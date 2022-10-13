@@ -1,0 +1,390 @@
+// Import all variables from the _vars.scss file
+@import "./vars";
+
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@200&display=swap');
+
+/* Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
+
+body {
+    font-size: 1.2rem;
+    background-color: $black;
+}
+
+
+/* BARRE DE NAVIGATION */
+nav {
+     width: 100%;
+     padding: 0 5rem;
+     background-color: $darkgray;
+
+     .card__menu {
+          margin-left: auto;
+          margin-right: 2rem;
+          text-align: center;
+          a.menu__link {
+               color: $red;
+               font-family: 'Anton', sans-serif;
+               font-size: 1.5rem;
+               text-decoration: none;
+               text-transform: uppercase;
+               letter-spacing: 0.1rem;
+               font-weight: 400;
+               margin-left: 1rem;
+               transition: all 0.3s ease-in-out;
+
+               &:not(:first-child) {
+                    color: $text-color !important;
+                    transition: all 0.3s ease-in-out;
+               }
+
+               &:first-child {
+                    margin-left: 0;
+                    color: $red;
+               }
+              
+               &:hover {
+                   color: $red !important;
+               }
+          }
+     }
+
+     .card__button {
+          background-color: $red;
+          margin-right: 2rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          text-align: center;
+          cursor: pointer;
+          border: none;
+
+          a.button__link {
+               color: $white !important;
+               font-family: 'Anton', sans-serif;
+               font-size: 1.5rem;
+               text-decoration: none;
+               letter-spacing: 0.1rem;
+               font-weight: 400;
+               margin-left: 1rem;
+               transition: all 0.3s ease-in-out;
+          }
+     }
+}
+
+/* CAROUSEL */
+.card__carousel {
+     opacity: 100%; 
+     transition: opacity 0.5s ease-in-out; 
+     
+     .carousel__img {
+          position: relative;
+          object-fit: cover;
+          object-position: center;
+          background-color: $black;
+          opacity:80%; 
+          transition: opacity 0.5s ease-in-out; 
+          
+          .carousel__text {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               opacity: 1;
+               font-size: 2rem;
+               font-weight: 200;
+               margin-left: 1rem;
+               letter-spacing: 0.1rem;
+               transform: translate(-50%, -50%);
+               font-family: 'Anton', sans-serif;
+               transition: all 0.3s ease-in-out;
+
+               .carousel__text--title {
+                    color: $white;
+                    font-size: 3rem;
+                    font-weight: 400;
+                    letter-spacing: 0.2rem;
+                    margin-bottom: 1rem;
+                    opacity: 1;
+               }
+
+               .contact {
+                    .fa-map-marker-alt, .fa-phone {
+                         color: $red;
+                         font-size: 1.5rem;
+                         margin-right: 0.5rem;
+                    }
+
+                    span {
+                         color: $white;
+                         font-size: 1.5rem;
+                         margin-right: 0.5rem;
+                    }
+               }
+          }
+     }
+}
+
+/* CABOUT US */
+.card__about__exp {
+     padding: 5rem 5rem;
+
+     .card__about__exp--img {
+          width: 100%;
+          height: 100%;
+          padding-left: 5rem ;
+          object-fit: cover;
+          object-position: center;
+          transition: opacity 0.5s ease-in-out;
+          position: relative;
+
+          .year {
+               top: 75%;
+               left: -7%;
+               padding: 2.5rem 5rem 1.9rem 2rem;
+               position: absolute;
+               background-color: $darkgray !important;
+                    
+               h1.year__title {
+                    color: $red;
+                    font-family: 'Anton', sans-serif;
+                    font-size: 3.2rem;
+                    letter-spacing: 0.1rem;
+                    font-weight: 200;
+                    margin-left: 1rem;
+                    transition: all 0.3s ease-in-out;
+               }
+               .year__text {
+                    color: $white;
+                    font-family: 'Anton', sans-serif;
+                    font-size: 2.5rem;
+                    letter-spacing: 0.1rem;
+                    font-weight: 200;
+                    margin-left: 1rem;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease-in-out;
+               }
+          }
+
+     }
+     
+     .card__about__exp--details {
+          span.title__text {
+               color: $red;
+               font-size: 2rem;
+               margin-left: 1rem;
+               padding: 0 1rem 0 1rem;
+               text-align: center;
+               letter-spacing: 0.1rem;
+               background-color: $darkgray;
+               transition: all 0.3s ease-in-out;
+
+          }
+
+          .card__about__exp__details--text {
+               h3.details__title {
+                    color: $white;
+                    font-size: 2.7rem;
+                    margin-left: 1rem;
+                    letter-spacing: 0.1rem;
+                    text-transform: uppercase;
+                    font-family: $font-family;
+                    font-weight: normal;
+                    transition: all 0.3s ease-in-out;
+               }  
+               p{
+                    color: $text-color;
+                    font-size: 1.3rem;
+                    margin-left: 1rem;
+                    letter-spacing: 0.1rem;
+                    font-weight: normal;
+                    transition: all 0.3s ease-in-out;
+               }
+               
+               p:not(:last-child) {
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+               }
+               p:not(:first-child) {
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+               }
+          
+          }
+
+          .card__about__exp--story {
+               .card__about__story--since {
+                    margin-left: 1rem;
+               
+                    h3.since__title {
+                         color: $white;
+                         font-size: 2.7rem;
+                         letter-spacing: 0.1rem;
+                         text-transform: uppercase;
+                         font-family: $font-family;
+                         font-weight: normal;
+                         transition: all 0.3s ease-in-out;
+                    }
+                    p.since__text {
+                         color: $text-color;
+                         font-size: 1.3rem;
+                         letter-spacing: 0.1rem;
+                         font-weight: normal;
+                         transition: all 0.3s ease-in-out;
+                    }
+                    
+               }
+          }
+     }
+}
+
+/* SERVICES */
+.card__services {
+     span.title__text {
+          color: $red;
+          font-size: 2rem;
+          margin-left: 1rem;
+          padding: 0 1rem 0 1rem;
+          text-align: center;
+          letter-spacing: 0.1rem;
+          background-color: $darkgray;
+          transition: all 0.3s ease-in-out;
+     }
+
+     h3.services__title {
+          color: $white;
+          font-size: 2.7rem;
+          margin-left: 1rem;
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+          font-family: $font-family;
+          font-weight: normal;
+          transition: all 0.3s ease-in-out;
+     }
+
+     .services__items {
+          width: 100%;
+          margin-bottom: 2rem;
+          position: relative;
+          background-color: $darkgray;
+          padding: 4rem 3rem 4rem 6rem;
+          
+          h3.services__title {
+               color: $white;
+               font-size: 2.7rem;
+               letter-spacing: 0.1rem;
+               text-transform: uppercase;
+               font-family: $font-family;
+               font-weight: normal;
+               transition: all 0.3s ease-in-out;
+          }
+
+          p{
+               color: $text-color;
+               font-size: 1rem;
+               letter-spacing: 0.1rem;
+               font-weight: normal;
+               font-family: Verdana, sans-serif;
+               transition: all 0.3s ease-in-out;
+          }
+
+          .services__footer {
+               margin-top: 2rem;
+               span.services__price {
+                    color: $red;
+                    font-size: 1rem;
+                    letter-spacing: 0.1rem;
+                    text-transform: uppercase;
+                    font-size: verdana;
+                    font-weight: normal;
+                    transition: all 0.3s ease-in-out;
+               }
+          }
+
+          .services__img {
+               top: 19%;
+               left: 0;
+               padding: .9rem;
+               position: absolute;
+               background-color: $black;
+          }
+     }
+     
+}
+
+
+
+
+/* Media query */
+@media (max-width: 768px) {
+     .d-flex{
+          flex-wrap: wrap;
+          justify-content: center;
+     }
+     .form {
+          width: 100%;
+     }
+     input[type="text"],
+     input[type="email"] {
+          width: 100%;
+          padding: 0.5rem;
+     }
+
+     textarea {
+          width: 100%;
+          padding: 0.5rem;
+     }
+
+     input[type="submit"],
+     button[type="button"],
+     button[type="submit"] {
+          padding: 0.5rem 1rem;
+     }
+}
+
+/* Apple watch */
+@media screen and (max-width: 162px) {
+     .container {
+          flex-direction: column;
+     }
+
+     .d-flex {
+          width: 100%;
+     }
+
+      h1 {
+          font-size: 0.8rem;
+     }
+}
+
+/* Taille des mobiles */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+     .container {
+          flex-direction: column;
+     }
+
+     .d-flex {
+          width: 100%;
+     }
+
+     h1 {
+          font-size: 0.8rem;
+     }
+}
+
+/* Taille des tablets */
+
+@media screen and (min-width: 768px) and (max-width:884px) {
+     .container {
+          flex-direction: column;
+     }
+
+     .d-flex {
+          width: 100%;
+     }
+
+     h1 {
+          font-size: 0.8rem;
+     }
+}

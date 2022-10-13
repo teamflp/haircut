@@ -1,0 +1,59 @@
+/* COLOR TEMPLATE */
+
+$red: #eb1616;
+$white: #ffffff;
+$black: #000000;
+$darkgray: #191c24;
+$text-color: #6d7293;
+
+/* FONT TEMPLATE */
+$font-family: 'Anton', sans-serif;
+
+/* MEDIA QUERY TEMPLATE */
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1200px;
+
+/* ANIMATION TEMPLATE */
+$animation-duration: 0.3s;
+$animation-timing: ease-in-out;
+
+/* TRANSITION TEMPLATE */
+$transition-duration: 0.3s;
+$transition-timing: ease-in-out;
+
+/* BORDER RADIUS TEMPLATE */
+$border-radius: 0.5rem;
+
+/* SHADOW TEMPLATE */
+$shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+/* SPACING TEMPLATE */
+$spacing: 1rem;
+
+/* FUNCTION GAP */
+@function gap($size) {
+     @return $size * $spacing;
+}
+
+/* FUNCTION REM */
+@function rem($size) {
+     @return $size / 16px * 1rem;
+}
+
+/* FUNCTION EM */
+@function em($size) {
+     @return $size / 16px * 1em;
+}
+
+/* FUNCTION PX */
+@function px($size) {
+     @return $size / 16px * 1px;
+}
+
+/* FUNCTION PERCENT */
+@function percent($size) {
+     @return $size / 16px * 100%;
+}
+
+/* Utilisation de la fonction size */
