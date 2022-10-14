@@ -14,6 +14,10 @@ body {
     background-color: $black;
 }
 
+h2, h3, h4, h5, h6 {
+    font-family: $font-segoe;
+    font-weight: 500;
+}
 
 /* BARRE DE NAVIGATION */
 nav {
@@ -312,6 +316,184 @@ nav {
      }
      
 }
+
+/* PRICING */
+.card__pricing {
+          
+     .pricing {    
+          padding: 3.5rem 2rem 0 2rem;
+          background-color: $darkgray; 
+
+          span.title__text {
+               color: $red;
+               font-size: rem(20px);
+               text-align: center;
+               margin-left: 1rem;
+               padding: .2rem 1rem .2rem 1rem;
+               font-family: $font-segoe;
+               text-align: center;
+               letter-spacing: 0.1rem;
+               background-color: $black;
+               transition: all 0.3s ease-in-out;
+          }
+
+          h3.pricing__title {
+               color: $white;
+               font-size: rem(40px);
+               margin-left: 1rem;
+               letter-spacing: 0.01rem;
+               text-transform: uppercase;
+               font-family: $font-family;
+               font-weight: normal;
+               transition: all 0.3s ease-in-out;
+          }
+
+          .price__items {
+               padding-left: 1rem;
+               .price__items--content {
+                    margin-bottom: 1rem;
+                    padding-bottom: 0.8rem;
+                    border-bottom: 1px solid $text-color;
+
+                    &:last-child {
+                         border-bottom: none;
+                    }
+
+                    .price__items--content--name {
+                         color: $white;
+                         font-size: rem(15px);
+                         letter-spacing: 1px;
+                         font-weight: normal;
+                         font-family: $font-segoe;
+                         text-transform: uppercase;;
+                    }
+
+                    .price__items--content--price {
+                         .price__title {
+                              @extend .price__items--content--name;
+                              color: $red;
+                              font-weight: normal;
+                              text-align-last: right;
+                         }
+                    }
+               }
+          }  
+     }
+
+}
+
+/* BARBERS */
+.card__teams__barbers {
+     span.barbers__text {
+          color: $red;
+          font-size: rem(20px);
+          text-align: center;
+          margin-left: 1rem;
+          padding: .2rem 1rem .2rem 1rem;
+          font-family: $font-segoe;
+          text-align: center;
+          letter-spacing: 0.1rem;
+          background-color: $darkgray;
+          transition: all 0.3s ease-in-out;
+     }
+
+     h3.barbers__title {
+          color: $white;
+          font-size: rem(40px);
+          margin-left: 1rem;
+          letter-spacing: 0.01rem;
+          text-transform: uppercase;
+          font-family: $font-family;
+          font-weight: normal;
+          transition: all 0.3s ease-in-out;
+     }
+
+     .barbers__items {
+          .barbers__items--content {
+               text-align: center;
+
+               .barbers__items--content--img {
+                    width: 100%;
+                    margin-bottom: -5px;
+                    background-color: $black;
+                    position: relative;
+
+                    .box__socials {
+                         text-align: center;
+                         gap: 1rem;
+                         top: 0;
+                         left: -16px;
+                         height: 100%;
+                         width: 100%;
+                         display: block;
+                         margin-left: 1rem;
+                         position: absolute;
+                         background-color: $black;
+                         opacity: 0.5;
+                         transform: translate(0 0);
+                         transition: all 0.3s ease-in-out;
+                         
+                         a {
+                              color: $red;
+                              font-size: 1.5rem;
+                              padding: .5rem;
+                              background-color: $black;
+                              transition: all 0.3s ease-in-out;
+
+                              &:hover {
+                                   display: block;
+                                   color: $white;
+                                   background-color: $red;
+                              }
+                         }
+
+                    }
+                    
+                    img {
+                         object-fit: cover;
+                         transition: all 0.3s ease-in-out;
+                         &:hover {
+                              opacity: 0.1;
+                              transition: all 0.3s ease-in-out;
+                         }
+                    }
+                    
+               }
+              
+               .barbers__items--content--text {
+                    padding: .5em 0.5rem;
+                    background-color: $darkgray;
+                    h3.barbers__title {
+                         color: $white;
+                         font-size: rem(20px);
+                         font-weight: 600;
+                         letter-spacing: 5px;
+                         font-family: $font-segoe;
+                         font-weight: 800;
+                         text-transform: uppercase;
+                    }
+                    p {
+                         color: $red;
+                         padding-top: 1rem;
+                         font-size: rem(15px);
+                         letter-spacing: 1px;
+                         font-weight: normal;
+                         font-family: $font-segoe;
+                         text-transform: uppercase;
+                    }
+               }
+          }
+     }   
+}
+
+
+
+
+
+
+
+
+
 
 
 
