@@ -35,27 +35,27 @@ $spacing: 1rem;
 
 /* FUNCTION GAP */
 @function gap($size) {
-     @return $size * $spacing;
+     @return calc($size * $spacing);
 }
 
 /* FUNCTION REM */
 @function rem($size) {
-     @return $size / 16px * 1rem;
+     @return calc($size / 16px * 1rem);
 }
 
 /* FUNCTION EM */
 @function em($size) {
-     @return $size / 16px * 1em;
+     @return calc($size / 16px * 1em);
 }
 
 /* FUNCTION PX */
 @function px($size) {
-     @return $size / 16px * 1px;
+     @return calc($size / 16px * 1px);
 }
 
 /* FUNCTION PERCENT */
 @function percent($size) {
-     @return $size / 16px * 100%;
+     @return calc($size / 16px * 100%);
 }
 
 /* Utilisation de la fonction size */

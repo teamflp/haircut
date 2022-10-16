@@ -16,25 +16,54 @@
                <img class="img-100" src="public/images/logo.png" alt="logo">
           </div>
 
-          <div class="card__menu">
+          <div class="navbar__menu">
                <a href="index.html" class="menu__link">Home</a>
                <a href="about.html" class="menu__link">About</a>
                <a href="services.html" class="menu__link">Service</a>
-               <a href="forfait.html" class="menu__link">Forfait</a>
-               <a href="barbiers.html" class="menu__link">Barbiers</a>
-               <a href="horaire.html" class="menu__link">Horaire</a>
-               <a href="temoins.html" class="menu__link">Témoins</a>
+               
+               <!-- DROPDOWN MENU 
+                    AU SURVOLE DE LA SOURIS SUR LE LIEN PRESTAIONS, 
+                    LE SOUS-MENU (DROPDOWN) S'AFFICHE AUTOMATIQUEMENT.
+               -->
+               <div class="dropdown">
+                    <a href="#" class="menu__link">Prestations <i class="fas fa-chevron-down"></i></a>
+                    <div class="navbar__dropdown__content">
+                         <a href="forfait.html" class="menu__link">Forfait</a>
+                         <a href="barbiers.html" class="menu__link">Barbiers</a>
+                         <a href="horaire.html" class="menu__link">Horaire</a>
+                         <a href="temoins.html" class="menu__link">Témoins</a>
+                    </div>
+               </div>
                <a href="contact.html" class="menu__link">Contact</a>
           </div>
+          
 
-          <button class="card__button">
+          <button type="button" class="card__button">
                <a class="button__link" href="">Appointment <i class="fas fa-arrow-right"></i></a>
           </button>
      </nav>
 
+     <!-- Navbar dropdown -->
+     <!-- <div class="navbar__dropdown">
+          <a href="index.html" class="menu__link">Home</a>
+          <a href="about.html" class="menu__link">About</a>
+          <a href="services.html" class="menu__link">Service</a>
+          
+          <div class="dropdown__link">
+               <a href="#" class="menu__link">My dropdown</a>
+               <div class="navbar__dropdown__content">
+                    <a href="forfait.html" class="menu__link">Forfait</a>
+                    <a href="barbiers.html" class="menu__link">Barbiers</a>
+                    <a href="horaire.html" class="menu__link">Horaire</a>
+                    <a href="temoins.html" class="menu__link">Témoins</a>
+               </div>
+               <a href="contact.html" class="menu__link">Contact</a>
+          </div>
+     </div> -->
+
      <!-- SECTION CAROUSEL -->
-     <div class="card__carousel container-fluid">
-          <div class="carousel__img">
+     <div class="card__carousel container-fluid d-flex a-items-center j-content-center">
+          <div class="carousel carousel__img">
                <img class="img-100" src="public/images/carousel-1.jpg" alt="carrousel">
                <div class="carousel__text">
                     <h1 class="carousel__text--title uppercase">
@@ -49,6 +78,32 @@
                          <span>+012 345 67890</span>
                     </div>
                </div>
+          </div>
+
+          <div class="carousel carousel__img">
+               <img class="img-100" src="public/images/carousel-2.jpg" alt="carrousel">
+               <div class="carousel__text">
+                    <h1 class="carousel__text--title uppercase">
+                         We will keep you an <br>awesome look
+                    </h1>
+                    <div class="contact uppercase">
+                         <i class="fas fa-map-marker-alt"></i> 
+                         <span>123 street, New York, USA</span>
+                    </div>
+                    <div class="contact">
+                         <i class="fas fa-phone"></i>
+                         <span>+012 345 67890</span>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="carousel__item container-fluid d-flex a-items-center j-content-center">
+          <div class="carousel__img">
+               <img class="img-100" src="public/images/carousel-1.jpg" alt="img">
+          </div>
+          <div class="carousel__img">
+               <img class="img-100" src="public/images/carousel-2.jpg" alt="img">
           </div>
      </div>
 
@@ -279,7 +334,7 @@
                          <div class="barbers__items--content">
                               <div class="barbers__items--content--img">
                                    <img class="img-100" src="public/images/team-2.jpg" alt="team" srcset="">
-                                   <div class="box__socials d-flex">
+                                   <div class="box__socials">
                                         
                                         <div class="box__socials--item">
                                              <a href="#" class="socials__items--link">
@@ -362,10 +417,15 @@
                     </div>
                     
                </div>
+
+               <!--  SECTION NEWS -->
+
+              
                
           </div>
      </div>
      <!-- Import JavaScript file -->
      <script src="assets/js/f88b724a6b.js"></script>
+     <script src="assets/js/scripts.js"></script>
 </body>
 </html>
