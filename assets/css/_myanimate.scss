@@ -1,0 +1,2620 @@
+/**
+* MYANIMATION - ANIMATION
+* @version 1.0.0
+* @author:  PATERNE
+* @license MIT
+* @link http://paterne.fr
+*
+/* ==========================================================================
+   JOLLY - ANIMATION
+   ========================================================================== */
+// Bounce, BounceIn, BounceOut, BounceInUp, BounceInDown, BounceInLeft, BounceInRight, BounceOutUp, BounceOutDown, BounceOutLeft, BounceOutRight
+@mixin Bounce($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Bounce $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Bounce $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes Bounce {
+          0%, 20%, 50%, 80%, 100% {
+               transform: translateY(0);
+          }
+          40% {
+               transform: translateY(-30px);
+          }
+          60% {
+               transform: translateY(-15px);
+          }
+     }
+}
+@mixin BounceIn($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: BounceIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: BounceIn $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes BounceIn {
+          0% {
+               opacity: 0;
+               transform: scale(0.3);
+          }
+          50% {
+               opacity: 1;
+               transform: scale(1.05);
+          }
+          70% {
+               transform: scale(0.9);
+          }
+          100% {
+               transform: scale(1);
+          }
+     }
+}
+@mixin BounceOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: BounceOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: BounceOut $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes BounceOut {
+          20% {
+               transform: scale(0.9);
+          }
+          50%, 55% {
+               opacity: 1;
+               transform: scale(1.1);
+          }
+          100% {
+               opacity: 0;
+               transform: scale(0.3);
+          }
+     }
+}
+@mixin BounceInUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: BounceInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: BounceInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes BounceInUp {
+          0% {
+               opacity: 0;
+               transform: translateY(2000px);
+          }
+          60% {
+               opacity: 1;
+               transform: translateY(-30px);
+          }
+          80% {
+               transform: translateY(10px);
+          }
+          100% {
+               transform: translateY(0);
+          }
+     }
+}
+@mixin BounceInDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: BounceInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: BounceInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes BounceInDown {
+          0% {
+               opacity: 0;
+               transform: translateY(-2000px);
+          }
+          60% {
+               opacity: 1;
+               transform: translateY(30px);
+          }
+          80% {
+               transform: translateY(-10px);
+          }
+          100% {
+               transform: translateY(0);
+          }
+     }
+}
+@mixin BounceInLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: BounceInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: BounceInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes BounceInLeft {
+          0% {
+               opacity: 0;
+               transform: translateX(-2000px);
+          }
+          60% {
+               opacity: 1;
+               transform: translateX(30px);
+          }
+          80% {
+               transform: translateX(-10px);
+          }
+          100% {
+               transform: translateX(0);
+          }
+     }
+}
+@mixin BounceInRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: BounceInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: BounceInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes BounceInRight {
+          0% {
+               opacity: 0;
+               transform: translateX(2000px);
+          }
+          60% {
+               opacity: 1;
+               transform: translateX(-30px);
+          }
+          80% {
+               transform: translateX(10px);
+          }
+          100% {
+               transform: translateX(0);
+          }
+     }
+}
+@mixin BounceOutUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: BounceOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: BounceOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes BounceOutUp {
+          20% {
+               transform: translateY(10px);
+          }
+          40%, 45% {
+               opacity: 1;
+               transform: translateY(-20px);
+          }
+          100% {
+               opacity: 0;
+               transform: translateY(-2000px);
+          }
+     }
+}
+@mixin BounceOutDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: BounceOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: BounceOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes BounceOutDown {
+          20% {
+               transform: translateY(-10px);
+          }
+          40%, 45% {
+               opacity: 1;
+               transform: translateY(20px);
+          }
+          100% {
+               opacity: 0;
+               transform: translateY(2000px);
+          }
+     }
+}
+@mixin BounceOutLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: BounceOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: BounceOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes BounceOutLeft {
+          20% {
+               transform: translateX(10px);
+          }
+          40%, 45% {
+               opacity: 1;
+               transform: translateX(-20px);
+          }
+          100% {
+               opacity: 0;
+               transform: translateX(-2000px);
+          }
+     }
+}
+@mixin BounceOutRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: BounceOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: BounceOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes BounceOutRight {
+          20% {
+               transform: translateX(-10px);
+          }
+          40%, 45% {
+               opacity: 1;
+               transform: translateX(20px);
+          }
+          100% {
+               opacity: 0;
+               transform: translateX(2000px);
+          }
+     }
+}
+
+// Fade, FadeIn, FadeInDown, FadeInDownBig, FadeInLeft, FadeInLeftBig, FadeInRight, FadeInRightBig, FadeInUp, FadeInUpBig, FadeOut, FadeOutUpBig, FadeOutDown, FadeOutDownBig, FadeOutLeft, FadeOutLeftBig, FadeOutRight, FadeOutRightBig, FadeOutUp
+@mixin Fade($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+    animation: Fade $duration $delay $timing $iteration $direction $fill $playstate;
+    -webkit-animation: $duration $delay $timing $timing;
+
+     @keyframes Fade {
+          0% {
+               opacity: 0;
+          }
+          100% {
+               opacity: 1;
+          }
+     }
+}
+@mixin FadeIn($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeIn $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeIn {
+          0% {
+               opacity: 0;
+          }
+          100% {
+               opacity: 1;
+          }
+     }
+}
+@mixin FadeOut($duration: 1s, $delay: 0s, $ease: ease-in-out) {
+    -webkit-animation: fadeOut $duration $delay $ease;
+    animation: fadeOut $duration $delay $ease;
+
+     @keyframes FadeOut {
+          0% {
+               opacity: 1;
+          }
+          100% {
+               opacity: 0;
+          }
+     }
+}
+@mixin FadeInUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeInUp {
+          0% {
+               opacity: 0;
+               transform: translateY(20px);
+          }
+          100% {
+               opacity: 1;
+               transform: translateY(0);
+          }
+     }
+}
+@mixin FadeInDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeInDown {
+          0% {
+               opacity: 0;
+               transform: translateY(-20px);
+          }
+          100% {
+               opacity: 1;
+               transform: translateY(0);
+          }
+     }
+}
+@mixin FadeInLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeInLeft {
+          0% {
+               opacity: 0;
+               transform: translateX(-20px);
+          }
+          100% {
+               opacity: 1;
+               transform: translateX(0);
+          }
+     }
+}
+@mixin FadeInRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeInRight {
+          0% {
+               opacity: 0;
+               transform: translateX(20px);
+          }
+          100% {
+               opacity: 1;
+               transform: translateX(0);
+          }
+     }
+}
+@mixin FadeInUpBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeInUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeInUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeInUpBig {
+          0% {
+               opacity: 0;
+               transform: translateY(2000px);
+          }
+          100% {
+               opacity: 1;
+               transform: translateY(0);
+          }
+     }
+}
+@mixin FadeInDownBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeInDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeInDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeInDownBig {
+          0% {
+               opacity: 0;
+               transform: translateY(-2000px);
+          }
+          100% {
+               opacity: 1;
+               transform: translateY(0);
+          }
+     }
+}
+@mixin FadeInLeftBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeInLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeInLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeInLeftBig {
+          0% {
+               opacity: 0;
+               transform: translateX(-2000px);
+          }
+          100% {
+               opacity: 1;
+               transform: translateX(0);
+          }
+     }
+}
+@mixin FadeInRightBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeInRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeInRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeInRightBig {
+          0% {
+               opacity: 0;
+               transform: translateX(2000px);
+          }
+          100% {
+               opacity: 1;
+               transform: translateX(0);
+          }
+     }
+}
+@mixin FadeOutUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeOutUp {
+          0% {
+               opacity: 1;
+               transform: translateY(0);
+          }
+          100% {
+               opacity: 0;
+               transform: translateY(-20px);
+          }
+     }
+}
+@mixin FadeOutDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeOutDown {
+          0% {
+               opacity: 1;
+               transform: translateY(0);
+          }
+          100% {
+               opacity: 0;
+               transform: translateY(20px);
+          }
+     }
+}
+@mixin FadeOutLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeOutLeft {
+          0% {
+               opacity: 1;
+               transform: translateX(0);
+          }
+          100% {
+               opacity: 0;
+               transform: translateX(-20px);
+          }
+     }
+}
+@mixin FadeOutRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeOutRight {
+          0% {
+               opacity: 1;
+               transform: translateX(0);
+          }
+          100% {
+               opacity: 0;
+               transform: translateX(20px);
+          }
+     }
+}
+@mixin FadeOutUpBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeOutUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeOutUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeOutUpBig {
+          0% {
+               opacity: 1;
+               transform: translateY(0);
+          }
+          100% {
+               opacity: 0;
+               transform: translateY(-2000px);
+          }
+     }
+}
+@mixin FadeOutDownBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeOutDownBig {
+          0% {
+               opacity: 1;
+               transform: translateY(0);
+          }
+          100% {
+               opacity: 0;
+               transform: translateY(2000px);
+          }
+     }
+}
+@mixin FadeOutLeftBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeOutLeftBig {
+          0% {
+               opacity: 1;
+               transform: translateX(0);
+          }
+          100% {
+               opacity: 0;
+               transform: translateX(-2000px);
+          }
+     }
+}
+@mixin FadeOutRightBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FadeOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FadeOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes FadeOutRightBig {
+          0% {
+               opacity: 1;
+               transform: translateX(0);
+          }
+          100% {
+               opacity: 0;
+               transform: translateX(2000px);
+          }
+     }
+}
+
+// Flip, FlipInX, FlipInY, FlipOutX, FlipOutY
+@mixin Flip($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Flip $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Flip $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes Flip {
+          0% {
+               transform: perspective(400px) rotateY(0deg);
+          }
+          40% {
+               transform: perspective(400px) rotateY(170deg);
+          }
+          50% {
+               transform: perspective(400px) rotateY(190deg);
+          }
+          80% {
+               transform: perspective(400px) rotateY(360deg);
+          }
+          100% {
+               transform: perspective(400px) rotateY(360deg);
+          }
+     }
+}
+@mixin FlipInX($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FlipInX $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FlipInX $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: FlipInX $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes FlipInX {
+          0% {
+               transform: perspective(400px) rotateX(90deg);
+               opacity: 0;
+          }
+          40% {
+               transform: perspective(400px) rotateX(-10deg);
+          }
+     }
+}
+@mixin FlipInY($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FlipInY $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FlipInY $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: FlipInY $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes FlipInY {
+          0% {
+               transform: perspective(400px) rotateY(90deg);
+               opacity: 0;
+          }
+          40% {
+               transform: perspective(400px) rotateY(-10deg);
+          }
+     }
+}
+@mixin FlipOutX($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FlipOutX $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FlipOutX $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: FlipOutX $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes FlipOutX {
+          0% {
+               transform: perspective(400px) rotateX(0deg);
+          }
+          30% {
+               transform: perspective(400px) rotateX(-20deg);
+               opacity: 1;
+          }
+          100% {
+               transform: perspective(400px) rotateX(90deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin FlipOutY($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: FlipOutY $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: FlipOutY $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: FlipOutY $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes FlipOutY {
+          0% {
+               transform: perspective(400px) rotateY(0deg);
+          }
+          30% {
+               transform: perspective(400px) rotateY(-20deg);
+               opacity: 1;
+          }
+          100% {
+               transform: perspective(400px) rotateY(90deg);
+               opacity: 0;
+          }
+     }
+}
+
+// LightSpeed, LightSpeedIn, LightSpeedOut, LightSpeedInRight, LightSpeedInLeft, LightSpeedOutRight, LightSpeedOutLeft
+@mixin LightSpeed($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: LightSpeed $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: LightSpeed $duration $timing $delay $iteration $direction $fill $playstate;
+     @keyframes LightSpeed {
+          0% {
+               transform: translateX(0);
+               opacity: 1;
+          }
+          60% {
+               transform: translateX(100%);
+               opacity: 0;
+          }
+          100% {
+               transform: translateX(100%);
+               opacity: 0;
+          }
+     }
+}
+@mixin LightSpeedIn($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: LightSpeedIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: LightSpeedIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: LightSpeedIn $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes LightSpeedIn {
+          0% {
+               transform: translateX(100%) skewX(-30deg);
+               opacity: 0;
+          }
+          60% {
+               transform: translateX(-20%) skewX(20deg);
+               opacity: 1;
+          }
+          80% {
+               transform: translateX(0%) skewX(-5deg);
+               opacity: 1;
+          }
+          100% {
+               transform: translateX(0%) skewX(0deg);
+               opacity: 1;
+          }
+     }
+}
+@mixin LightSpeedOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: LightSpeedOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: LightSpeedOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: LightSpeedOut $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes LightSpeedOut {
+          0% {
+               transform: translateX(0%) skewX(0deg);
+               opacity: 1;
+          }
+          100% {
+               transform: translateX(100%) skewX(30deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin LightSpeedInRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: LightSpeedInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: LightSpeedInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: LightSpeedInRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes LightSpeedInRight {
+          0% {
+               transform: translateX(100%) skewX(-30deg);
+               opacity: 0;
+          }
+          60% {
+               transform: translateX(-20%) skewX(20deg);
+               opacity: 1;
+          }
+          80% {
+               transform: translateX(0%) skewX(-5deg);
+               opacity: 1;
+          }
+          100% {
+               transform: translateX(0%) skewX(0deg);
+               opacity: 1;
+          }
+     }
+}
+@mixin LightSpeedInLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: LightSpeedInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: LightSpeedInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: LightSpeedInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes LightSpeedInLeft {
+          0% {
+               transform: translateX(-100%) skewX(30deg);
+               opacity: 0;
+          }
+          60% {
+               transform: translateX(20%) skewX(-20deg);
+               opacity: 1;
+          }
+          80% {
+               transform: translateX(0%) skewX(5deg);
+               opacity: 1;
+          }
+          100% {
+               transform: translateX(0%) skewX(0deg);
+               opacity: 1;
+          }
+     }
+}
+@mixin LightSpeedOutRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: LightSpeedOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: LightSpeedOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: LightSpeedOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes LightSpeedOutRight {
+          0% {
+               transform: translateX(0%) skewX(0deg);
+               opacity: 1;
+          }
+          100% {
+               transform: translateX(100%) skewX(30deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin LightSpeedOutLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: LightSpeedOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: LightSpeedOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: LightSpeedOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes LightSpeedOutLeft {
+          0% {
+               transform: translateX(0%) skewX(0deg);
+               opacity: 1;
+          }
+          100% {
+               transform: translateX(-100%) skewX(-30deg);
+               opacity: 0;
+          }
+     }
+}
+
+// Roll, RollIn, RollOut, RollInLeft, RollInRight, RollInUp, RollInDown, RollOutLeft, RollOutRight, RollOutUp, RollOutDown, 
+// RollOutUpBig, RollOutDownBig, RollOutLeftBig, RollOutRightBig, RollInUpBig, RollInDownBig, RollInLeftBig, RollInRightBig
+
+@mixin Roll($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Roll $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Roll $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: Roll $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Roll {
+          0% {
+               transform: rotate(0);
+          }
+          100% {
+               transform: rotate(360deg);
+          }
+     }
+}
+@mixin RollIn($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollIn $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollIn {
+          0% {
+               transform: translateX(-100%) rotate(-120deg);
+               opacity: 0;
+          }
+          100% {
+               transform: translateX(0) rotate(0);
+               opacity: 1;
+          }
+     }
+}
+@mixin RollOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollOut $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollOut {
+          0% {
+               transform: translateX(0) rotate(0);
+               opacity: 1;
+          }
+          100% {
+               transform: translateX(100%) rotate(120deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RollInLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollInLeft {
+          0% {
+               transform: translateX(-100%) rotate(-120deg);
+               opacity: 0;
+          }
+          100% {
+               transform: translateX(0) rotate(0);
+               opacity: 1;
+          }
+     }
+}
+@mixin RollInRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollInRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollInRight {
+          0% {
+               transform: translateX(100%) rotate(120deg);
+               opacity: 0;
+          }
+          100% {
+               transform: translateX(0) rotate(0);
+               opacity: 1;
+          }
+     }
+}
+@mixin RollInUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollInUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollInUp {
+          0% {
+               transform: translateY(-100%) rotate(-120deg);
+               opacity: 0;
+          }
+          100% {
+               transform: translateY(0) rotate(0);
+               opacity: 1;
+          }
+     }
+}
+@mixin RollInDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollInDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollInDown {
+          0% {
+               transform: translateY(100%) rotate(120deg);
+               opacity: 0;
+          }
+          100% {
+               transform: translateY(0) rotate(0);
+               opacity: 1;
+          }
+     }
+}
+@mixin RollOutLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollOutLeft {
+          0% {
+               transform: translateX(0) rotate(0);
+               opacity: 1;
+          }
+          100% {
+               transform: translateX(-100%) rotate(-120deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RollOutRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollOutRight {
+          0% {
+               transform: translateX(0) rotate(0);
+               opacity: 1;
+          }
+          100% {
+               transform: translateX(100%) rotate(120deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RollOutUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollOutUp {
+          0% {
+               transform: translateY(0) rotate(0);
+               opacity: 1;
+          }
+          100% {
+               transform: translateY(-100%) rotate(-120deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RollOutDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollOutDown {
+          0% {
+               transform: translateY(0) rotate(0);
+               opacity: 1;
+          }
+          100% {
+               transform: translateY(100%) rotate(120deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RollOutUpBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollOutUpBig {
+          0% {
+               transform: translateY(0) rotate(0);
+               opacity: 1;
+          }
+          100% {
+               transform: translateY(-1000%) rotate(-120deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RollOutDownBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollOutDownBig {
+          0% {
+               transform: translateY(0) rotate(0);
+               opacity: 1;
+          }
+          100% {
+               transform: translateY(1000%) rotate(120deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RollOutLeftBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollOutLeftBig {
+          0% {
+               transform: translateX(0) rotate(0);
+               opacity: 1;
+          }
+          100% {
+               transform: translateX(-1000%) rotate(-120deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RollOutRightBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollOutRightBig {
+          0% {
+               transform: translateX(0) rotate(0);
+               opacity: 1;
+          }
+          100% {
+               transform: translateX(1000%) rotate(120deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RollInUpBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollInUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollInUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollInUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollInUpBig {
+          0% {
+               transform: translateY(1000%) rotate(120deg);
+               opacity: 0;
+          }
+          100% {
+               transform: translateY(0) rotate(0);
+               opacity: 1;
+          }
+     }
+}@mixin RollInDownBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollInDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollInDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollInDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollInDownBig {
+          0% {
+               transform: translateY(-1000%) rotate(-120deg);
+               opacity: 0;
+          }
+          100% {
+               transform: translateY(0) rotate(0);
+               opacity: 1;
+          }
+     }
+}
+@mixin RollInLeftBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollInLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollInLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollInLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollInLeftBig {
+          0% {
+               transform: translateX(-1000%) rotate(-120deg);
+               opacity: 0;
+          }
+          100% {
+               transform: translateX(0) rotate(0);
+               opacity: 1;
+          }
+     }
+}
+@mixin RollInRightBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RollInRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RollInRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RollInRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RollInRightBig {
+          0% {
+               transform: translateX(1000%) rotate(120deg);
+               opacity: 0;
+          }
+          100% {
+               transform: translateX(0) rotate(0);
+               opacity: 1;
+          }
+     }
+}
+
+// Rotate, RotateIn, RotateOut, RotateInUpLeft, RotateInDownLeft, RotateInUpRight, RotateInDownRight, RotateOutUpLeft, RotateOutDownLeft, RotateOutUpRight, RotateOutDownRight
+@mixin Rotate($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Rotate $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Rotate $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: Rotate $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Rotate {
+          0% {
+               transform: rotate(0);
+          }
+          100% {
+               transform: rotate(360deg);
+          }
+     }
+}
+@mixin RotateIn($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RotateIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RotateIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RotateIn $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RotateIn {
+          0% {
+               transform-origin: center center;
+               transform: rotate3d(0, 0, 1, -200deg);
+               opacity: 0;
+          }
+          100% {
+               transform-origin: center center;
+               transform: rotate3d(0, 0, 1, 0deg);
+               opacity: 1;
+          }
+     }
+}
+@mixin RotateOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RotateOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RotateOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RotateOut $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RotateOut {
+          0% {
+               transform-origin: center center;
+               transform: rotate3d(0, 0, 1, 0deg);
+               opacity: 1;
+          }
+          100% {
+               transform-origin: center center;
+               transform: rotate3d(0, 0, 1, 200deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RotateInDownLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RotateInDownLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RotateInDownLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RotateInDownLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RotateInDownLeft {
+          0% {
+               transform-origin: left bottom;
+               transform: rotate3d(0, 0, 1, -45deg);
+               opacity: 0;
+          }
+          100% {
+               transform-origin: left bottom;
+               transform: rotate3d(0, 0, 1, 0deg);
+               opacity: 1;
+          }
+     }
+}
+@mixin RotateInDownRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RotateInDownRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RotateInDownRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RotateInDownRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RotateInDownRight {
+          0% {
+               transform-origin: right bottom;
+               transform: rotate3d(0, 0, 1, 45deg);
+               opacity: 0;
+          }
+          100% {
+               transform-origin: right bottom;
+               transform: rotate3d(0, 0, 1, 0deg);
+               opacity: 1;
+          }
+     }
+}
+@mixin RotateInUpLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RotateInUpLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RotateInUpLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RotateInUpLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RotateInUpLeft {
+          0% {
+               transform-origin: left bottom;
+               transform: rotate3d(0, 0, 1, 45deg);
+               opacity: 0;
+          }
+          100% {
+               transform-origin: left bottom;
+               transform: rotate3d(0, 0, 1, 0deg);
+               opacity: 1;
+          }
+     }
+}
+@mixin RotateInUpRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RotateInUpRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RotateInUpRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RotateInUpRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RotateInUpRight {
+          0% {
+               transform-origin: right bottom;
+               transform: rotate3d(0, 0, 1, -90deg);
+               opacity: 0;
+          }
+          100% {
+               transform-origin: right bottom;
+               transform: rotate3d(0, 0, 1, 0deg);
+               opacity: 1;
+          }
+     }
+}
+@mixin RotateOutDownLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RotateOutDownLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RotateOutDownLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RotateOutDownLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RotateOutDownLeft {
+          0% {
+               transform-origin: left bottom;
+               transform: rotate3d(0, 0, 1, 0deg);
+               opacity: 1;
+          }
+          100% {
+               transform-origin: left bottom;
+               transform: rotate3d(0, 0, 1, 45deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RotateOutDownRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RotateOutDownRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RotateOutDownRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RotateOutDownRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RotateOutDownRight {
+          0% {
+               transform-origin: right bottom;
+               transform: rotate3d(0, 0, 1, 0deg);
+               opacity: 1;
+          }
+          100% {
+               transform-origin: right bottom;
+               transform: rotate3d(0, 0, 1, -45deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RotateOutUpLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RotateOutUpLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RotateOutUpLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RotateOutUpLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RotateOutUpLeft {
+          0% {
+               transform-origin: left bottom;
+               transform: rotate3d(0, 0, 1, 0deg);
+               opacity: 1;
+          }
+          100% {
+               transform-origin: left bottom;
+               transform: rotate3d(0, 0, 1, -45deg);
+               opacity: 0;
+          }
+     }
+}
+@mixin RotateOutUpRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RotateOutUpRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RotateOutUpRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RotateOutUpRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RotateOutUpRight {
+          0% {
+               transform-origin: right bottom;
+               transform: rotate3d(0, 0, 1, 0deg);
+               opacity: 1;
+          }
+          100% {
+               transform-origin: right bottom;
+               transform: rotate3d(0, 0, 1, 90deg);
+               opacity: 0;
+          }
+     }
+}
+
+// Slide, SlideInUp, SlideInDown, SlideInLeft, SlideInRight, SlideOutUp, SlideOutDown, SlideOutLeft, SlideOutRight, SlideToggle, SlideInFromLeft
+
+@mixin Slide($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Slide $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Slide $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: Slide $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Slide {
+          0% {
+               transform: translate3d(0, 0, 0);
+          }
+          100% {
+               transform: translate3d(0, 0, 0);
+          }
+     }
+}
+@mixin SlideInDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: SlideInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: SlideInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: SlideInDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes SlideInDown {
+          0% {
+               transform: translateY(-100%);
+               visibility: visible;
+          }
+          100% {
+               transform: translateY(0);
+          }
+     }
+}
+@mixin SlideInLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: SlideInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: SlideInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: SlideInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes SlideInLeft {
+          0% {
+               transform: translateX(-100%);
+               visibility: visible;
+          }
+          100% {
+               transform: translateX(0);
+          }
+     }
+}
+@mixin SlideInRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: SlideInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: SlideInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: SlideInRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes SlideInRight {
+          0% {
+               transform: translateX(100%);
+               visibility: visible;
+          }
+          100% {
+               transform: translateX(0);
+          }
+     }
+}
+@mixin SlideInUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: SlideInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: SlideInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: SlideInUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes SlideInUp {
+          0% {
+               transform: translateY(100%);
+               visibility: visible;
+          }
+          100% {
+               transform: translateY(0);
+          }
+     }
+}
+@mixin SlideOutDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: SlideOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: SlideOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: SlideOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes SlideOutDown {
+          0% {
+               transform: translateY(0);
+          }
+          100% {
+               transform: translateY(100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin SlideOutLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: SlideOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: SlideOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: SlideOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes SlideOutLeft {
+          0% {
+               transform: translateX(0);
+          }
+          100% {
+               transform: translateX(-100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin SlideOutRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: SlideOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: SlideOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: SlideOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes SlideOutRight {
+          0% {
+               transform: translateX(0);
+          }
+          100% {
+               transform: translateX(100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin SlideOutUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: SlideOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: SlideOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: SlideOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes SlideOutUp {
+          0% {
+               transform: translateY(0);
+          }
+          100% {
+               transform: translateY(-100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin SlideOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: SlideOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: SlideOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: SlideOut $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes SlideOut {
+          0% {
+               transform: translateX(0);
+          }
+          100% {
+               transform: translateX(-100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin SlideToggle($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: SlideToggle $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: SlideToggle $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: SlideToggle $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes SlideToggle {
+          0% {
+               transform: translateX(0);
+          }
+          50% {
+               transform: translateX(-100%);
+               visibility: hidden;
+          }
+          100% {
+               transform: translateX(0);
+               visibility: visible;
+          }
+     }
+}
+@mixin SlideInFromLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: SlideInFromLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: SlideInFromLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: SlideInFromLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes SlideInFromLeft {
+          0% {
+               transform: translateX(-100%);
+               visibility: visible;
+          }
+          100% {
+               transform: translateX(0);
+          }
+     }
+}
+
+// Zoom, ZoomIn, ZoomInDown, ZoomInLeft, ZoomInRight, ZoomInUp, ZoomOut, ZoomOutDown, ZoomOutLeft, ZoomOutRight, ZoomOutUp, ZoomOutLeft, ZoomOutRight
+
+@mixin Zoom($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Zoom $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Zoom {
+          0% {
+               transform: scale(0);
+          }
+          100% {
+               transform: scale(1);
+          }
+     }
+}
+@mixin ZoomIn($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomIn {
+          0% {
+               transform: scale(0);
+               visibility: visible;
+          }
+          100% {
+               transform: scale(1);
+          }
+     }
+}
+@mixin ZoomInDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomInDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomInDown {
+          0% {
+               transform: scale(0) translateY(-100%);
+               visibility: visible;
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin ZoomInLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomInLeft {
+          0% {
+               transform: scale(0) translateX(-100%);
+               visibility: visible;
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin ZoomInRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomInRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomInRight {
+          0% {
+               transform: scale(0) translateX(100%);
+               visibility: visible;
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin ZoomInUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomInUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomInUp {
+          0% {
+               transform: scale(0) translateY(100%);
+               visibility: visible;
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin ZoomOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOut {
+          0% {
+               transform: scale(1);
+          }
+          100% {
+               transform: scale(0);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutDown {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          100% {
+               transform: scale(0) translateY(100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutLeft {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          100% {
+               transform: scale(0) translateX(-100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutRight {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          100% {
+               transform: scale(0) translateX(100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutUp {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          100% {
+               transform: scale(0) translateY(-100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutUpBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutUpBig {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          100% {
+               transform: scale(1.5) translateY(-100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutDownBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutDownBig {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          100% {
+               transform: scale(1.5) translateY(100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutLeftBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutLeftBig {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          100% {
+               transform: scale(1.5) translateX(-100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutRightBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutRightBig {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          100% {
+               transform: scale(1.5) translateX(100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOut {
+          0% {
+               transform: scale(1);
+          }
+          100% {
+               transform: scale(0);
+               visibility: hidden;
+          }
+     }
+}
+
+// Pulse, PulseIn, PulseOut, PulseInOut, PulseOutIn, PulseInUp, PulseInDown, PulseInLeft, PulseInRight, PulseOutUp, PulseOutDown, PulseOutLeft,
+// PulseOutRight, PulseInOutUp, PulseInOutDown, PulseInOutLeft, PulseInOutRight, PulseOutInUp, PulseOutInDown, PulseOutInLeft, PulseOutInRight, 
+// PulseInfinite, PulseInfiniteIn, PulseInfiniteOut, PulseInfiniteInOut, PulseInfiniteOutIn, PulseInfiniteInUp, PulseInfiniteInDown, PulseInfiniteInLeft, PulseInfiniteInRight,
+// PulseInfiniteOutUp, PulseInfiniteOutDown, PulseInfiniteOutLeft, PulseInfiniteOutRight, PulseInfiniteInOutUp, PulseInfiniteInOutDown, PulseInfiniteInOutLeft, PulseInfiniteInOutRight,
+// PulseInfiniteOutInUp, PulseInfiniteOutInDown, PulseInfiniteOutInLeft, PulseInfiniteOutInRight, PulseInfiniteOutInDownRight, PulseInfiniteOutInDownLeft, PulseInfiniteOutInUpRight, PulseInfiniteOutInUpLeft
+@mixin Pulse($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Pulse $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Pulse $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: Pulse $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Pulse {
+          0% {
+               transform: scale(1);
+          }
+          50% {
+               transform: scale(1.1);
+          }
+          100% {
+               transform: scale(1);
+          }
+     }
+}
+@mixin PulseIn($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseIn $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseIn {
+          0% {
+               transform: scale(0);
+          }
+          50% {
+               transform: scale(1.1);
+          }
+          100% {
+               transform: scale(1);
+          }
+     }
+}
+@mixin PulseOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseOut $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseOut {
+          0% {
+               transform: scale(1);
+          }
+          50% {
+               transform: scale(1.1);
+          }
+          100% {
+               transform: scale(0);
+          }
+     }
+}
+@mixin PulseInOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInOut $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInOut {
+          0% {
+               transform: scale(0);
+          }
+          25% {
+               transform: scale(1.1);
+          }
+          50% {
+               transform: scale(1);
+          }
+          75% {
+               transform: scale(1.1);
+          }
+          100% {
+               transform: scale(0);
+          }
+     }
+}
+@mixin PulseOutIn($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseOutIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseOutIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseOutIn $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseOutIn {
+          0% {
+               transform: scale(1);
+          }
+          25% {
+               transform: scale(1.1);
+          }
+          50% {
+               transform: scale(0);
+          }
+          75% {
+               transform: scale(1.1);
+          }
+          100% {
+               transform: scale(1);
+          }
+     }
+}
+@mixin PulseInUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInUp {
+          0% {
+               transform: scale(0) translateY(100%);
+          }
+          50% {
+               transform: scale(1.1) translateY(-10%);
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin PulseInDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInDown {
+          0% {
+               transform: scale(0) translateY(-100%);
+          }
+          50% {
+               transform: scale(1.1) translateY(10%);
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin PulseInLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInLeft {
+          0% {
+               transform: scale(0) translateX(-100%);
+          }
+          50% {
+               transform: scale(1.1) translateX(10%);
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin PulseInRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInRight {
+          0% {
+               transform: scale(0) translateX(100%);
+          }
+          50% {
+               transform: scale(1.1) translateX(-10%);
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin PulseOutUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseOutUp {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          50% {
+               transform: scale(1.1) translateY(-10%);
+          }
+          100% {
+               transform: scale(0) translateY(-100%);
+          }
+     }
+}
+@mixin PulseOutDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseOutDown {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          50% {
+               transform: scale(1.1) translateY(10%);
+          }
+          100% {
+               transform: scale(0) translateY(100%);
+          }
+     }
+}
+@mixin PulseOutLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseOutLeft {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          50% {
+               transform: scale(1.1) translateX(-10%);
+          }
+          100% {
+               transform: scale(0) translateX(-100%);
+          }
+     }
+}
+@mixin PulseOutRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseOutRight {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          50% {
+               transform: scale(1.1) translateX(10%);
+          }
+          100% {
+               transform: scale(0) translateX(100%);
+          }
+     }
+}
+@mixin PulseInOutUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInOutUpPulseIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInOutUp {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          25% {
+               transform: scale(1.1) translateY(-10%);
+          }
+          50% {
+               transform: scale(1) translateY(0);
+          }
+          75% {
+               transform: scale(1.1) translateY(10%);
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin PulseInOutDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInOutDown {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          25% {
+               transform: scale(1.1) translateY(10%);
+          }
+          50% {
+               transform: scale(1) translateY(0);
+          }
+          75% {
+               transform: scale(1.1) translateY(-10%);
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin PulseInOutLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInOutLeft {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          25% {
+               transform: scale(1.1) translateX(-10%);
+          }
+          50% {
+               transform: scale(1) translateX(0);
+          }
+          75% {
+               transform: scale(1.1) translateX(10%);
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin PulseInOutRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInOutRight {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          25% {
+               transform: scale(1.1) translateX(10%);
+          }
+          50% {
+               transform: scale(1) translateX(0);
+          }
+          75% {
+               transform: scale(1.1) translateX(-10%);
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin PulseOutInUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseOutInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseOutInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseOutInUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseOutInUp {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          25% {
+               transform: scale(1.1) translateY(-10%);
+          }
+          50% {
+               transform: scale(0) translateY(-100%);
+          }
+          75% {
+               transform: scale(1.1) translateY(10%);
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin PulseOutInDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseOutInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseOutInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseOutInDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseOutInDown {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          25% {
+               transform: scale(1.1) translateY(10%);
+          }
+          50% {
+               transform: scale(0) translateY(100%);
+          }
+          75% {
+               transform: scale(1.1) translateY(-10%);
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin PulseOutInLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseOutInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseOutInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseOutInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseOutInLeft {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          25% {
+               transform: scale(1.1) translateX(-10%);
+          }
+          50% {
+               transform: scale(0) translateX(-100%);
+          }
+          75% {
+               transform: scale(1.1) translateX(10%);
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin PulseOutInRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseOutInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseOutInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseOutInRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseOutInRight {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          25% {
+               transform: scale(1.1) translateX(10%);
+          }
+          50% {
+               transform: scale(0) translateX(100%);
+          }
+          75% {
+               transform: scale(1.1) translateX(-10%);
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin PulseInfinite($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfinite $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfinite $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfinite $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfinite {
+          0% {
+               transform: scale(1);
+          }
+          50% {
+               transform: scale(1.1);
+          }
+          100% {
+               transform: scale(1);
+          }
+     }
+}
+@mixin PulseInfiniteUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteUp {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          50% {
+               transform: scale(1.1) translateY(-10%);
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin PulseInfiniteDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteDown {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          50% {
+               transform: scale(1.1) translateY(10%);
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin PulseInfiniteLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteLeft {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          50% {
+               transform: scale(1.1) translateX(-10%);
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin PulseInfiniteRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteRight {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          50% {
+               transform: scale(1.1) translateX(10%);
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin PulseInfiniteOutIn($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteOutIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteOutIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteOutIn $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteOutIn {
+          0% {
+               transform: scale(1);
+          }
+          25% {
+               transform: scale(1.1);
+          }
+          50% {
+               transform: scale(0);
+          }
+          75% {
+               transform: scale(1.1);
+          }
+          100% {
+               transform: scale(1);
+          }
+     }
+}
+@mixin PulseInfiniteOutInUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteOutInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteOutInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteOutInUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteOutInUp {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          25% {
+               transform: scale(1.1) translateY(-10%);
+          }
+          50% {
+               transform: scale(0) translateY(-100%);
+          }
+          75% {
+               transform: scale(1.1) translateY(10%);
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin PulseInfiniteOutInDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteOutInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteOutInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteOutInDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteOutInDown {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          25% {
+               transform: scale(1.1) translateY(10%);
+          }
+          50% {
+               transform: scale(0) translateY(100%);
+          }
+          75% {
+               transform: scale(1.1) translateY(-10%);
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin PulseInfiniteOutInLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteOutInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteOutInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteOutInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteOutInLeft {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          25% {
+               transform: scale(1.1) translateX(-10%);
+          }
+          50% {
+               transform: scale(0) translateX(-100%);
+          }
+          75% {
+               transform: scale(1.1) translateX(10%);
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin PulseInfiniteOutInRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteOutInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteOutInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteOutInRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteOutInRight {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          25% {
+               transform: scale(1.1) translateX(10%);
+          }
+          50% {
+               transform: scale(0) translateX(100%);
+          }
+          75% {
+               transform: scale(1.1) translateX(-10%);
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin PulseInfiniteOutInUpRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteOutInUpRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteOutInUpRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteOutInUpRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteOutInUpRight {
+          0% {
+               transform: scale(1) translateX(0) translateY(0);
+          }
+          25% {
+               transform: scale(1.1) translateX(10%) translateY(-10%);
+          }
+          50% {
+               transform: scale(0) translateX(100%) translateY(-100%);
+          }
+          75% {
+               transform: scale(1.1) translateX(-10%) translateY(10%);
+          }
+          100% {
+               transform: scale(1) translateX(0) translateY(0);
+          }
+     }
+}
+@mixin PulseInfiniteOutInUpLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteOutInUpLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteOutInUpLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteOutInUpLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteOutInUpLeft {
+          0% {
+               transform: scale(1) translateX(0) translateY(0);
+          }
+          25% {
+               transform: scale(1.1) translateX(-10%) translateY(-10%);
+          }
+          50% {
+               transform: scale(0) translateX(-100%) translateY(-100%);
+          }
+          75% {
+               transform: scale(1.1) translateX(10%) translateY(10%);
+          }
+          100% {
+               transform: scale(1) translateX(0) translateY(0);
+          }
+     }
+}
+@mixin PulseInfiniteOutInDownRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteOutInDownRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteOutInDownRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteOutInDownRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteOutInDownRight {
+          0% {
+               transform: scale(1) translateX(0) translateY(0);
+          }
+          25% {
+               transform: scale(1.1) translateX(10%) translateY(10%);
+          }
+          50% {
+               transform: scale(0) translateX(100%) translateY(100%);
+          }
+          75% {
+               transform: scale(1.1) translateX(-10%) translateY(-10%);
+          }
+          100% {
+               transform: scale(1) translateX(0) translateY(0);
+          }
+     }
+}
+@mixin PulseInfiniteOutInDownLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: infinite, $direction: normal, $fill: both, $playstate: running) {
+     animation: PulseInfiniteOutInDownLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: PulseInfiniteOutInDownLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: PulseInfiniteOutInDownLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes PulseInfiniteOutInDownLeft {
+          0% {
+               transform: scale(1) translateX(0) translateY(0);
+          }
+          25% {
+               transform: scale(1.1) translateX(-10%) translateY(10%);
+          }
+          50% {
+               transform: scale(0) translateX(-100%) translateY(100%);
+          }
+          75% {
+               transform: scale(1.1) translateX(10%) translateY(-10%);
+          }
+          100% {
+               transform: scale(1) translateX(0) translateY(0);
+          }
+     }
+}
+
+// RubberBand
+@mixin RubberBand($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: RubberBand $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: RubberBand $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: RubberBand $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes RubberBand {
+          0% {
+               transform: scale(1);
+          }
+          30% {
+               transform: scale(1.25) rotate(3deg);
+          }
+          40% {
+               transform: scale(0.75) rotate(-3deg);
+          }
+          50% {
+               transform: scale(1.15) rotate(2deg);
+          }
+          65% {
+               transform: scale(0.95) rotate(-2deg);
+          }
+          75% {
+               transform: scale(1.05) rotate(1deg);
+          }
+          100% {
+               transform: scale(1) rotate(0);
+          }
+     }
+}
+// Hinge
+@mixin Hinge($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Hinge $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Hinge $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: Hinge $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Hinge {
+          0% {
+               transform: rotate(0);
+          }
+          20% {
+               transform: rotate(80deg);
+          }
+          40% {
+               transform: rotate(60deg);
+          }
+          60% {
+               transform: rotate(80deg);
+          }
+          80% {
+               transform: rotate(60deg);
+          }
+          100% {
+               transform: rotate(60deg);
+          }
+     }
+     
+}
+
+// Flash
+
+@mixin Flash($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Flash $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Flash $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: Flash $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Flash {
+          0%,
+          50%,
+          100% {
+               opacity: 1;
+          }
+          25%,
+          75% {
+               opacity: 0;
+          }
+     }
+}
+// Shake
+
+@mixin Shake($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Shake $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Shake $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: Shake $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Shake {
+           0% {
+               transform: translateX(0);
+          }
+          10%,
+          30%,
+          50%,
+          70%,
+          90% {
+               transform: translateX(-10px);
+          }
+          20%,
+          40%, 45% {
+               transform: translateX(10px);
+          }
+          55%, 45% {
+               transform: translateX(-10px);
+          }
+          60%, 45% {
+               transform: translateX(10px);
+          }
+          80%, 45% {
+               transform: translateX(-10px);
+          }
+          100% {
+               transform: translateX(0);
+          }
+     }
+}
+// Swing
+@mixin Swing($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Swing $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Swing $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: Swing $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Swing {
+          20% {
+               transform: rotate(15deg);
+          }
+          40% {
+               transform: rotate(-10deg);
+          }
+          60% {
+               transform: rotate(5deg);
+          }
+          80% {
+               transform: rotate(-5deg);
+          }
+          100% {
+               transform: rotate(0deg);
+          }
+     }
+}
+// Tada
+
+@mixin Tada($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Tada $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Tada $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: Tada $duration $timing $delay $iteration $direction $fill $playstate;
+     -ms-animation: Tada $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Tada {
+          0% {
+               transform: scale(1);
+          }
+          10%, 45% {
+               transform: scale(0.9) rotate(-3deg);
+          }
+          20%, 55% {
+               transform: scale(0.9) rotate(-3deg);
+          }
+          30%, 50%, 70%, 90% {
+               transform: scale(1.1) rotate(3deg);
+          }
+          40%, 60%, 80% {
+               transform: scale(1.1) rotate(-3deg);
+          }
+          50%, 70%, 90% {
+               transform: scale(1.1) rotate(3deg);
+          }
+          100% {
+               transform: scale(1) rotate(0);
+          }
+     }
+}
+// Wobble
+@mixin Wobble($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Wobble $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Wobble $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: Wobble $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Wobble {
+          0% {
+               transform: translateX(0);
+          }
+          15% {
+               transform: translateX(-25%) rotate(-5deg);
+          }
+          30% {
+               transform: translateX(20%) rotate(3deg);
+          }
+          45% {
+               transform: translateX(-15%) rotate(-3deg);
+          }
+          60% {
+               transform: translateX(10%) rotate(2deg);
+          }
+          75% {
+               transform: translateX(-5%) rotate(-1deg);
+          }
+          100% {
+               transform: translateX(0);
+          }
+     }
+}    
+
+// Jello
+@mixin Jello($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Jello $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: Jello $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: Jello $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Jello {
+          0% {
+               transform: scale(1);
+          }
+          11.1% {
+               transform: scale(1.25) skewX(-12.5deg) skewY(-12.5deg);
+          }
+          22.2% {
+               transform: scale(0.75) skewX(6.25deg) skewY(6.25deg);
+          }
+          33.3% {
+               transform: scale(1.15) skewX(-3.125deg) skewY(-3.125deg);
+          }
+          44.4% {
+               transform: scale(0.85) skewX(1.5625deg) skewY(1.5625deg);
+          }
+          55.5% {
+               transform: scale(1.05) skewX(-0.78125deg) skewY(-0.78125deg);
+          }
+          66.6% {
+               transform: scale(0.95) skewX(0.390625deg) skewY(0.390625deg);
+          }
+          77.7% {
+               transform: scale(1.02) skewX(-0.1953125deg) skewY(-0.1953125deg);
+          }
+          88.8% {
+               transform: scale(0.99) skewX(0.09765625deg) skewY(0.09765625deg);
+          }
+          100% {
+               transform: scale(1);
+          }
+     }
+}
+
+// JackInTheBox
+@mixin JackInTheBox($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: JackInTheBox $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: JackInTheBox $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: JackInTheBox $duration $timing $delay $iteration $direction $fill $playstate;
+     -ms-animation: JackInTheBox $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes JackInTheBox {
+          0% {
+               opacity: 0;
+               transform: scale(0.1) rotate(30deg);
+               transform-origin: center bottom;
+          }
+          50% {
+               transform: rotate(-10deg);
+          }
+          70% {
+               transform: rotate(3deg);
+          }
+          100% {
+               opacity: 1;
+               transform: scale(1);
+          }
+     }
+}
+
+
+

@@ -1,5 +1,5 @@
 // Import all variables from the _vars.scss file
-@import "./vars";
+@import "./vars", "./myanimate.scss";
 
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
@@ -21,8 +21,7 @@ h2, h3, h4, h5, h6 {
 
 /* BARRE DE NAVIGATION  AND DROPDOWN MENU*/
 nav {
-     width: 100%;
-     padding: 0 5rem;
+     padding: .5rem 5rem;
      background-color: $darkgray;
 
      .navbar__menu {
@@ -60,31 +59,46 @@ nav {
                position: relative;
                display: inline-flex;
 
+               a.menu__link--presta {
+                    @extend .menu__link;
+               }
+
                .navbar__dropdown__content {
                     display: none; /* PAR DEFAUT, ON CACHE LE MENU DROPDOWN */
+                    min-width: 12rem;
+                    margin-top: 2rem;
+                    padding: 0.5rem 0;
                     position: absolute;
                     background-color: $darkgray;
-                    min-width: 160px;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                    z-index: 1;
-                    padding: 0.5rem 0;
-                    margin-top: 2rem;
                     transition: all 0.5s ease-in-out;
                     animation: ring2 0.3s ease-in-out;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
                     
-
-                    a.menu__link {
+                    a.submenu__link {
+                         display: block;
+                         font-weight: 400;
+                         font-size: 1.2rem;
                          color: $text-color;
                          padding: 0.5rem 1rem;
                          text-decoration: none;
-                         display: block;
-                         font-size: 1.2rem;
                          font-family: $font-segoe;
-                         font-weight: 400;
+                         text-transform: uppercase;
                          transition: all 0.3s ease-in-out;
+                         border-bottom: 1px solid $text-color;
+
+                         &:last-child {
+                              border-bottom: none;
+                         }
 
                          &:hover {
                               color: $red;
+                              text-transform: uppercase;
+                              border-bottom: 1px solid $red;
+
+                              &:last-child {
+                                   border-bottom: none;
+                              }
                          }
                     }
 
@@ -115,15 +129,15 @@ nav {
                     }
                }
 
+               /* AFFICHAGE DU MENU DROPDOWN AU SURVOLE DE LA SOURIS */
+               &:hover .navbar__dropdown__content {
+                    display: block;
+                    transition: all 0.5s ease-in-out;
+                    @include SlideToggle(); 
+               }
                
           }
           
-          /* AFFICHAGE DU MENU DROPDOWN AU SURVOLE DE LA SOURIS */
-          &:hover .navbar__dropdown__content {
-               display: block;
-               transition: all 0.5s ease-in-out;
-               animation: ring 0.3s ease-in-out 0s 1 normal forwards;
-          }
      }
      .card__button {
           background-color: $red;
@@ -146,196 +160,6 @@ nav {
           }
      }
 }
-
-/*  Keyframes SlideDown */
-
-@keyframes slideDown {
-     0% {
-          transform: translateY(-100%);
-          opacity: 0;
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          transform: translateY(0);
-          opacity: 1;
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-@keyframes slideUp {
-     0% {
-          transform: translateY(0);
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          transform: translateY(100%); 
-          opacity: 1;
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-@keyframes slideLeft {
-     0% {
-          transform: translateX(-100%);
-          opacity: 0;
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          transform: translateX(0);
-          opacity: 1;
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-@keyframes slideRight {
-     0% {
-          transform: translateX(100%);
-          opacity: 0;
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          transform: translateX(0);
-          opacity: 1;
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-@keyframes fadeDown {
-    0% {
-          opacity: 0;
-          transform: translateY(-100%);
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          opacity: 1;
-          transform: translateY(0);
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-@keyframes fadeUp {
-    0% {
-          opacity: 0;
-          transform: translateY(100%);
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          opacity: 1;
-          transform: translateY(0);
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-@keyframes fadeUpOut {
-    0% {
-          opacity: 1;
-          transform: translateY(0);
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          opacity: 0;
-          transform: translateY(-100%);
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-@keyframes flipe {
-     0% {
-          transform: rotateY(0deg);
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          transform: rotateY(180deg);
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-@keyframes flipe2 {
-     0% {
-          transform: rotateY(180deg);
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          transform: rotateY(0deg);
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-@keyframes slideToggle {
-     0% {
-          transform: translateY(100%);
-          opacity: 0;
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          transform: translateY(0%);
-          opacity: 1;
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-@keyframes ring {
-     0% {
-          transform: scale(0);
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          transform: scale(1);
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-@keyframes ring2 {
-     0% {
-          transform: scale(1);
-          transition: all 0.5s ease-in-out;
-     }
-     100% {
-          transform: scale(0);
-          transition: all 0.5s ease-in-out;
-     }
-}
-
-/*  Navbar dropdown */
-// .dropdown {
-//      .dropdown__link {
-//           position: relative;
-//           display: inline-block;
-//           margin-left: 1rem;
-          
-//           .navbar__dropdown__content {
-//                display: none;
-//                position: absolute;
-//                background-color: $darkgray;
-//                min-width: 160px;
-//                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-//                z-index: 1;
-//                padding: 0.5rem 0;
-//                border-radius: 0.5rem;
-
-//                a.menu__link {
-//                     color: $text-color;
-//                     padding: 0.5rem 1rem;
-//                     text-decoration: none;
-//                     display: block;
-//                     font-size: 1.2rem;
-//                     font-family: $font-segoe;
-//                     font-weight: 400;
-//                     transition: all 0.3s ease-in-out;
-
-//                     &:hover {
-//                          background-color: $red;
-//                          color: $white;
-//                     }
-//                }
-//           }
-//      }
-
-
-//      &:hover .navbar__dropdown__content {
-//           display: block;
-//      }
-// }
 
 /* CAROUSEL */
 .card__carousel {
@@ -782,18 +606,8 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* Media query */
-// @media (max-width: 768px) {
+@media (max-width: 768px) {
 //      .d-flex{
 //           flex-wrap: wrap;
 //           justify-content: center;
@@ -817,10 +631,10 @@ nav {
 //      button[type="submit"] {
 //           padding: 0.5rem 1rem;
 //      }
-// }
+}
 
 /* Apple watch */
-// @media screen and (max-width: 162px) {
+@media screen and (max-width: 162px) {
 //      .container {
 //           flex-direction: column;
 //      }
@@ -832,26 +646,26 @@ nav {
 //       h1 {
 //           font-size: 0.8rem;
 //      }
-// }
+}
 
 /* Taille des mobiles */
-// @media screen and (min-width: 320px) and (max-width: 768px) {
-//      .container {
-//           flex-direction: column;
-//      }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+     .container {
+          flex-direction: column;
+     }
 
-//      .d-flex {
-//           width: 100%;
-//      }
+     .d-flex {
+          width: 100%;
+     }
 
-//      h1 {
-//           font-size: 0.8rem;
-//      }
-// }
+     h1 {
+          font-size: 0.8rem;
+     }
+}
 
 /* Taille des tablets */
 
-// @media screen and (min-width: 768px) and (max-width:884px) {
+@media screen and (min-width: 768px) and (max-width:884px) {
 //      .container {
 //           flex-direction: column;
 //      }
@@ -863,4 +677,19 @@ nav {
 //      h1 {
 //           font-size: 0.8rem;
 //      }
-// }
+}
+
+/* Taille des desktops */
+@media screen and (min-width: 884px) and (max-width: 1024px) {
+     .container {
+         flex-direction: column;
+     }
+
+     .d-flex {
+          width: 100%;
+     }
+
+     h1 {
+          font-size: 0.8rem;
+     }
+}

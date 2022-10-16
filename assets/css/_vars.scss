@@ -59,3 +59,32 @@ $spacing: 1rem;
 }
 
 /* Utilisation de la fonction size */
+
+
+// Fonction pour définir dynamiquement la largeur d'un élément
+@mixin ElementWidth($width) {
+     @if $width is defined {
+          width: $width; 
+     }
+     // Sinon aucune taille n'est définie on ne fait rien
+     @else {
+          width: auto;
+     }
+}
+
+// Fonction pour définir dynamiquement la hauteur d'un élément
+@mixin ElementHeight($height) {
+     @if $height is defined {
+          height: $height;
+     }
+     // Sinon aucune taille n'est définie on ne fait rien
+     @else {
+          height: auto;
+     }
+}
+
+// Utilisation de la fonction size
+// .element {
+//      @include ElementWidth(100%);
+// }
+
