@@ -66,11 +66,20 @@ nav {
 
                a.menu__link--presta {
                     @extend .menu__link;
+                    
+                    // On ajoute le l'icon fa-angle-down
+                    &:after {
+                         content: "\f107";
+                         font-family: "Font Awesome 6 Free";
+                         font-weight: 900;
+                         font-size: 1rem;
+                         margin-left: 0.5rem;
+                    }
                }
 
                .navbar__dropdown__content {
                     display: none; /* PAR DEFAUT, ON CACHE LE MENU DROPDOWN */
-                    min-width: 12rem;
+                    width: 12rem;
                     margin-top: 2rem;
                     padding: 0.5rem 0;
                     position: absolute;
@@ -869,33 +878,36 @@ nav {
                               padding: .6rem .3rem;
                               letter-spacing: 0.01rem;
                               font-family: $font-segoe;
-                              transition: all 0.3s ease-in-out;
+                              transition: all 0.3s ease-in-out 0.1s forwards;
                               animation: translate(-50%, -50%);
 
                               &:hover {
                                    outline: 0;
-                                   transition: all 0.3s ease-in-out;
+                                   transition: all 0.3s ease-in-out 0.1s forwards;
                               }
-
                          }   
-                         // On cache l'icon fa-chevron-right
-                         .fa-chevron-right {
+
+                         // On cache l'icon fa-circle-chevron-right
+                         .fa-circle-chevron-right {
                               position: relative;
                               display: inline-block;
                               top: 0px;
-                              left: -1px;
-                              transition: transform 0.3s ease-in-out;
+                              left: -5px;
+                              opacity: 0;
+                              transition: all 0.5s ease-in-out 0s;
                               z-index: 1;
                          }
 
                          // Si on passe la souris sur le bouton, on fait apparaitre l'icon fa-chevron-right 
-                         button:hover .fa-chevron-right {
+                         button:hover .fa-circle-chevron-right {
+                              font-weight: 900;
+                              opacity: 1;
                               display: inline-block;
                               transform: translateX(10px);
-                              transition: transform 0.3s ease-in-out;
+                              transition: all 0.5s ease-in-out 0s; 
                          }                      
                          button:hover {
-                              transition: transform 0.3s ease-in-out;
+                              transition: all 0.5s ease-in-out 0s;
                          }                      
                     }
 
@@ -990,16 +1002,21 @@ nav {
                text-decoration: none;
                transition: all 0.3s ease-in-out;
 
-               &:hover {
-                    color: $red;
-               }                         
+               &::before {
+                    content: "\f106 ";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    font-size: 1rem;
+                    margin-left: 0;
+               }                        
           }
 
           &:hover {
+               color: $white;
+               animation: translateY(10px);
                transition: all 0.3s ease-in-out;
           }
      }
-
 }
 
 
@@ -1049,17 +1066,206 @@ nav {
 }
 
 /* Taille des mobiles */
-@media screen and (min-width: 320px) and (max-width: 768px) {
-     .container {
-          width: 100%;
+@media screen and (min-width: 162px) and (max-width: 768px) {
+     .container-fluid, .container, .d-flex {
+          max-width: 100%;
+          flex-direction: column;
      }
 
-     .d-flex {
-          width: 100%;
+     nav {
+         padding: 0 1rem;
+         flex-direction: column;;
+
+         .logo {
+               width: 100%;
+               padding: 0;
+          }
+     
+          .navbar__menu {
+               width: 100%;
+               margin-top: 1rem;
+
+               a.menu__link {
+                    display: block;
+                    text-align: left;
+
+                    &:first-child {
+                         margin-left: 1rem;
+                         color: $red !important;
+                    }                                                                                                                   
+               }
+               
+               /* MENU DROPDOWN */
+               .dropdown {
+                    margin-left: 0;
+                    a.menu__link--presta {
+                         margin-left: 0;
+                         
+                         // On ajoute le l'icon fa-angle-down
+                         &:after {
+                              content: "\f107";
+                              font-family: "Font Awesome 6 Free";
+                              font-weight: 900;
+                              font-size: 1rem;
+                         }
+                    }
+
+                    .navbar__dropdown__content {
+                         a.submenu__link {
+                              padding: 0.5rem 1rem;
+
+                         }
+
+                    }
+
+                    a.menu__link {
+
+                         &:first-child {
+                              margin-left: 1rem;
+                              color: $text-color !important;
+                         }
+
+                         &:hover {
+                              color: $red !important;
+                         }
+
+                         &:hover .navbar__dropdown__content {
+                              display: block;
+                         }
+                    }
+
+                    /* AFFICHAGE DU MENU DROPDOWN AU SURVOLE DE LA SOURIS */
+                    &:hover .navbar__dropdown__content {
+                         margin-top: 2.5rem;
+                         width: 23.9rem;
+                         box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+                    }
+                    
+               }
+               
+          }
+          .card__button {
+               width: 100%;
+               margin-top: 1rem;
+               padding: .8rem .8rem;
+
+               a.button__link {
+                    margin: 0;
+               }
+          }
      }
 
-     h1, h2, h3, h4, h5, h6 {
-          font-size: 1.5rem;
+     .card__carousel {          
+          .carousel__img { 
+               .carousel__text {
+                    width: 100%;
+                    top: 50%;
+                    left: 46%;
+                    text-align: center;
+                    .carousel__text--title {
+                         font-size: 1.8rem;
+                         word-wrap: break-word;
+                         font-family: $font-segoe;
+                         letter-spacing: 0;
+                         margin-bottom: 1rem;
+                         opacity: 1;
+                    }
+                    .contact {
+                         .fa-map-marker-alt, .fa-phone {
+                              color: $red;
+                              font-size: 1.2rem;
+
+                         }
+                         a {
+                              text-decoration: none;
+                              color: $white;
+                              font-size: 2rem;
+                         }
+                         span {
+                              font-size: 1rem;
+                              font-family: $font-segoe;
+                              font-weight: bold;
+                         }
+                    }
+               }
+          }
+     }
+     .card__about__exp {
+          width: 100%;
+          padding: 0;
+          margin-top: 0.1rem;
+          
+          .card__about__exp--img {
+               width: 100%;
+               padding-left: 0;
+               .year {
+                    top: 76.1%;
+                    left: 0%;
+                    padding: 1rem;
+                         
+                    h1.year__title {
+                         font-size: 1.2rem;
+                         margin-left: 1rem;
+                    }
+                    .year__text {
+                         color: $white;
+                         font-family: 'Anton', sans-serif;
+                         font-size: 1.2rem;
+                         letter-spacing: 0.1rem;
+                         font-weight: 200;
+                         margin-left: 1rem;
+                         text-transform: uppercase;
+                         transition: all 0.3s ease-in-out;
+                    }
+               }
+          }
+          
+          .card__about__exp--details {
+               margin: 1rem 0;
+               span.title__text {
+                    color: $red;
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+               }
+               .card__about__exp__details--text {
+                    h3.details__title {
+                         color: $white;
+                         font-size: 1.5rem;
+                         margin-left: 1rem;
+                    }  
+                    p{
+                         color: $text-color;
+                         font-size: 1.3rem;
+                         margin-left: 1rem;
+                         letter-spacing: 0.1rem;
+                         font-weight: normal;
+                         transition: all 0.3s ease-in-out;
+                    }
+                    
+                    p:not(:last-child) {
+                         margin-top: 2rem;
+                         margin-bottom: 2rem;
+                    }
+                    p:not(:first-child) {
+                         margin-top: 2rem;
+                         margin-bottom: 2rem;
+                    }
+               
+               }
+               .card__about__exp--story {
+                    .card__about__story--since {
+                         margin-left: 1rem;
+                    
+                         h3.since__title {
+                              font-size: 1.5rem;
+                         }
+                         p.since__text {
+                              font-size: 1.2rem;
+                         }
+                         
+                    }
+               }
+          }
      }
 }
 
