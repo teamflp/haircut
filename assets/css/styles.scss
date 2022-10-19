@@ -217,10 +217,16 @@ nav {
                          margin-right: 0.5rem;
                     }
 
-                    span {
+                    a.tel {
+                         text-decoration: none;
                          color: $white;
                          font-size: 1.5rem;
-                         margin-right: 0.5rem;
+                    }
+                    span {
+                         font-size: 1.5rem;
+                         color: $white;
+                         font-family: $font-segoe;
+                         font-weight: bold;
                     }
                }
           }
@@ -272,22 +278,19 @@ nav {
      }
      
      .card__about__exp--details {
-          span.title__text {
+          .title__text {
                color: $red;
                font-size: 2rem;
-               margin-left: 1rem;
-               padding: 0 1rem 0 1rem;
+               padding: 0 1rem .5rem 1rem;
                text-align: center;
-               letter-spacing: 0.1rem;
                font-family: $font-segoe;
                background-color: $darkgray;
-               transition: all 0.3s ease-in-out;
-
           }
 
           .card__about__exp__details--text {
                h3.details__title {
                     color: $white;
+                    text-align: center;
                     font-size: 2.7rem;
                     margin-left: 1rem;
                     letter-spacing: 0.1rem;
@@ -313,12 +316,13 @@ nav {
                     margin-top: 2rem;
                     margin-bottom: 2rem;
                }
-          
           }
 
           .card__about__exp--story {
+               width: 100%;
                .card__about__story--since {
-                    margin-left: 1rem;
+                    width: 100%;
+                    margin: 1rem 0;
                
                     h3.since__title {
                          color: $white;
@@ -345,6 +349,7 @@ nav {
 
 /* SERVICES */
 .card__services {
+     margin: 0 1rem;
      span.title__text {
           color: $red;
           font-size: 2rem;
@@ -355,6 +360,10 @@ nav {
           letter-spacing: 0.1rem;
           background-color: $darkgray;
           transition: all 0.3s ease-in-out;
+     }
+
+     .mydiv {
+          margin: 5rem 0;
      }
 
      h3.services__title {
@@ -752,7 +761,7 @@ nav {
 /* FOOTER */
 .footer {
      margin-top: 6rem;
-     padding: 5rem 5rem 0 5rem;
+     padding: 5rem 5rem 0 1rem;
      background-color: $darkgray;
                
      .footer__block {
@@ -770,6 +779,7 @@ nav {
                     padding: 0;
                     margin: 0;
                     li {
+                         display: inline-block;
                          color: $text-color;
                          font-size: rem(15px);
                          letter-spacing: 0.01rem;
@@ -781,23 +791,12 @@ nav {
                          .fa-map-marker-alt, .fa-phone, .fa-envelope-open {
                               color: $red;
                               text-align: center;
-                              width: 2rem;
-                              margin-right: 1rem;
+                              width: auto;
+                              margin-right: 0;
                               font-size: rem(15px);
                               padding: .6rem 1.2rem .6rem .6rem;
                               background-color: $black;
-                         }
-
-                         a {
-                              color: $text-color;
-                              text-decoration: none;
-                              transition: all 0.3s ease-in-out;
-
-                              &:hover {
-                                   color: $red;
-                              }                         
-                         }
-
+                         }                 
                     }
                }
           }
@@ -810,7 +809,7 @@ nav {
                     margin: 0;
                     li {
                          color: $text-color;
-                         font-size: rem(15px);
+                         
                          letter-spacing: 0.01rem;
                          font-family: $font-segoe;
                          font-weight: normal;
@@ -818,6 +817,7 @@ nav {
                          transition: all 0.3s ease-in-out;
 
                          a {
+                              font-size: rem(20px);
                               color: $text-color;
                               text-decoration: none;
                               transition: all 0.3s ease-in-out;
@@ -827,8 +827,10 @@ nav {
                               }  
 
                               &::before {
-                                   content: " \f054  ";
-                                   color: $white;
+                                   content: " \f054 ";
+                                   font-family: "Font Awesome 5 Free";
+                                   font-weight: 900;
+                                   color: $text-color;
                               }                       
                          }
 
@@ -864,7 +866,7 @@ nav {
 
                          button {
                               width: 26%;
-                              top: 12%;
+                              top: 20%;
                               left: 72%;
                               border: none;
                               outline: none;
@@ -875,7 +877,7 @@ nav {
                               font-weight: normal;
                               font-size: rem(15px);
                               background-color: $red;
-                              padding: .6rem .3rem;
+                              padding: .3rem .3rem;
                               letter-spacing: 0.01rem;
                               font-family: $font-segoe;
                               transition: all 0.3s ease-in-out 0.1s forwards;
@@ -1018,7 +1020,6 @@ nav {
           }
      }
 }
-
 
 /**************** Media query *********************/
 @media (max-width: 768px) {
@@ -1190,16 +1191,17 @@ nav {
                }
           }
      }
+
      .card__about__exp {
           width: 100%;
-          padding: 0;
+          padding: 5rem 0;
           margin-top: 0.1rem;
           
-          .card__about__exp--img {
+          .card__about__exp--img { 
                width: 100%;
                padding-left: 0;
                .year {
-                    top: 76.1%;
+                    top: 74%;
                     left: 0%;
                     padding: 1rem;
                          
@@ -1221,42 +1223,44 @@ nav {
           }
           
           .card__about__exp--details {
-               margin: 1rem 0;
-               span.title__text {
+               width: 100%;
+               padding: 0 0;
+
+               .title__text {
+                    width: 100%;
                     color: $red;
                     font-size: 1.5rem;
-                    margin-left: 1rem;
                }
                .card__about__exp__details--text {
                     h3.details__title {
                          color: $white;
-                         font-size: 1.5rem;
-                         margin-left: 1rem;
+                         font-size: 1.3rem;
+                         margin-left: 0;
                     }  
                     p{
                          color: $text-color;
                          font-size: 1.3rem;
-                         margin-left: 1rem;
+                         margin-left: 0;
                          letter-spacing: 0.1rem;
                          font-weight: normal;
                          transition: all 0.3s ease-in-out;
                     }
                     
                     p:not(:last-child) {
-                         margin-top: 2rem;
+                         margin-top: 1rem;
                          margin-bottom: 2rem;
                     }
                     p:not(:first-child) {
                          margin-top: 2rem;
                          margin-bottom: 2rem;
                     }
-               
                }
                .card__about__exp--story {
                     .card__about__story--since {
-                         margin-left: 1rem;
+                         margin-left: 0;
                     
                          h3.since__title {
+                              margin-top: -1rem;
                               font-size: 1.5rem;
                          }
                          p.since__text {
@@ -1264,6 +1268,532 @@ nav {
                          }
                          
                     }
+               }
+          }
+     }
+
+     /* SERVICES */
+     .card__services {
+          margin: 0;
+          span.title__text {
+               width: 100%;
+               color: $red;
+               font-size: 2rem;
+               margin-left: 0;
+               text-align: center;
+               padding: 0 1rem .5rem 1rem;
+               border: 1px solid red;
+          }
+
+          .mydiv {
+               width: 100%;
+               margin: -4rem 0;
+          }
+
+          h3.services__title {
+               color: $white;
+               font-size: 1.5rem;
+               margin-left: 0;
+               letter-spacing: 0.1rem;
+               text-transform: uppercase;
+               font-family: $font-family;
+               font-weight: normal;
+               transition: all 0.3s ease-in-out;
+          }
+
+          #card__services-items-2 {
+               margin-top: -3.5rem;
+
+          }
+
+          .card__services-items {
+               width: 100%;
+               margin: 5rem 0;
+
+               .services__items {
+                    width: 100%;
+                    margin-bottom: 0;
+                    padding: 2rem 1rem 4rem 0rem;
+                    
+                    h3.services__title {
+                         text-align: center;
+                         font-size: 1.8rem;
+                         margin-top: 2.5rem;
+                         letter-spacing: 0.1rem;
+                         font-family: $font-family;
+                    }
+
+                    p{
+                         text-align: center;
+                         font-size: 1.1rem;
+                         margin: 1rem .3rem;
+                         font-family: $font-segoe;
+                    }
+
+                    .services__footer {
+                         margin-top: 2rem;
+                         text-align: center;
+                         span.services__price {
+                              font-size: 1rem;
+                              font-family: $font-segoe;
+                         }
+                    }
+
+                    .services__img {
+                         top: 0;
+                    }
+               }
+          }
+
+          
+     }
+
+     /* PRICING */
+
+     #card__pricing  {
+          margin-top: -3.5rem;
+     }
+     .card__pricing {
+          .pricing {  
+               width: 100%;
+               padding: 2.5rem 0;
+               background-color: $darkgray; 
+
+               span.title__text {
+                    margin-left: 0;
+                    padding: .2rem 0 .3rem 1rem;
+               }
+
+               h3.pricing__title {
+                    color: $white;
+                    font-size: rem(26px);
+                    margin-left: 0;
+                    letter-spacing: 0.01rem;
+                    text-transform: uppercase;
+                    font-family: $font-family;
+               }
+
+               .price__items {
+                    padding-left: 0;
+                    .price__items--content {
+                         margin-bottom: 1rem;
+                         padding-bottom: 0.5rem;
+                         border-bottom: 1px solid $text-color;
+
+                         &:last-child {
+                              border-bottom: none;
+                         }
+
+                         .price__items--content--name {
+                              width: 19rem;
+                              color: $white;
+                              font-size: rem(12px);
+                              letter-spacing: 1px;
+                              font-weight: normal;
+                              font-family: $font-segoe;
+                              text-transform: uppercase;
+                              padding-left: .5rem;
+                         }
+
+                         .price__items--content--price {
+                              .price__title {
+                                   color: $red;
+                                   float: right;
+                                   width: 2.5rem;
+                                   margin-top: -1.8rem;
+                                   font-size: rem(20px);
+                                   padding-left: 0;
+                              }
+                         }
+                    }
+               }  
+          }
+
+     }
+
+     /* TEMOIGNAGES DES CLIENTS */
+     .card__temoins {
+          .temoins__header {
+               width: 100%;
+               text-align: center;
+
+               span.temoins__text {
+                    color: $red;
+                    letter-spacing: 0.1rem;
+               }
+
+               h3.temoins__header {
+                    color: $white;
+                    font-size: rem(25px);
+               }
+
+               h3.name__client {
+                    font-size: rem(20px);
+                    @extend .temoins__header;
+               }
+
+               p.profession {
+                    color: $red;
+                    font-family: $font-segoe;
+               }
+
+               .card__temoins--text {
+                    color: $white;
+                    font-size: rem(15px);
+                    letter-spacing: 0.01rem;
+                    font-family: $font-segoe;
+                    font-weight: normal;
+                    transition: all 0.3s ease-in-out;
+               }
+          }
+
+          .card__temoins--carousel {
+               display: flex;
+               display: inline-block;
+               flex-direction: row;
+               .temoins__carousel--items {
+                    margin-top: 1rem;
+                    flex-direction: row;
+
+                    img {
+                         outline: 10px solid $darkgray;
+                         transition: all 0.3s ease-in-out;
+
+                         &:hover {
+                         transform: scale(1.1);
+                         }
+
+                    }
+                    &:first-child, &:last-child {
+                         opacity: 25%;
+                         background-color: $white;
+                    }
+               }
+          }
+     }
+
+          /* HEURES D'OUVERTURE */
+     .card__open {
+          background-color: $darkgray;
+
+          .open__houre {
+               width: 100%;
+               padding: 1rem 1rem;
+
+               span.open__title {
+                    text-align: center;
+                    color: $red;
+                    padding: 0 1rem .5rem 1rem;
+                    font-size: rem(20px);
+                    letter-spacing: 0.01rem;
+                    font-family: $font-segoe;
+                    font-weight: normal;
+                    background-color: $black;
+                    transition: all 0.3s ease-in-out;
+               }
+
+               p.open__text {
+                    color: $white;
+                    text-align: center;
+                    font-size: rem(20px);
+                    letter-spacing: 0.01rem;
+                    text-transform: uppercase;
+                    font-family: $font-segoe;
+                    font-weight: normal;
+                    transition: all 0.3s ease-in-out;
+               }
+
+               .open__items {
+                    .open__items--content {
+                         display: flex;
+                         justify-content: space-between;
+                         align-items: center;
+                         padding: 1rem 0 1rem 0;
+                         border-bottom: 1px solid $text-color;
+
+                         &:last-child {
+                              border-bottom: none;
+                         }
+
+                         .open__items--content--text {
+                              color: $white;
+                              font-size: rem(15px);
+                              letter-spacing: 1px;
+                              font-weight: normal;
+                              font-family: $font-segoe;
+                              text-transform: uppercase;
+                              transition: all 0.3s ease-in-out;
+
+                              &[title] {
+                                   color: $red;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+
+          /* FOOTER */
+     .footer {
+          margin-top: 2rem;
+          padding: 1rem 1rem;
+          background-color: $darkgray;
+                    
+          .footer__block {
+               h3.contacts__title {
+                    font-size: rem(20px);
+               }
+               .footer__items--1 {
+                    ul {
+                         list-style: none;
+                         padding: 0;
+                         margin: 0 0 1rem 0;
+                         li {
+                              color: $text-color;
+                              font-size: rem(15px);
+                              letter-spacing: 0.01rem;
+                              font-family: $font-segoe;
+                              font-weight: normal;
+                              margin-top: .5rem;
+                              transition: all 0.3s ease-in-out;
+
+                              .fa-map-marker-alt, .fa-phone, .fa-envelope-open {
+                                   color: $red;
+                                   text-align: center;
+                                   width: 2rem;
+                                   margin-right: 1rem;
+                                   font-size: rem(15px);
+                                   padding: .6rem 1.2rem .6rem .6rem;
+                                   background-color: $black;
+                              }
+
+                              a {
+                                   color: $text-color;
+                                   text-decoration: none;
+                                   transition: all 0.3s ease-in-out;
+
+                                   &:hover {
+                                        color: $red;
+                                   }                         
+                              }
+
+                         }
+                    }
+               }
+
+               .footer__items--2{
+
+                    ul {
+                         list-style: none;
+                         padding: 0;
+                         margin: 0;
+                         li {
+                              color: $text-color;
+                              font-size: rem(15px);
+                              letter-spacing: 0.01rem;
+                              font-family: $font-segoe;
+                              font-weight: normal;
+                              margin-top: .5rem;
+                              transition: all 0.3s ease-in-out;
+
+                              a {
+                                   color: $text-color;
+                                   text-decoration: none;
+                                   transition: all 0.3s ease-in-out;
+
+                                   &:hover {
+                                        color: $red;
+                                   }  
+
+                                   &::before {
+                                        content: " \f054  ";
+                                        color: $white;
+                                   }                       
+                              }
+
+                         }
+                    }
+               }
+
+               .footer__items--3 {
+                    .contact__form {
+                         margin-top: 2rem;
+                         .form__group {
+                              margin-bottom: 1rem;
+                              position: relative;
+
+                              input {
+                                   width: 100%;
+                                   padding: 1rem 1rem;
+                                   border: none;
+                                   outline: none;
+                                   background-color: $white;
+                                   
+                                   color: $darkgray;
+                                   font-size: rem(15px);
+                                   letter-spacing: 0.01rem;
+                                   font-family: $font-segoe;
+                                   font-weight: normal;
+                                   transition: all 0.3s ease-in-out;
+
+                                   &::placeholder {
+                                        color: $text-color;
+                                   }
+                              }
+
+                              button {
+                                   width: 26%;
+                                   top: 12%;
+                                   left: 72%;
+                                   border: none;
+                                   outline: none;
+                                   color: $white;
+                                   cursor: pointer;
+                                   position: absolute;
+                                   pointer-events: all; /* Désactive le bouton */
+                                   font-weight: normal;
+                                   font-size: rem(15px);
+                                   background-color: $red;
+                                   padding: .6rem .3rem;
+                                   letter-spacing: 0.01rem;
+                                   font-family: $font-segoe;
+                                   transition: all 0.3s ease-in-out 0.1s forwards;
+                                   animation: translate(-50%, -50%);
+
+                                   &:hover {
+                                        outline: 0;
+                                        transition: all 0.3s ease-in-out 0.1s forwards;
+                                   }
+                              }   
+
+                              // On cache l'icon fa-circle-chevron-right
+                              .fa-circle-chevron-right {
+                                   position: relative;
+                                   display: inline-block;
+                                   top: 0px;
+                                   left: -5px;
+                                   opacity: 0;
+                                   transition: all 0.5s ease-in-out 0s;
+                                   z-index: 1;
+                              }
+
+                              // Si on passe la souris sur le bouton, on fait apparaitre l'icon fa-chevron-right 
+                              button:hover .fa-circle-chevron-right {
+                                   font-weight: 900;
+                                   opacity: 1;
+                                   display: inline-block;
+                                   transform: translateX(10px);
+                                   transition: all 0.5s ease-in-out 0s; 
+                              }                      
+                              button:hover {
+                                   transition: all 0.5s ease-in-out 0s;
+                              }                      
+                         }
+
+                         .contact__social {
+                              margin-top: 2rem;
+                              ul.socials {
+                                   width: 100%;
+                                   margin: 0;
+                                   padding: 0;
+                                   list-style: none;
+                                   align-items: flex-start;
+                                   justify-content: flex-start;
+
+                                   li.social__items {
+                                        width: 10%;
+                                        margin: .5rem 0;
+                                        padding: .5rem .5rem .5rem .8rem;
+                                        color: $text-color;
+                                        font-weight: normal;
+                                        font-size: rem(15px);
+                                        letter-spacing: 0.01rem;
+                                        background-color: $black;
+                                        font-family: $font-segoe;
+                                        transition: all 0.3s ease-in-out;
+
+                                        &:hover {
+                                             animation: scale(1.2) rotateY(360deg);
+                                        }  
+
+                                        a {
+                                             color: $red;
+                                             width: 100%;
+                                             text-decoration: none;
+                                             transition: all 0.3s ease-in-out;
+
+                                             &:hover {
+                                                  color: $white;
+                                             }                         
+                                        }
+                                   }                       
+                              }
+                         }
+                    }
+               }
+          }
+
+          .card__mentions {
+               margin-top: 5rem;
+               padding: 2rem 2rem;
+               font-size: 1rem;
+               font-family: $font-segoe;
+               color: $text-color;
+               background-color: $black;
+
+               a {
+                    color: $text-color;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                         color: $red;
+                    }                         
+               }
+
+               .right {
+                    text-align: end;
+
+                    a{
+                         padding: .5rem;
+                    }
+               }
+          }
+
+          .btn__top {
+               position: fixed;
+               bottom: 2rem;
+               right: 2rem;
+               width: 3rem;
+               height: 3rem;
+               border: none;
+               outline: none;
+               color: $white;
+               cursor: pointer;
+               text-align: center;
+               padding: .8rem .5rem .5rem .5rem;
+               background-color: $red;
+               transition: all 0.3s ease-in-out;
+               z-index: 999;
+
+               a {
+                    color: $white;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+
+                    &::before {
+                         content: "\f106 ";
+                         font-family: "Font Awesome 6 Free";
+                         font-weight: 900;
+                         font-size: 1rem;
+                         margin-left: 0;
+                    }                        
+               }
+
+               &:hover {
+                    color: $white;
+                    animation: translateY(10px);
+                    transition: all 0.3s ease-in-out;
                }
           }
      }
