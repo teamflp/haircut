@@ -147,7 +147,7 @@ nav {
                &:hover .navbar__dropdown__content {
                     display: block;
                     transition: all 0.5s ease-in-out;
-                    @include SlideInDown(0.5s); 
+                    @include Slide(0.5s); 
                }
                
           }
@@ -1067,7 +1067,7 @@ nav {
 }
 
 /* Taille des mobiles */
-@media screen and (min-width: 162px) and (max-width: 768px) {
+@media screen and (min-width: 360px) and (max-width: 768px) {
      .container-fluid, .container, .d-flex {
           max-width: 100%;
           flex-direction: column;
@@ -1282,7 +1282,6 @@ nav {
                margin-left: 0;
                text-align: center;
                padding: 0 1rem .5rem 1rem;
-               border: 1px solid red;
           }
 
           .mydiv {
@@ -1291,20 +1290,12 @@ nav {
           }
 
           h3.services__title {
-               color: $white;
                font-size: 1.5rem;
                margin-left: 0;
                letter-spacing: 0.1rem;
-               text-transform: uppercase;
-               font-family: $font-family;
-               font-weight: normal;
-               transition: all 0.3s ease-in-out;
           }
 
-          #card__services-items-2 {
-               margin-top: -3.5rem;
-
-          }
+          #card__services-items-2 { margin-top: -3.5rem;}
 
           .card__services-items {
                width: 100%;
@@ -1313,6 +1304,7 @@ nav {
                .services__items {
                     width: 100%;
                     margin-bottom: 0;
+                    border: 1px solid $text-color;
                     padding: 2rem 1rem 4rem 0rem;
                     
                     h3.services__title {
@@ -1347,9 +1339,59 @@ nav {
 
           
      }
+          /* BARBIERS */
+     .card__teams__barbers {
+          span.barbers__text {
+               font-size: rem(20px);
+               text-align: center;
+               margin-left: 0;
+               text-transform: capitalize;
+          }
+
+          h3.barbers__title {
+               font-size: rem(30px);
+               margin-left: 0;
+          }
+
+          .barbers__items {
+               display: inline-block;
+               .barbers__items--content {
+                    display: inline-block;
+                    width: 23.9%;
+                    text-align: center;
+
+                    .barbers__items--content--img {
+                         width: 100%;
+                    
+                         .box__socials {display: none;}
+
+                         img {
+                              &:hover {opacity: 1;}
+                         }
+                    }
+               
+                    .barbers__items--content--text {
+                         padding: .5em 0;
+                         
+                         text-align: center;
+                         background-color: $darkgray;
+                         h3.barbers__title {
+                              margin-left: -.2rem;
+                              font-size: rem(10px);
+                              font-weight: normal;
+                              letter-spacing: 0;
+                         }
+                         p {
+                              padding-top: .2rem;
+                              font-size: rem(10px);
+                              letter-spacing: 0;
+                         }
+                    }
+               }
+          }   
+     }
 
      /* PRICING */
-
      #card__pricing  {
           margin-top: -3.5rem;
      }
@@ -1366,11 +1408,10 @@ nav {
 
                h3.pricing__title {
                     color: $white;
-                    font-size: rem(26px);
+                    text-align: center;
+                    font-size: rem(25px);
                     margin-left: 0;
                     letter-spacing: 0.01rem;
-                    text-transform: uppercase;
-                    font-family: $font-family;
                }
 
                .price__items {
@@ -1380,28 +1421,36 @@ nav {
                          padding-bottom: 0.5rem;
                          border-bottom: 1px solid $text-color;
 
-                         &:last-child {
-                              border-bottom: none;
+                         &:last-child {border-bottom: none;}
+
+                         #prix-1 .price__title,
+                         #prix-2 .price__title,
+                         #prix-3 .price__title,
+                         #prix-4 .price__title,
+                         #prix-5 .price__title,
+                         #prix-6 .price__title,
+                         #prix-7 .price__title,
+                         #designation .price__title,
+                         #designation .price__title,
+                         #designation .price__title,
+                         #designation .price__title,
+                         #designation .price__title,
+                         #designation .price__title,
+                         #designation .price__title {
+                              font-size: rem(18px);
+                              padding-left: 1rem;
                          }
 
-                         .price__items--content--name {
-                              width: 19rem;
-                              color: $white;
-                              font-size: rem(12px);
-                              letter-spacing: 1px;
-                              font-weight: normal;
-                              font-family: $font-segoe;
-                              text-transform: uppercase;
-                              padding-left: .5rem;
-                         }
+                         .price__items--content--name {width: 100%;}
 
                          .price__items--content--price {
-                              .price__title {
+
+                              h3.price__title {
                                    color: $red;
                                    float: right;
-                                   width: 2.5rem;
+                                   font-weight: 600;
                                    margin-top: -1.8rem;
-                                   font-size: rem(20px);
+                                   margin-right: 1rem;
                                    padding-left: 0;
                               }
                          }
@@ -1448,41 +1497,44 @@ nav {
           }
 
           .card__temoins--carousel {
-               display: flex;
-               display: inline-block;
-               flex-direction: row;
+               width: 100%;
                .temoins__carousel--items {
+                    width: 25%;
+                    display: inline-block;
                     margin-top: 1rem;
-                    flex-direction: row;
 
                     img {
                          outline: 10px solid $darkgray;
                          transition: all 0.3s ease-in-out;
-
-                         &:hover {
-                         transform: scale(1.1);
-                         }
-
                     }
                     &:first-child, &:last-child {
-                         opacity: 25%;
+                         opacity: 20%;
                          background-color: $white;
                     }
                }
           }
      }
 
-          /* HEURES D'OUVERTURE */
+     /* HEURES D'OUVERTURE */
+     #card__open {margin-top: 2rem;}
      .card__open {
           background-color: $darkgray;
 
           .open__houre {
                width: 100%;
                padding: 1rem 1rem;
-
+               
+               #open__title {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    align-items: center;
+                    align-content: center;
+               }
                span.open__title {
-                    text-align: center;
                     color: $red;
+                    margin: auto;
+                    text-align: center;
+                    border: $border-r;
                     padding: 0 1rem .5rem 1rem;
                     font-size: rem(20px);
                     letter-spacing: 0.01rem;
@@ -1536,12 +1588,16 @@ nav {
           /* FOOTER */
      .footer {
           margin-top: 2rem;
-          padding: 1rem 1rem;
+          padding: 1rem 0;
           background-color: $darkgray;
                     
           .footer__block {
                h3.contacts__title {
+                    margin-top: 2rem;
+                    padding-top: 1rem;
+                    text-align: center;
                     font-size: rem(20px);
+                    border-top: 1px solid $text-color;
                }
                .footer__items--1 {
                     ul {
@@ -1625,98 +1681,46 @@ nav {
                               input {
                                    width: 100%;
                                    padding: 1rem 1rem;
-                                   border: none;
-                                   outline: none;
-                                   background-color: $white;
-                                   
-                                   color: $darkgray;
-                                   font-size: rem(15px);
-                                   letter-spacing: 0.01rem;
-                                   font-family: $font-segoe;
-                                   font-weight: normal;
-                                   transition: all 0.3s ease-in-out;
-
-                                   &::placeholder {
-                                        color: $text-color;
-                                   }
                               }
 
                               button {
-                                   width: 26%;
-                                   top: 12%;
-                                   left: 72%;
-                                   border: none;
-                                   outline: none;
-                                   color: $white;
-                                   cursor: pointer;
-                                   position: absolute;
-                                   pointer-events: all; /* Désactive le bouton */
-                                   font-weight: normal;
-                                   font-size: rem(15px);
-                                   background-color: $red;
-                                   padding: .6rem .3rem;
-                                   letter-spacing: 0.01rem;
-                                   font-family: $font-segoe;
-                                   transition: all 0.3s ease-in-out 0.1s forwards;
-                                   animation: translate(-50%, -50%);
-
-                                   &:hover {
-                                        outline: 0;
-                                        transition: all 0.3s ease-in-out 0.1s forwards;
-                                   }
+                                   width: 27%;
+                                   height: 3.3rem;
+                                   top: 0;
+                                   left: 73%;
+                                   padding: .5rem .4rem .3rem .3rem;
                               }   
 
                               // On cache l'icon fa-circle-chevron-right
                               .fa-circle-chevron-right {
-                                   position: relative;
-                                   display: inline-block;
-                                   top: 0px;
-                                   left: -5px;
-                                   opacity: 0;
-                                   transition: all 0.5s ease-in-out 0s;
-                                   z-index: 1;
+                                   display: none;
                               }
 
                               // Si on passe la souris sur le bouton, on fait apparaitre l'icon fa-chevron-right 
                               button:hover .fa-circle-chevron-right {
-                                   font-weight: 900;
-                                   opacity: 1;
-                                   display: inline-block;
-                                   transform: translateX(10px);
-                                   transition: all 0.5s ease-in-out 0s; 
-                              }                      
-                              button:hover {
-                                   transition: all 0.5s ease-in-out 0s;
-                              }                      
+                                   display: none;
+                              }                                            
                          }
 
                          .contact__social {
                               margin-top: 2rem;
+                              
                               ul.socials {
-                                   width: 100%;
+
                                    margin: 0;
                                    padding: 0;
                                    list-style: none;
-                                   align-items: flex-start;
-                                   justify-content: flex-start;
+                                   display: inline-block;
 
                                    li.social__items {
-                                        width: 10%;
-                                        margin: .5rem 0;
+                                        
+                                        margin: 0;
                                         padding: .5rem .5rem .5rem .8rem;
-                                        color: $text-color;
-                                        font-weight: normal;
-                                        font-size: rem(15px);
-                                        letter-spacing: 0.01rem;
-                                        background-color: $black;
-                                        font-family: $font-segoe;
-                                        transition: all 0.3s ease-in-out;
-
-                                        &:hover {
-                                             animation: scale(1.2) rotateY(360deg);
-                                        }  
+                                        border: $border-r; 
 
                                         a {
+                                             display: inline-block;
+                                             width: 100%;
                                              color: $red;
                                              width: 100%;
                                              text-decoration: none;
@@ -1734,29 +1738,13 @@ nav {
           }
 
           .card__mentions {
-               margin-top: 5rem;
-               padding: 2rem 2rem;
-               font-size: 1rem;
-               font-family: $font-segoe;
-               color: $text-color;
-               background-color: $black;
-
-               a {
-                    color: $text-color;
-                    text-decoration: none;
-                    transition: all 0.3s ease-in-out;
-
-                    &:hover {
-                         color: $red;
-                    }                         
-               }
+               margin-top: 1.5rem;
+               padding: 1rem ;
+               text-align: center;
 
                .right {
-                    text-align: end;
-
-                    a{
-                         padding: .5rem;
-                    }
+                    width: 100%;
+                    text-align: center;
                }
           }
 

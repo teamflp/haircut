@@ -1423,248 +1423,6 @@
      }
 }
 
-// Zoom, ZoomIn, ZoomInDown, ZoomInLeft, ZoomInRight, ZoomInUp, ZoomOut, ZoomOutDown, ZoomOutLeft, ZoomOutRight, ZoomOutUp, ZoomOutLeft, ZoomOutRight
-
-@mixin Zoom($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: Zoom $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes Zoom {
-          0% {
-               transform: scale(0);
-          }
-          100% {
-               transform: scale(1);
-          }
-     }
-}
-@mixin ZoomIn($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomIn {
-          0% {
-               transform: scale(0);
-               visibility: visible;
-          }
-          100% {
-               transform: scale(1);
-          }
-     }
-}
-@mixin ZoomInDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomInDown $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomInDown $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomInDown $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomInDown {
-          0% {
-               transform: scale(0) translateY(-100%);
-               visibility: visible;
-          }
-          100% {
-               transform: scale(1) translateY(0);
-          }
-     }
-}
-@mixin ZoomInLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomInLeft $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomInLeft $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomInLeft $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomInLeft {
-          0% {
-               transform: scale(0) translateX(-100%);
-               visibility: visible;
-          }
-          100% {
-               transform: scale(1) translateX(0);
-          }
-     }
-}
-@mixin ZoomInRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomInRight $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomInRight $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomInRight $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomInRight {
-          0% {
-               transform: scale(0) translateX(100%);
-               visibility: visible;
-          }
-          100% {
-               transform: scale(1) translateX(0);
-          }
-     }
-}
-@mixin ZoomInUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomInUp $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomInUp $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomInUp $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomInUp {
-          0% {
-               transform: scale(0) translateY(100%);
-               visibility: visible;
-          }
-          100% {
-               transform: scale(1) translateY(0);
-          }
-     }
-}
-@mixin ZoomOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomOut {
-          0% {
-               transform: scale(1);
-          }
-          100% {
-               transform: scale(0);
-               visibility: hidden;
-          }
-     }
-}
-@mixin ZoomOutDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomOutDown $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomOutDown $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomOutDown $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomOutDown {
-          0% {
-               transform: scale(1) translateY(0);
-          }
-          100% {
-               transform: scale(0) translateY(100%);
-               visibility: hidden;
-          }
-     }
-}
-@mixin ZoomOutLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomOutLeft {
-          0% {
-               transform: scale(1) translateX(0);
-          }
-          100% {
-               transform: scale(0) translateX(-100%);
-               visibility: hidden;
-          }
-     }
-}
-@mixin ZoomOutRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomOutRight $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomOutRight $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomOutRight $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomOutRight {
-          0% {
-               transform: scale(1) translateX(0);
-          }
-          100% {
-               transform: scale(0) translateX(100%);
-               visibility: hidden;
-          }
-     }
-}
-@mixin ZoomOutUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomOutUp $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomOutUp $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomOutUp $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomOutUp {
-          0% {
-               transform: scale(1) translateY(0);
-          }
-          100% {
-               transform: scale(0) translateY(-100%);
-               visibility: hidden;
-          }
-     }
-}
-@mixin ZoomOutUpBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomOutUpBig $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomOutUpBig $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomOutUpBig $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomOutUpBig {
-          0% {
-               transform: scale(1) translateY(0);
-          }
-          100% {
-               transform: scale(1.5) translateY(-100%);
-               visibility: hidden;
-          }
-     }
-}
-@mixin ZoomOutDownBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomOutDownBig {
-          0% {
-               transform: scale(1) translateY(0);
-          }
-          100% {
-               transform: scale(1.5) translateY(100%);
-               visibility: hidden;
-          }
-     }
-}
-@mixin ZoomOutLeftBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomOutLeftBig {
-          0% {
-               transform: scale(1) translateX(0);
-          }
-          100% {
-               transform: scale(1.5) translateX(-100%);
-               visibility: hidden;
-          }
-     }
-}
-@mixin ZoomOutRightBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomOutRightBig {
-          0% {
-               transform: scale(1) translateX(0);
-          }
-          100% {
-               transform: scale(1.5) translateX(100%);
-               visibility: hidden;
-          }
-     }
-}
-@mixin ZoomOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
-     animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
-     -webkit-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
-     -moz-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
-
-     @keyframes ZoomOut {
-          0% {
-               transform: scale(1);
-          }
-          100% {
-               transform: scale(0);
-               visibility: hidden;
-          }
-     }
-}
-
 // Pulse, PulseIn, PulseOut, PulseInOut, PulseOutIn, PulseInUp, PulseInDown, PulseInLeft, PulseInRight, PulseOutUp, PulseOutDown, PulseOutLeft,
 // PulseOutRight, PulseInOutUp, PulseInOutDown, PulseInOutLeft, PulseInOutRight, PulseOutInUp, PulseOutInDown, PulseOutInLeft, PulseOutInRight, 
 // PulseInfinite, PulseInfiniteIn, PulseInfiniteOut, PulseInfiniteInOut, PulseInfiniteOutIn, PulseInfiniteInUp, PulseInfiniteInDown, PulseInfiniteInLeft, PulseInfiniteInRight,
@@ -2643,6 +2401,247 @@
           100% {
                opacity: 1;
                transform: scale(1);
+          }
+     }
+}
+// Zoom, ZoomIn, ZoomInDown, ZoomInLeft, ZoomInRight, ZoomInUp, ZoomOut, ZoomOutDown, ZoomOutLeft, ZoomOutRight, ZoomOutUp, ZoomOutLeft, ZoomOutRight
+
+@mixin Zoom($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: Zoom $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes Zoom {
+          0% {
+               transform: scale(0);
+          }
+          100% {
+               transform: scale(1);
+          }
+     }
+}
+@mixin ZoomIn($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomIn $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomIn {
+          0% {
+               transform: scale(0);
+               visibility: visible;
+          }
+          100% {
+               transform: scale(1);
+          }
+     }
+}
+@mixin ZoomInDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomInDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomInDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomInDown {
+          0% {
+               transform: scale(0) translateY(-100%);
+               visibility: visible;
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin ZoomInLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomInLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomInLeft {
+          0% {
+               transform: scale(0) translateX(-100%);
+               visibility: visible;
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin ZoomInRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomInRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomInRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomInRight {
+          0% {
+               transform: scale(0) translateX(100%);
+               visibility: visible;
+          }
+          100% {
+               transform: scale(1) translateX(0);
+          }
+     }
+}
+@mixin ZoomInUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomInUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomInUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomInUp {
+          0% {
+               transform: scale(0) translateY(100%);
+               visibility: visible;
+          }
+          100% {
+               transform: scale(1) translateY(0);
+          }
+     }
+}
+@mixin ZoomOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOut {
+          0% {
+               transform: scale(1);
+          }
+          100% {
+               transform: scale(0);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutDown($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutDown $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutDown {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          100% {
+               transform: scale(0) translateY(100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutLeft($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutLeft $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutLeft {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          100% {
+               transform: scale(0) translateX(-100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutRight($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutRight $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutRight {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          100% {
+               transform: scale(0) translateX(100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutUp($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutUp $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutUp {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          100% {
+               transform: scale(0) translateY(-100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutUpBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutUpBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutUpBig {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          100% {
+               transform: scale(1.5) translateY(-100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutDownBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutDownBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutDownBig {
+          0% {
+               transform: scale(1) translateY(0);
+          }
+          100% {
+               transform: scale(1.5) translateY(100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutLeftBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutLeftBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutLeftBig {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          100% {
+               transform: scale(1.5) translateX(-100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOutRightBig($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOutRightBig $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOutRightBig {
+          0% {
+               transform: scale(1) translateX(0);
+          }
+          100% {
+               transform: scale(1.5) translateX(100%);
+               visibility: hidden;
+          }
+     }
+}
+@mixin ZoomOut($duration: 1s, $delay: 0s, $timing: ease-in-out, $iteration: 1, $direction: normal, $fill: both, $playstate: running) {
+     animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -webkit-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+     -moz-animation: ZoomOut $duration $timing $delay $iteration $direction $fill $playstate;
+
+     @keyframes ZoomOut {
+          0% {
+               transform: scale(1);
+          }
+          100% {
+               transform: scale(0);
+               visibility: hidden;
           }
      }
 }
