@@ -25,9 +25,14 @@ h2, h3, h4, h5, h6 {
 
 /* BARRE DE NAVIGATION  AND DROPDOWN MENU*/
 nav {
-     // width: ElemenWidth(100%); /* 100% */
-     padding: 0 5rem;
+     padding: 1rem 5rem;
      background-color: $darkgray;
+
+     .logo {          
+          .menu__hamburger {
+               display: none;
+          }
+     }
 
      .navbar__menu {
           margin-left: auto;
@@ -986,6 +991,7 @@ nav {
      .btn__top {
           position: fixed;
           bottom: 2rem;
+          top: 39.7rem;
           right: 2rem;
           width: 3rem;
           height: 3rem;
@@ -1067,7 +1073,739 @@ nav {
 }
 
 /* Taille des mobiles */
-@media screen and (min-width: 360px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
+     .container-fluid, .container, .d-flex {
+          flex-direction: column;
+     }
+
+     nav {
+         padding: 0;
+         flex-direction: column;
+
+         .logo {
+               width: 100%;
+               border: $border-r;
+
+               img.mylogo {
+                    width: 50%;
+                    border: $border-r;
+               }
+          }
+     
+          .navbar__menu {
+               padding-right: 1rem;
+
+               width: 100%;
+               margin-top: 1rem;
+
+               a.menu__link {
+                    display: block;
+                    text-align: left;
+
+                    &:first-child {
+                         margin-left: 1rem;
+                         color: $red !important;
+                    }                                                                                                                   
+               }
+               
+               /* MENU DROPDOWN */
+               .dropdown {
+                    margin-left: 0;
+                    a.menu__link--presta {
+                         margin-left: 0;
+                         
+                         // On ajoute le l'icon fa-angle-down
+                         &:after {
+                              content: "\f107";
+                              font-family: "Font Awesome 6 Free";
+                         }
+                    }
+
+                    .navbar__dropdown__content {
+                         width: 24.4rem;
+                         margin-top: 0rem;
+                         display: none;
+                         @include SlideInRight();
+
+                         a.submenu__link {
+                              padding: 0.5rem 1rem;
+                              font-weight: 600;
+                         }
+
+                    }
+
+                    a.menu__link {
+
+                         &:first-child {
+                              margin-left: 1rem;
+                              color: $text-color !important;
+                         }
+
+                         &:hover {
+                              color: $red !important;
+                         }
+
+                         &:hover .navbar__dropdown__content {
+                              display: block;
+                         }
+                    }
+
+                    /* AFFICHAGE DU MENU DROPDOWN AU SURVOLE DE LA SOURIS */
+                    &:hover .navbar__dropdown__content {
+                         @include SlideInLeft();
+                         margin-top: 2.5rem;
+                         box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+                    }
+                    
+               }
+               
+          }
+          .card__button {
+               width: 100%;
+               margin-top: 1rem;
+               padding: .8rem .8rem;
+
+               a.button__link {
+                    margin: 0;
+               }
+          }
+     }
+
+     .card__carousel {          
+          .carousel__img { 
+               .carousel__text {
+                    width: 100%;
+                    top: 50%;
+                    left: 46%;
+                    text-align: center;
+                    .carousel__text--title {
+                         font-size: 1.8rem;
+                         word-wrap: break-word;
+                         font-family: $font-segoe;
+                         letter-spacing: 0;
+                         margin-bottom: 1rem;
+                         opacity: 1;
+                    }
+                    .contact {
+                         .fa-map-marker-alt, .fa-phone {
+                              color: $red;
+                              font-size: 1.2rem;
+
+                         }
+                         a {
+                              text-decoration: none;
+                              color: $white;
+                              font-size: 2rem;
+                         }
+                         span {
+                              font-size: 1rem;
+                              font-family: $font-segoe;
+                              font-weight: bold;
+                         }
+                    }
+               }
+          }
+     }
+
+     .card__about__exp {
+          width: 100%;
+          padding: 5rem 0;
+          margin-top: 0.1rem;
+          
+          .card__about__exp--img { 
+               width: 100%;
+               padding-left: 0;
+               .year {
+                    top: 74%;
+                    left: 0%;
+                    padding: 1rem;
+                         
+                    h1.year__title {
+                         font-size: 1.2rem;
+                         margin-left: 1rem;
+                    }
+                    .year__text {
+                         color: $white;
+                         font-family: 'Anton', sans-serif;
+                         font-size: 1.2rem;
+                         letter-spacing: 0.1rem;
+                         font-weight: 200;
+                         margin-left: 1rem;
+                         text-transform: uppercase;
+                         transition: all 0.3s ease-in-out;
+                    }
+               }
+          }
+          
+          .card__about__exp--details {
+               width: 100%;
+               padding: 0 0;
+
+               .title__text {
+                    width: 100%;
+                    color: $red;
+                    font-size: 1.5rem;
+               }
+               .card__about__exp__details--text {
+                    h3.details__title {
+                         color: $white;
+                         font-size: 1.3rem;
+                         margin-left: 0;
+                    }  
+                    p{
+                         color: $text-color;
+                         font-size: 1.3rem;
+                         margin-left: 0;
+                         letter-spacing: 0.1rem;
+                         font-weight: normal;
+                         transition: all 0.3s ease-in-out;
+                    }
+                    
+                    p:not(:last-child) {
+                         margin-top: 1rem;
+                         margin-bottom: 2rem;
+                    }
+                    p:not(:first-child) {
+                         margin-top: 2rem;
+                         margin-bottom: 2rem;
+                    }
+               }
+               .card__about__exp--story {
+                    .card__about__story--since {
+                         margin-left: 0;
+                    
+                         h3.since__title {
+                              margin-top: -1rem;
+                              font-size: 1.5rem;
+                         }
+                         p.since__text {
+                              font-size: 1.2rem;
+                         }
+                         
+                    }
+               }
+          }
+     }
+
+     /* SERVICES */
+     .card__services {
+          margin: 0;
+          span.title__text {
+               width: 100%;
+               color: $red;
+               font-size: 2rem;
+               margin-left: 0;
+               text-align: center;
+               padding: 0 1rem .5rem 1rem;
+          }
+
+          .mydiv {
+               width: 100%;
+               margin: -4rem 0;
+          }
+
+          h3.services__title {
+               font-size: 1.5rem;
+               margin-left: 0;
+               letter-spacing: 0.1rem;
+          }
+
+          #card__services-items-2 { margin-top: -3.5rem;}
+
+          .card__services-items {
+               width: 100%;
+               margin: 5rem 0;
+
+               .services__items {
+                    width: 100%;
+                    margin-bottom: 0;
+                    border: 1px solid $text-color;
+                    padding: 2rem 1rem 4rem 0rem;
+                    
+                    h3.services__title {
+                         text-align: center;
+                         font-size: 1.8rem;
+                         margin-top: 2.5rem;
+                         letter-spacing: 0.1rem;
+                         font-family: $font-family;
+                    }
+
+                    p{
+                         text-align: center;
+                         font-size: 1.1rem;
+                         margin: 1rem .3rem;
+                         font-family: $font-segoe;
+                    }
+
+                    .services__footer {
+                         margin-top: 2rem;
+                         text-align: center;
+                         span.services__price {
+                              font-size: 1rem;
+                              font-family: $font-segoe;
+                         }
+                    }
+
+                    .services__img {
+                         top: 0;
+                    }
+               }
+          }
+
+          
+     }
+          /* BARBIERS */
+     .card__teams__barbers {
+          span.barbers__text {
+               font-size: rem(20px);
+               text-align: center;
+               margin-left: 0;
+               text-transform: capitalize;
+          }
+
+          h3.barbers__title {
+               font-size: rem(30px);
+               margin-left: 0;
+          }
+
+          .barbers__items {
+               display: inline-block;
+               .barbers__items--content {
+                    display: inline-block;
+                    width: 23.9%;
+                    text-align: center;
+
+                    .barbers__items--content--img {
+                         width: 100%;
+                    
+                         .box__socials {display: none;}
+
+                         img {
+                              &:hover {opacity: 1;}
+                         }
+                    }
+               
+                    .barbers__items--content--text {
+                         padding: .5em 0;
+                         
+                         text-align: center;
+                         background-color: $darkgray;
+                         h3.barbers__title {
+                              margin-left: -.2rem;
+                              font-size: rem(10px);
+                              font-weight: normal;
+                              letter-spacing: 0;
+                         }
+                         p {
+                              padding-top: .2rem;
+                              font-size: rem(10px);
+                              letter-spacing: 0;
+                         }
+                    }
+               }
+          }   
+     }
+
+     /* PRICING */
+     #card__pricing  {
+          margin-top: -3.5rem;
+     }
+     .card__pricing {
+          .pricing {  
+               width: 100%;
+               padding: 2.5rem 0;
+               background-color: $darkgray; 
+
+               span.title__text {
+                    margin-left: 0;
+                    padding: .2rem 0 .3rem 1rem;
+               }
+
+               h3.pricing__title {
+                    color: $white;
+                    text-align: center;
+                    font-size: rem(25px);
+                    margin-left: 0;
+                    letter-spacing: 0.01rem;
+               }
+
+               .price__items {
+                    padding-left: 0;
+                    .price__items--content {
+                         margin-bottom: 1rem;
+                         padding-bottom: 0.5rem;
+                         border-bottom: 1px solid $text-color;
+
+                         &:last-child {border-bottom: none;}
+
+                         #prix-1 .price__title,
+                         #prix-2 .price__title,
+                         #prix-3 .price__title,
+                         #prix-4 .price__title,
+                         #prix-5 .price__title,
+                         #prix-6 .price__title,
+                         #prix-7 .price__title,
+                         #designation .price__title,
+                         #designation .price__title,
+                         #designation .price__title,
+                         #designation .price__title,
+                         #designation .price__title,
+                         #designation .price__title,
+                         #designation .price__title {
+                              font-size: rem(18px);
+                              padding-left: 1rem;
+                         }
+
+                         .price__items--content--name {width: 100%;}
+
+                         .price__items--content--price {
+
+                              h3.price__title {
+                                   color: $red;
+                                   float: right;
+                                   font-weight: 600;
+                                   margin-top: -1.8rem;
+                                   margin-right: 1rem;
+                                   padding-left: 0;
+                              }
+                         }
+                    }
+               }  
+          }
+
+     }
+
+     /* TEMOIGNAGES DES CLIENTS */
+     .card__temoins {
+          .temoins__header {
+               width: 100%;
+               text-align: center;
+
+               span.temoins__text {
+                    color: $red;
+                    letter-spacing: 0.1rem;
+               }
+
+               h3.temoins__header {
+                    color: $white;
+                    font-size: rem(25px);
+               }
+
+               h3.name__client {
+                    font-size: rem(20px);
+                    
+               }
+
+               p.profession {
+                    color: $red;
+                    font-family: $font-segoe;
+               }
+
+               .card__temoins--text {
+                    color: $white;
+                    font-size: rem(15px);
+                    letter-spacing: 0.01rem;
+                    font-family: $font-segoe;
+                    font-weight: normal;
+                    transition: all 0.3s ease-in-out;
+               }
+          }
+
+          .card__temoins--carousel {
+               width: 100%;
+               .temoins__carousel--items {
+                    width: 25%;
+                    display: inline-block;
+                    margin-top: 1rem;
+
+                    img {
+                         outline: 10px solid $darkgray;
+                         transition: all 0.3s ease-in-out;
+                    }
+                    &:first-child, &:last-child {
+                         opacity: 20%;
+                         background-color: $white;
+                    }
+               }
+          }
+     }
+
+     /* HEURES D'OUVERTURE */
+     #card__open {margin-top: 2rem;}
+     .card__open {
+          background-color: $darkgray;
+
+          .open__houre {
+               width: 100%;
+               padding: 1rem 1rem;
+               
+               #open__title {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    align-items: center;
+                    align-content: center;
+               }
+               span.open__title {
+                    color: $red;
+                    margin: auto;
+                    text-align: center;
+                    border: $border-r;
+                    padding: 0 1rem .5rem 1rem;
+                    font-size: rem(20px);
+                    letter-spacing: 0.01rem;
+                    font-family: $font-segoe;
+                    font-weight: normal;
+                    background-color: $black;
+                    transition: all 0.3s ease-in-out;
+               }
+
+               p.open__text {
+                    color: $white;
+                    text-align: center;
+                    font-size: rem(20px);
+                    letter-spacing: 0.01rem;
+                    text-transform: uppercase;
+                    font-family: $font-segoe;
+                    font-weight: normal;
+                    transition: all 0.3s ease-in-out;
+               }
+
+               .open__items {
+                    .open__items--content {
+                         display: flex;
+                         justify-content: space-between;
+                         align-items: center;
+                         padding: 1rem 0 1rem 0;
+                         border-bottom: 1px solid $text-color;
+
+                         &:last-child {
+                              border-bottom: none;
+                         }
+
+                         .open__items--content--text {
+                              color: $white;
+                              font-size: rem(15px);
+                              letter-spacing: 1px;
+                              font-weight: normal;
+                              font-family: $font-segoe;
+                              text-transform: uppercase;
+                              transition: all 0.3s ease-in-out;
+
+                              &[title] {
+                                   color: $red;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+
+          /* FOOTER */
+     .footer {
+          margin-top: 2rem;
+          padding: 1rem 0;
+          background-color: $darkgray;
+                    
+          .footer__block {
+               h3.contacts__title {
+                    margin-top: 2rem;
+                    padding-top: 1rem;
+                    text-align: center;
+                    font-size: rem(20px);
+                    border-top: 1px solid $text-color;
+               }
+               .footer__items--1 {
+                    ul {
+                         list-style: none;
+                         padding: 0;
+                         margin: 0 0 1rem 0;
+                         li {
+                              color: $text-color;
+                              font-size: rem(15px);
+                              letter-spacing: 0.01rem;
+                              font-family: $font-segoe;
+                              font-weight: normal;
+                              margin-top: .5rem;
+                              transition: all 0.3s ease-in-out;
+
+                              .fa-map-marker-alt, .fa-phone, .fa-envelope-open {
+                                   color: $red;
+                                   text-align: center;
+                                   width: 2rem;
+                                   margin-right: 1rem;
+                                   font-size: rem(15px);
+                                   padding: .6rem 1.2rem .6rem .6rem;
+                                   background-color: $black;
+                              }
+
+                              a {
+                                   color: $text-color;
+                                   text-decoration: none;
+                                   transition: all 0.3s ease-in-out;
+
+                                   &:hover {
+                                        color: $red;
+                                   }                         
+                              }
+
+                         }
+                    }
+               }
+
+               .footer__items--2{
+
+                    ul {
+                         list-style: none;
+                         padding: 0;
+                         margin: 0;
+                         li {
+                              color: $text-color;
+                              font-size: rem(15px);
+                              letter-spacing: 0.01rem;
+                              font-family: $font-segoe;
+                              font-weight: normal;
+                              margin-top: .5rem;
+                              transition: all 0.3s ease-in-out;
+
+                              a {
+                                   color: $text-color;
+                                   text-decoration: none;
+                                   transition: all 0.3s ease-in-out;
+
+                                   &:hover {
+                                        color: $red;
+                                   }  
+
+                                   &::before {
+                                        content: " \f054  ";
+                                        color: $white;
+                                   }                       
+                              }
+
+                         }
+                    }
+               }
+
+               .footer__items--3 {
+                    .contact__form {
+                         margin-top: 2rem;
+                         .form__group {
+                              margin-bottom: 1rem;
+                              position: relative;
+
+                              input {
+                                   width: 100%;
+                                   padding: 1rem 1rem;
+                              }
+
+                              button {
+                                   width: 27%;
+                                   height: 3.3rem;
+                                   top: 0;
+                                   left: 73%;
+                                   padding: .5rem .4rem .3rem .3rem;
+                              }   
+
+                              // On cache l'icon fa-circle-chevron-right
+                              .fa-circle-chevron-right {
+                                   display: none;
+                              }
+
+                              // Si on passe la souris sur le bouton, on fait apparaitre l'icon fa-chevron-right 
+                              button:hover .fa-circle-chevron-right {
+                                   display: none;
+                              }                                            
+                         }
+
+                         .contact__social {
+                              width: 100%;
+                              text-align: flex-start;
+                              margin-top: 2rem;
+                              
+                              ul.socials {
+
+                                   margin: 0;
+                                   padding: 0;
+                                   list-style: none;
+                                   display: inline-block;
+
+                                   li.social__items {
+                                        display: inline-flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin: 0 0.5rem;
+                                        border: $border-r;
+                                        padding: .5rem .5rem .5rem .8rem;
+
+                                        a {
+                                             color: $red;
+                                             width: 100%;
+                                             text-decoration: none;
+                                             transition: all 0.3s ease-in-out;
+
+                                             &:hover {
+                                                  color: $white;
+                                             }                         
+                                        }
+                                   }                       
+                              }
+                         }
+                    }
+               }
+          }
+
+          .card__mentions {
+               margin-top: 1.5rem;
+               padding: 1rem ;
+               text-align: center;
+
+               .right {
+                    width: 100%;
+                    text-align: center;
+               }
+          }
+
+          .btn__top {
+               position: fixed;
+               top: 38rem;
+               width: 3rem;
+               right: 1.3rem;
+               height: 3rem;
+               bottom: 2rem;
+               border: none;
+               outline: none;
+               color: $white;
+               cursor: pointer;
+               text-align: center;
+               padding: .8rem .5rem .5rem .5rem;
+               background-color: $red;
+               transition: all 0.3s ease-in-out;
+               z-index: 999;
+
+               a {
+                    color: $white;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+
+                    &::before {
+                         content: "\f106 ";
+                         font-family: "Font Awesome 6 Free";
+                         font-weight: 900;
+                         font-size: 1rem;
+                         margin-left: 0;
+                    }                        
+               }
+
+               &:hover {
+                    color: $white;
+                    animation: translateY(10px);
+                    transition: all 0.3s ease-in-out;
+               }
+          }
+     }
+}
+/* Taille des Tablets */
+@media screen and (min-width: 768px) and (max-width: 884px) {
      .container-fluid, .container, .d-flex {
           max-width: 100%;
           flex-direction: column;
