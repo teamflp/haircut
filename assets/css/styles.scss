@@ -14,13 +14,17 @@ html {
 }
 
 body {
-    font-size: 1.2rem;
-    background-color: $black;
+     font-size: 1.2rem;
+     background-color: $black;
 }
 
-h2, h3, h4, h5, h6 {
-    font-family: $font-segoe;
-    font-weight: 500;
+h2,
+h3,
+h4,
+h5,
+h6 {
+     font-family: $font-segoe;
+     font-weight: 500;
 }
 
 /* BARRE DE NAVIGATION  AND DROPDOWN MENU*/
@@ -28,7 +32,7 @@ nav {
      padding: 1rem 5rem;
      background-color: $darkgray;
 
-     .logo {          
+     .logo {
           .menu__hamburger {
                display: none;
           }
@@ -58,12 +62,12 @@ nav {
                     margin-left: 0;
                     color: $red;
                }
-          
+
                &:hover {
                     color: $red !important;
                }
           }
-          
+
           /* MENU DROPDOWN */
           .dropdown {
                position: relative;
@@ -71,7 +75,7 @@ nav {
 
                a.menu__link--presta {
                     @extend .menu__link;
-                    
+
                     // On ajoute le l'icon fa-angle-down
                     &:after {
                          content: "\f107";
@@ -83,7 +87,8 @@ nav {
                }
 
                .navbar__dropdown__content {
-                    display: none; /* PAR DEFAUT, ON CACHE LE MENU DROPDOWN */
+                    display: none;
+                    /* PAR DEFAUT, ON CACHE LE MENU DROPDOWN */
                     width: 12rem;
                     margin-top: 2rem;
                     padding: 0.5rem 0;
@@ -91,9 +96,9 @@ nav {
                     background-color: $darkgray;
                     transition: all 0.5s ease-in-out;
                     animation: ring2 0.3s ease-in-out;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                     z-index: 1;
-                    
+
                     a.submenu__link {
                          display: block;
                          font-weight: 400;
@@ -152,12 +157,13 @@ nav {
                &:hover .navbar__dropdown__content {
                     display: block;
                     transition: all 0.5s ease-in-out;
-                    @include Slide(0.5s); 
+                    @include Slide(0.5s);
                }
-               
+
           }
-          
+
      }
+
      .card__button {
           background-color: $red;
           margin-right: 2rem;
@@ -182,17 +188,17 @@ nav {
 
 /* CAROUSEL */
 .card__carousel {
-     opacity: 100%; 
-     transition: opacity 0.5s ease-in-out; 
-     
+     opacity: 100%;
+     transition: opacity 0.5s ease-in-out;
+
      .carousel__img {
           position: relative;
           object-fit: cover;
           object-position: center;
           background-color: $black;
-          opacity:80%; 
-          transition: opacity 0.5s ease-in-out; 
-          
+          opacity: 80%;
+          transition: opacity 0.5s ease-in-out;
+
           .carousel__text {
                position: absolute;
                top: 50%;
@@ -216,7 +222,9 @@ nav {
                }
 
                .contact {
-                    .fa-map-marker-alt, .fa-phone {
+
+                    .fa-map-marker-alt,
+                    .fa-phone {
                          color: $red;
                          font-size: 1.5rem;
                          margin-right: 0.5rem;
@@ -227,6 +235,7 @@ nav {
                          color: $white;
                          font-size: 1.5rem;
                     }
+
                     span {
                          font-size: 1.5rem;
                          color: $white;
@@ -245,7 +254,7 @@ nav {
      .card__about__exp--img {
           width: 100%;
           height: 100%;
-          padding-left: 5rem ;
+          padding-left: 5rem;
           object-fit: cover;
           object-position: center;
           transition: opacity 0.5s ease-in-out;
@@ -257,7 +266,7 @@ nav {
                padding: 2.5rem 5rem 1.9rem 2rem;
                position: absolute;
                background-color: $darkgray !important;
-                    
+
                h1.year__title {
                     color: $red;
                     font-family: 'Anton', sans-serif;
@@ -265,9 +274,11 @@ nav {
                     letter-spacing: 0.1rem;
                     font-weight: 200;
                     margin-left: 1rem;
-                    text-transform: uppercase;;
+                    text-transform: uppercase;
+                    ;
                     transition: all 0.3s ease-in-out;
                }
+
                .year__text {
                     color: $white;
                     font-family: 'Anton', sans-serif;
@@ -281,7 +292,7 @@ nav {
           }
 
      }
-     
+
      .card__about__exp--details {
           .title__text {
                color: $red;
@@ -303,8 +314,9 @@ nav {
                     font-family: $font-family;
                     font-weight: normal;
                     transition: all 0.3s ease-in-out;
-               }  
-               p{
+               }
+
+               p {
                     color: $text-color;
                     font-size: 1.2rem;
                     margin-left: 1rem;
@@ -312,11 +324,12 @@ nav {
                     font-weight: normal;
                     transition: all 0.3s ease-in-out;
                }
-               
+
                p:not(:last-child) {
                     margin-top: 2rem;
                     margin-bottom: 2rem;
                }
+
                p:not(:first-child) {
                     margin-top: 2rem;
                     margin-bottom: 2rem;
@@ -325,10 +338,11 @@ nav {
 
           .card__about__exp--story {
                width: 100%;
+
                .card__about__story--since {
                     width: 100%;
                     margin: 1rem 0;
-               
+
                     h3.since__title {
                          color: $white;
                          font-size: 2.7rem;
@@ -338,6 +352,7 @@ nav {
                          font-weight: normal;
                          transition: all 0.3s ease-in-out;
                     }
+
                     p.since__text {
                          margin-top: 1rem;
                          color: $text-color;
@@ -346,7 +361,7 @@ nav {
                          font-weight: normal;
                          transition: all 0.3s ease-in-out;
                     }
-                    
+
                }
           }
      }
@@ -355,6 +370,7 @@ nav {
 /* SERVICES */
 .card__services {
      margin: 0 1rem;
+
      span.title__text {
           color: $red;
           font-size: 2rem;
@@ -388,7 +404,7 @@ nav {
           position: relative;
           background-color: $darkgray;
           padding: 4rem 3rem 4rem 6rem;
-          
+
           h3.services__title {
                color: $white;
                font-size: 2.7rem;
@@ -399,7 +415,7 @@ nav {
                transition: all 0.3s ease-in-out;
           }
 
-          p{
+          p {
                color: $text-color;
                font-size: 1rem;
                letter-spacing: 0.1rem;
@@ -410,6 +426,7 @@ nav {
 
           .services__footer {
                margin-top: 2rem;
+
                span.services__price {
                     color: $red;
                     font-size: 1rem;
@@ -429,15 +446,15 @@ nav {
                background-color: $black;
           }
      }
-     
+
 }
 
 /* PRICING */
 .card__pricing {
-          
-     .pricing {    
+
+     .pricing {
           padding: 3.5rem 2rem 0 2rem;
-          background-color: $darkgray; 
+          background-color: $darkgray;
 
           span.title__text {
                color: $red;
@@ -465,6 +482,7 @@ nav {
 
           .price__items {
                padding-left: 1rem;
+
                .price__items--content {
                     margin-bottom: 1rem;
                     padding-bottom: 0.8rem;
@@ -480,7 +498,8 @@ nav {
                          letter-spacing: 1px;
                          font-weight: normal;
                          font-family: $font-segoe;
-                         text-transform: uppercase;;
+                         text-transform: uppercase;
+                         ;
                     }
 
                     .price__items--content--price {
@@ -492,7 +511,7 @@ nav {
                          }
                     }
                }
-          }  
+          }
      }
 
 }
@@ -571,8 +590,8 @@ nav {
                               transition: all 0.3s ease-in-out;
                               transform: translate(0 0);
                          }
-                         
-                         a.socials__items--link{
+
+                         a.socials__items--link {
                               width: 100%;
                               color: $red;
                               display: flex;
@@ -580,8 +599,8 @@ nav {
                               text-align: center;
                               align-items: center;
                               padding: .5rem 0 .5rem 0;
-                              align-content: center; 
-                              justify-content: center;                      
+                              align-content: center;
+                              justify-content: center;
                               border: 1px solid red;
                               text-decoration: none;
                               background-color: $black;
@@ -597,21 +616,23 @@ nav {
                          }
 
                     }
-                    
+
                     img {
                          object-fit: cover;
                          transition: all 0.3s ease-in-out;
+
                          &:hover {
                               opacity: 0.1;
                               transition: all 0.3s ease-in-out;
                          }
                     }
-                    
+
                }
-              
+
                .barbers__items--content--text {
                     padding: .5em 0.5rem;
                     background-color: $darkgray;
+
                     h3.barbers__title {
                          color: $white;
                          font-size: rem(20px);
@@ -621,6 +642,7 @@ nav {
                          font-weight: 800;
                          text-transform: uppercase;
                     }
+
                     p {
                          color: $red;
                          padding-top: 1rem;
@@ -632,7 +654,7 @@ nav {
                     }
                }
           }
-     }   
+     }
 }
 
 /* HEURES D'OUVERTURE */
@@ -751,11 +773,13 @@ nav {
                     transition: all 0.3s ease-in-out;
 
                     &:hover {
-                      transform: scale(1.1);
+                         transform: scale(1.1);
                     }
 
                }
-               &:first-child, &:last-child {
+
+               &:first-child,
+               &:last-child {
                     opacity: 25%;
                     background-color: $white;
                }
@@ -768,7 +792,7 @@ nav {
      margin-top: 6rem;
      padding: 5rem 5rem 0 1rem;
      background-color: $darkgray;
-               
+
      .footer__block {
           h3.contacts__title {
                color: $white;
@@ -778,11 +802,13 @@ nav {
                font-family: $font-segoe;
                text-transform: uppercase;
           }
+
           .footer__items--1 {
                ul {
                     list-style: none;
                     padding: 0;
                     margin: 0;
+
                     li {
                          display: inline-block;
                          color: $text-color;
@@ -793,7 +819,9 @@ nav {
                          margin-top: .5rem;
                          transition: all 0.3s ease-in-out;
 
-                         .fa-map-marker-alt, .fa-phone, .fa-envelope-open {
+                         .fa-map-marker-alt,
+                         .fa-phone,
+                         .fa-envelope-open {
                               color: $red;
                               text-align: center;
                               width: auto;
@@ -801,20 +829,21 @@ nav {
                               font-size: rem(15px);
                               padding: .6rem 1.2rem .6rem .6rem;
                               background-color: $black;
-                         }                 
+                         }
                     }
                }
           }
 
-          .footer__items--2{
+          .footer__items--2 {
 
                ul {
                     list-style: none;
                     padding: 0;
                     margin: 0;
+
                     li {
                          color: $text-color;
-                         
+
                          letter-spacing: 0.01rem;
                          font-family: $font-segoe;
                          font-weight: normal;
@@ -829,14 +858,14 @@ nav {
 
                               &:hover {
                                    color: $red;
-                              }  
+                              }
 
                               &::before {
                                    content: " \f054 ";
                                    font-family: "Font Awesome 5 Free";
                                    font-weight: 900;
                                    color: $text-color;
-                              }                       
+                              }
                          }
 
                     }
@@ -846,6 +875,7 @@ nav {
           .footer__items--3 {
                .contact__form {
                     margin-top: 2rem;
+
                     .form__group {
                          margin-bottom: 1rem;
                          position: relative;
@@ -856,7 +886,7 @@ nav {
                               border: none;
                               outline: none;
                               background-color: $white;
-                              
+
                               color: $darkgray;
                               font-size: rem(15px);
                               letter-spacing: 0.01rem;
@@ -878,7 +908,8 @@ nav {
                               color: $white;
                               cursor: pointer;
                               position: absolute;
-                              pointer-events: all; /* Désactive le bouton */
+                              pointer-events: all;
+                              /* Désactive le bouton */
                               font-weight: normal;
                               font-size: rem(15px);
                               background-color: $red;
@@ -892,7 +923,7 @@ nav {
                                    outline: 0;
                                    transition: all 0.3s ease-in-out 0.1s forwards;
                               }
-                         }   
+                         }
 
                          // On cache l'icon fa-circle-chevron-right
                          .fa-circle-chevron-right {
@@ -911,15 +942,17 @@ nav {
                               opacity: 1;
                               display: inline-block;
                               transform: translateX(10px);
-                              transition: all 0.5s ease-in-out 0s; 
-                         }                      
+                              transition: all 0.5s ease-in-out 0s;
+                         }
+
                          button:hover {
                               transition: all 0.5s ease-in-out 0s;
-                         }                      
+                         }
                     }
 
                     .contact__social {
                          margin-top: 2rem;
+
                          ul.socials {
                               width: 100%;
                               margin: 0;
@@ -942,7 +975,7 @@ nav {
 
                                    &:hover {
                                         animation: scale(1.2) rotateY(360deg);
-                                   }  
+                                   }
 
                                    a {
                                         color: $red;
@@ -952,9 +985,9 @@ nav {
 
                                         &:hover {
                                              color: $white;
-                                        }                         
+                                        }
                                    }
-                              }                       
+                              }
                          }
                     }
                }
@@ -976,19 +1009,20 @@ nav {
 
                &:hover {
                     color: $red;
-               }                         
+               }
           }
 
           .right {
                text-align: end;
 
-               a{
+               a {
                     padding: .5rem;
                }
           }
      }
 
      .btn__top {
+          display: none;
           position: fixed;
           bottom: 2rem;
           top: 39.7rem;
@@ -1016,7 +1050,7 @@ nav {
                     font-weight: 900;
                     font-size: 1rem;
                     margin-left: 0;
-               }                        
+               }
           }
 
           &:hover {
@@ -1027,15 +1061,200 @@ nav {
      }
 }
 
+
+/* ------------------------------------ *\
+     #ANIMATION
+\* ------------------------------------ */
+
+     .slide {
+          animation: slide 0.5s ease-in-out;
+     }
+     .SlideInDown {
+          animation: slideInDown 1s ease-in-out 0s normal forwards;
+     }
+
+     .SlideInLeft {
+          animation: slideInLeft .1s ease-in-out 0s 1 normal forwards;
+     }
+
+     .SlideInRight {
+          animation: slideInRight 1s ease-in-out 0s 1 normal forwards;
+     }
+
+     .SlideInUp {
+          animation: slideInUp 1s ease-in-out 0s 1 normal forwards;
+     }
+
+     .SlideOutDown {
+          animation: slideOutDown 1s ease-in-out 0s 1 normal forwards;
+     }
+
+     .SlideOutLeft {
+          animation: slideOutLeft 1s ease-in-out 0s 1 normal forwards;
+     }
+
+     .SlideOutRight {
+          animation: slideOutRight 1s ease-in-out 0s 1 normal forwards;
+     }
+
+     .SlideOutUp {
+          animation: slideOutUp 1s ease-in-out 0s 1 normal forwards;
+     }
+
+     .slideLeftToRight {
+          animation: slideLeftToRight 1s ease-in-out 0s 1 normal forwards;
+     }
+
+     .slideRightToLeft {
+          animation: slideRightToLeft 1s ease-in-out 0s 1 normal forwards;
+     }
+
+     @keyframes slideInDown {
+          0% {
+               transform: translateY(-100%);
+               visibility: visible;
+          }
+
+          100% {
+               transform: translateY(0);
+          }
+     }
+
+     @keyframes slideInLeft {
+          0% {
+               transform: translateX(-100%);
+               visibility: visible;
+          }
+
+          100% {
+               transform: translateX(0);
+          }
+     }
+
+     @keyframes slideInRight {
+          0% {
+               transform: translateX(100%);
+               visibility: visible;
+          }
+
+          100% {
+               transform: translateX(0);
+          }
+     }
+
+     @keyframes slideInUp {
+          0% {
+               transform: translateY(100%);
+               visibility: visible;
+          }
+
+          100% {
+               transform: translateY(0);
+          }
+     }
+
+     @keyframes slideOutDown {
+          0% {
+               transform: translateY(0);
+               visibility: visible;
+          }
+
+          100% {
+               transform: translateY(100%);
+          }
+     }
+
+     @keyframes slideOutLeft {
+          0% {
+               transform: translateX(0);
+               visibility: visible;
+          }
+
+          100% {
+               transform: translateX(-100%);
+          }
+     }
+
+     @keyframes slideOutRight {
+          0% {
+               transform: translateX(0);
+               visibility: visible;
+          }
+
+          100% {
+               transform: translateX(100%);
+          }
+     }
+
+     @keyframes slideOutUp {
+          0% {
+               transform: translateY(0);
+               visibility: visible;
+          }
+
+          100% {
+               transform: translateY(-100%);
+          }
+     }
+
+     @keyframes scale {
+          0% {
+               transform: scale(1);
+          }
+
+          100% {
+               transform: scale(1.2);
+          }
+     }
+
+     @keyframes slide {
+          0% {
+               transform: translateX(0);
+          }
+
+          100% {
+               transform: translateX(100%);
+          }
+     }
+
+     @keyframes slideLeftToRight {
+          0% {
+               transform: translateX(-100%);
+               visibility: visible;
+          }
+
+          100% {
+               transform: translateX(0);
+          }
+     }
+
+     @keyframes slideRightToLeft {
+          0% {
+               transform: translateX(100%);
+               visibility: visible;
+          }
+
+          100% {
+               transform: translateX(0);
+          }
+     }
+     
+
+
+
+
+
 /**************** Media query *********************/
 @media (max-width: 768px) {
-     .d-flex{
+     .d-flex {
           flex-wrap: wrap;
           justify-content: center;
      }
+
      .form {
           width: 100%;
      }
+
      input[type="text"],
      input[type="email"] {
           width: 100%;
@@ -1052,7 +1271,13 @@ nav {
      button[type="submit"] {
           padding: 0.5rem 1rem;
      }
-     h1, h2, h3, h4, h5, h6 {
+
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6 {
           font-size: 1.5rem;
      }
 }
@@ -1067,33 +1292,61 @@ nav {
           width: 100%;
      }
 
-     h1, h2, h3, h4, h5, h6 {
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6 {
           font-size: 1.5rem;
      }
 }
 
 /* Taille des mobiles */
 @media screen and (min-width: 320px) and (max-width: 768px) {
-     .container-fluid, .container, .d-flex {
+
+     .container-fluid,
+     .container,
+     .d-flex {
           flex-direction: column;
      }
 
      nav {
-         padding: 0;
-         flex-direction: column;
+          padding: 0;
+          flex-direction: column;
 
-         .logo {
+          .logo {
                width: 100%;
-               border: $border-r;
+               padding: .5rem 0;
+               margin-right: auto;
 
                img.mylogo {
                     width: 50%;
-                    border: $border-r;
+                    position: relative;
+               }
+
+               button.menu__hamburger{
+                    width: 15%;
+                    top: 1%;
+                    left: 82%;
+                    padding: 0;
+                    color: $white;
+                    position: absolute;
+                    text-align: center;
+                    display: block;
+                    appearance: none;
+                    border: none;
+                    background-color: transparent;
+
+                    .fa-bars{
+                         font-size: 2.5rem;
+                    }
                }
           }
-     
+
           .navbar__menu {
                padding-right: 1rem;
+               display: none;
 
                width: 100%;
                margin-top: 1rem;
@@ -1105,15 +1358,16 @@ nav {
                     &:first-child {
                          margin-left: 1rem;
                          color: $red !important;
-                    }                                                                                                                   
+                    }
                }
-               
+
                /* MENU DROPDOWN */
                .dropdown {
                     margin-left: 0;
+
                     a.menu__link--presta {
                          margin-left: 0;
-                         
+
                          // On ajoute le l'icon fa-angle-down
                          &:after {
                               content: "\f107";
@@ -1123,9 +1377,9 @@ nav {
 
                     .navbar__dropdown__content {
                          width: 24.4rem;
-                         margin-top: 0rem;
-                         display: none;
-                         @include SlideInRight();
+                         margin-top: -0.5rem;
+                         opacity: 0;
+                         @include SlideInLeft(.6s);
 
                          a.submenu__link {
                               padding: 0.5rem 1rem;
@@ -1144,22 +1398,23 @@ nav {
                          &:hover {
                               color: $red !important;
                          }
-
-                         &:hover .navbar__dropdown__content {
-                              display: block;
-                         }
                     }
 
                     /* AFFICHAGE DU MENU DROPDOWN AU SURVOLE DE LA SOURIS */
+
+                    // On retire l'animation du menu dropdown de manière fluide lorsqu'on enlève la souris sur le menu dropdown
+
                     &:hover .navbar__dropdown__content {
-                         @include SlideInLeft();
-                         margin-top: 2.5rem;
-                         box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+                         opacity: 1;
+                         @include SlideInLeft(.6s);
+                         margin-top: 1.9rem;
+                         box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+                         // border: $border-r;
                     }
-                    
                }
-               
+
           }
+
           .card__button {
                width: 100%;
                margin-top: 1rem;
@@ -1171,13 +1426,14 @@ nav {
           }
      }
 
-     .card__carousel {          
-          .carousel__img { 
+     .card__carousel {
+          .carousel__img {
                .carousel__text {
                     width: 100%;
                     top: 50%;
                     left: 46%;
                     text-align: center;
+
                     .carousel__text--title {
                          font-size: 1.8rem;
                          word-wrap: break-word;
@@ -1186,17 +1442,22 @@ nav {
                          margin-bottom: 1rem;
                          opacity: 1;
                     }
+
                     .contact {
-                         .fa-map-marker-alt, .fa-phone {
+
+                         .fa-map-marker-alt,
+                         .fa-phone {
                               color: $red;
                               font-size: 1.2rem;
 
                          }
+
                          a {
                               text-decoration: none;
                               color: $white;
                               font-size: 2rem;
                          }
+
                          span {
                               font-size: 1rem;
                               font-family: $font-segoe;
@@ -1211,19 +1472,21 @@ nav {
           width: 100%;
           padding: 5rem 0;
           margin-top: 0.1rem;
-          
-          .card__about__exp--img { 
+
+          .card__about__exp--img {
                width: 100%;
                padding-left: 0;
+
                .year {
                     top: 74%;
                     left: 0%;
                     padding: 1rem;
-                         
+
                     h1.year__title {
                          font-size: 1.2rem;
                          margin-left: 1rem;
                     }
+
                     .year__text {
                          color: $white;
                          font-family: 'Anton', sans-serif;
@@ -1236,7 +1499,7 @@ nav {
                     }
                }
           }
-          
+
           .card__about__exp--details {
                width: 100%;
                padding: 0 0;
@@ -1246,13 +1509,15 @@ nav {
                     color: $red;
                     font-size: 1.5rem;
                }
+
                .card__about__exp__details--text {
                     h3.details__title {
                          color: $white;
                          font-size: 1.3rem;
                          margin-left: 0;
-                    }  
-                    p{
+                    }
+
+                    p {
                          color: $text-color;
                          font-size: 1.3rem;
                          margin-left: 0;
@@ -1260,28 +1525,31 @@ nav {
                          font-weight: normal;
                          transition: all 0.3s ease-in-out;
                     }
-                    
+
                     p:not(:last-child) {
                          margin-top: 1rem;
                          margin-bottom: 2rem;
                     }
+
                     p:not(:first-child) {
                          margin-top: 2rem;
                          margin-bottom: 2rem;
                     }
                }
+
                .card__about__exp--story {
                     .card__about__story--since {
                          margin-left: 0;
-                    
+
                          h3.since__title {
                               margin-top: -1rem;
                               font-size: 1.5rem;
                          }
+
                          p.since__text {
                               font-size: 1.2rem;
                          }
-                         
+
                     }
                }
           }
@@ -1290,6 +1558,7 @@ nav {
      /* SERVICES */
      .card__services {
           margin: 0;
+
           span.title__text {
                width: 100%;
                color: $red;
@@ -1310,7 +1579,9 @@ nav {
                letter-spacing: 0.1rem;
           }
 
-          #card__services-items-2 { margin-top: -3.5rem;}
+          #card__services-items-2 {
+               margin-top: -3.5rem;
+          }
 
           .card__services-items {
                width: 100%;
@@ -1321,7 +1592,7 @@ nav {
                     margin-bottom: 0;
                     border: 1px solid $text-color;
                     padding: 2rem 1rem 4rem 0rem;
-                    
+
                     h3.services__title {
                          text-align: center;
                          font-size: 1.8rem;
@@ -1330,7 +1601,7 @@ nav {
                          font-family: $font-family;
                     }
 
-                    p{
+                    p {
                          text-align: center;
                          font-size: 1.1rem;
                          margin: 1rem .3rem;
@@ -1340,6 +1611,7 @@ nav {
                     .services__footer {
                          margin-top: 2rem;
                          text-align: center;
+
                          span.services__price {
                               font-size: 1rem;
                               font-family: $font-segoe;
@@ -1352,9 +1624,10 @@ nav {
                }
           }
 
-          
+
      }
-          /* BARBIERS */
+
+     /* BARBIERS */
      .card__teams__barbers {
           span.barbers__text {
                font-size: rem(20px);
@@ -1370,6 +1643,7 @@ nav {
 
           .barbers__items {
                display: inline-block;
+
                .barbers__items--content {
                     display: inline-block;
                     width: 23.9%;
@@ -1377,25 +1651,31 @@ nav {
 
                     .barbers__items--content--img {
                          width: 100%;
-                    
-                         .box__socials {display: none;}
+
+                         .box__socials {
+                              display: none;
+                         }
 
                          img {
-                              &:hover {opacity: 1;}
+                              &:hover {
+                                   opacity: 1;
+                              }
                          }
                     }
-               
+
                     .barbers__items--content--text {
                          padding: .5em 0;
-                         
+
                          text-align: center;
                          background-color: $darkgray;
+
                          h3.barbers__title {
                               margin-left: -.2rem;
                               font-size: rem(10px);
                               font-weight: normal;
                               letter-spacing: 0;
                          }
+
                          p {
                               padding-top: .2rem;
                               font-size: rem(10px);
@@ -1403,18 +1683,19 @@ nav {
                          }
                     }
                }
-          }   
+          }
      }
 
      /* PRICING */
-     #card__pricing  {
+     #card__pricing {
           margin-top: -3.5rem;
      }
+
      .card__pricing {
-          .pricing {  
+          .pricing {
                width: 100%;
                padding: 2.5rem 0;
-               background-color: $darkgray; 
+               background-color: $darkgray;
 
                span.title__text {
                     margin-left: 0;
@@ -1431,12 +1712,15 @@ nav {
 
                .price__items {
                     padding-left: 0;
+
                     .price__items--content {
                          margin-bottom: 1rem;
                          padding-bottom: 0.5rem;
                          border-bottom: 1px solid $text-color;
 
-                         &:last-child {border-bottom: none;}
+                         &:last-child {
+                              border-bottom: none;
+                         }
 
                          #prix-1 .price__title,
                          #prix-2 .price__title,
@@ -1456,7 +1740,9 @@ nav {
                               padding-left: 1rem;
                          }
 
-                         .price__items--content--name {width: 100%;}
+                         .price__items--content--name {
+                              width: 100%;
+                         }
 
                          .price__items--content--price {
 
@@ -1470,7 +1756,7 @@ nav {
                               }
                          }
                     }
-               }  
+               }
           }
 
      }
@@ -1493,7 +1779,7 @@ nav {
 
                h3.name__client {
                     font-size: rem(20px);
-                    
+
                }
 
                p.profession {
@@ -1513,6 +1799,7 @@ nav {
 
           .card__temoins--carousel {
                width: 100%;
+
                .temoins__carousel--items {
                     width: 25%;
                     display: inline-block;
@@ -1522,7 +1809,9 @@ nav {
                          outline: 10px solid $darkgray;
                          transition: all 0.3s ease-in-out;
                     }
-                    &:first-child, &:last-child {
+
+                    &:first-child,
+                    &:last-child {
                          opacity: 20%;
                          background-color: $white;
                     }
@@ -1531,20 +1820,24 @@ nav {
      }
 
      /* HEURES D'OUVERTURE */
-     #card__open {margin-top: 2rem;}
+     #card__open {
+          margin-top: 2rem;
+     }
+
      .card__open {
           background-color: $darkgray;
 
           .open__houre {
                width: 100%;
                padding: 1rem 1rem;
-               
+
                #open__title {
                     width: 100%;
                     margin-bottom: 1rem;
                     align-items: center;
                     align-content: center;
                }
+
                span.open__title {
                     color: $red;
                     margin: auto;
@@ -1600,12 +1893,12 @@ nav {
           }
      }
 
-          /* FOOTER */
+     /* FOOTER */
      .footer {
           margin-top: 2rem;
           padding: 1rem 0;
           background-color: $darkgray;
-                    
+
           .footer__block {
                h3.contacts__title {
                     margin-top: 2rem;
@@ -1614,11 +1907,13 @@ nav {
                     font-size: rem(20px);
                     border-top: 1px solid $text-color;
                }
+
                .footer__items--1 {
                     ul {
                          list-style: none;
                          padding: 0;
                          margin: 0 0 1rem 0;
+
                          li {
                               color: $text-color;
                               font-size: rem(15px);
@@ -1628,7 +1923,9 @@ nav {
                               margin-top: .5rem;
                               transition: all 0.3s ease-in-out;
 
-                              .fa-map-marker-alt, .fa-phone, .fa-envelope-open {
+                              .fa-map-marker-alt,
+                              .fa-phone,
+                              .fa-envelope-open {
                                    color: $red;
                                    text-align: center;
                                    width: 2rem;
@@ -1645,19 +1942,20 @@ nav {
 
                                    &:hover {
                                         color: $red;
-                                   }                         
+                                   }
                               }
 
                          }
                     }
                }
 
-               .footer__items--2{
+               .footer__items--2 {
 
                     ul {
                          list-style: none;
                          padding: 0;
                          margin: 0;
+
                          li {
                               color: $text-color;
                               font-size: rem(15px);
@@ -1674,12 +1972,12 @@ nav {
 
                                    &:hover {
                                         color: $red;
-                                   }  
+                                   }
 
                                    &::before {
                                         content: " \f054  ";
                                         color: $white;
-                                   }                       
+                                   }
                               }
 
                          }
@@ -1689,6 +1987,7 @@ nav {
                .footer__items--3 {
                     .contact__form {
                          margin-top: 2rem;
+
                          .form__group {
                               margin-bottom: 1rem;
                               position: relative;
@@ -1704,7 +2003,7 @@ nav {
                                    top: 0;
                                    left: 73%;
                                    padding: .5rem .4rem .3rem .3rem;
-                              }   
+                              }
 
                               // On cache l'icon fa-circle-chevron-right
                               .fa-circle-chevron-right {
@@ -1714,14 +2013,14 @@ nav {
                               // Si on passe la souris sur le bouton, on fait apparaitre l'icon fa-chevron-right 
                               button:hover .fa-circle-chevron-right {
                                    display: none;
-                              }                                            
+                              }
                          }
 
                          .contact__social {
                               width: 100%;
                               text-align: flex-start;
                               margin-top: 2rem;
-                              
+
                               ul.socials {
 
                                    margin: 0;
@@ -1745,9 +2044,9 @@ nav {
 
                                              &:hover {
                                                   color: $white;
-                                             }                         
+                                             }
                                         }
-                                   }                       
+                                   }
                               }
                          }
                     }
@@ -1756,7 +2055,7 @@ nav {
 
           .card__mentions {
                margin-top: 1.5rem;
-               padding: 1rem ;
+               padding: 1rem;
                text-align: center;
 
                .right {
@@ -1793,7 +2092,7 @@ nav {
                          font-weight: 900;
                          font-size: 1rem;
                          margin-left: 0;
-                    }                        
+                    }
                }
 
                &:hover {
@@ -1804,22 +2103,27 @@ nav {
           }
      }
 }
+
 /* Taille des Tablets */
 @media screen and (min-width: 768px) and (max-width: 884px) {
-     .container-fluid, .container, .d-flex {
+
+     .container-fluid,
+     .container,
+     .d-flex {
           max-width: 100%;
           flex-direction: column;
      }
 
      nav {
-         padding: 0 1rem;
-         flex-direction: column;;
+          padding: 0 1rem;
+          flex-direction: column;
+          ;
 
-         .logo {
+          .logo {
                width: 100%;
                padding: 0;
           }
-     
+
           .navbar__menu {
                width: 100%;
                margin-top: 1rem;
@@ -1831,15 +2135,16 @@ nav {
                     &:first-child {
                          margin-left: 1rem;
                          color: $red !important;
-                    }                                                                                                                   
+                    }
                }
-               
+
                /* MENU DROPDOWN */
                .dropdown {
                     margin-left: 0;
+
                     a.menu__link--presta {
                          margin-left: 0;
-                         
+
                          // On ajoute le l'icon fa-angle-down
                          &:after {
                               content: "\f107";
@@ -1877,12 +2182,13 @@ nav {
                     &:hover .navbar__dropdown__content {
                          margin-top: 2.5rem;
                          width: 23.9rem;
-                         box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+                         box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
                     }
-                    
+
                }
-               
+
           }
+
           .card__button {
                width: 100%;
                margin-top: 1rem;
@@ -1894,13 +2200,14 @@ nav {
           }
      }
 
-     .card__carousel {          
-          .carousel__img { 
+     .card__carousel {
+          .carousel__img {
                .carousel__text {
                     width: 100%;
                     top: 50%;
                     left: 46%;
                     text-align: center;
+
                     .carousel__text--title {
                          font-size: 1.8rem;
                          word-wrap: break-word;
@@ -1909,17 +2216,22 @@ nav {
                          margin-bottom: 1rem;
                          opacity: 1;
                     }
+
                     .contact {
-                         .fa-map-marker-alt, .fa-phone {
+
+                         .fa-map-marker-alt,
+                         .fa-phone {
                               color: $red;
                               font-size: 1.2rem;
 
                          }
+
                          a {
                               text-decoration: none;
                               color: $white;
                               font-size: 2rem;
                          }
+
                          span {
                               font-size: 1rem;
                               font-family: $font-segoe;
@@ -1934,19 +2246,21 @@ nav {
           width: 100%;
           padding: 5rem 0;
           margin-top: 0.1rem;
-          
-          .card__about__exp--img { 
+
+          .card__about__exp--img {
                width: 100%;
                padding-left: 0;
+
                .year {
                     top: 74%;
                     left: 0%;
                     padding: 1rem;
-                         
+
                     h1.year__title {
                          font-size: 1.2rem;
                          margin-left: 1rem;
                     }
+
                     .year__text {
                          color: $white;
                          font-family: 'Anton', sans-serif;
@@ -1959,7 +2273,7 @@ nav {
                     }
                }
           }
-          
+
           .card__about__exp--details {
                width: 100%;
                padding: 0 0;
@@ -1969,13 +2283,15 @@ nav {
                     color: $red;
                     font-size: 1.5rem;
                }
+
                .card__about__exp__details--text {
                     h3.details__title {
                          color: $white;
                          font-size: 1.3rem;
                          margin-left: 0;
-                    }  
-                    p{
+                    }
+
+                    p {
                          color: $text-color;
                          font-size: 1.3rem;
                          margin-left: 0;
@@ -1983,28 +2299,31 @@ nav {
                          font-weight: normal;
                          transition: all 0.3s ease-in-out;
                     }
-                    
+
                     p:not(:last-child) {
                          margin-top: 1rem;
                          margin-bottom: 2rem;
                     }
+
                     p:not(:first-child) {
                          margin-top: 2rem;
                          margin-bottom: 2rem;
                     }
                }
+
                .card__about__exp--story {
                     .card__about__story--since {
                          margin-left: 0;
-                    
+
                          h3.since__title {
                               margin-top: -1rem;
                               font-size: 1.5rem;
                          }
+
                          p.since__text {
                               font-size: 1.2rem;
                          }
-                         
+
                     }
                }
           }
@@ -2013,6 +2332,7 @@ nav {
      /* SERVICES */
      .card__services {
           margin: 0;
+
           span.title__text {
                width: 100%;
                color: $red;
@@ -2033,7 +2353,9 @@ nav {
                letter-spacing: 0.1rem;
           }
 
-          #card__services-items-2 { margin-top: -3.5rem;}
+          #card__services-items-2 {
+               margin-top: -3.5rem;
+          }
 
           .card__services-items {
                width: 100%;
@@ -2044,7 +2366,7 @@ nav {
                     margin-bottom: 0;
                     border: 1px solid $text-color;
                     padding: 2rem 1rem 4rem 0rem;
-                    
+
                     h3.services__title {
                          text-align: center;
                          font-size: 1.8rem;
@@ -2053,7 +2375,7 @@ nav {
                          font-family: $font-family;
                     }
 
-                    p{
+                    p {
                          text-align: center;
                          font-size: 1.1rem;
                          margin: 1rem .3rem;
@@ -2063,6 +2385,7 @@ nav {
                     .services__footer {
                          margin-top: 2rem;
                          text-align: center;
+
                          span.services__price {
                               font-size: 1rem;
                               font-family: $font-segoe;
@@ -2075,9 +2398,10 @@ nav {
                }
           }
 
-          
+
      }
-          /* BARBIERS */
+
+     /* BARBIERS */
      .card__teams__barbers {
           span.barbers__text {
                font-size: rem(20px);
@@ -2093,6 +2417,7 @@ nav {
 
           .barbers__items {
                display: inline-block;
+
                .barbers__items--content {
                     display: inline-block;
                     width: 23.9%;
@@ -2100,25 +2425,31 @@ nav {
 
                     .barbers__items--content--img {
                          width: 100%;
-                    
-                         .box__socials {display: none;}
+
+                         .box__socials {
+                              display: none;
+                         }
 
                          img {
-                              &:hover {opacity: 1;}
+                              &:hover {
+                                   opacity: 1;
+                              }
                          }
                     }
-               
+
                     .barbers__items--content--text {
                          padding: .5em 0;
-                         
+
                          text-align: center;
                          background-color: $darkgray;
+
                          h3.barbers__title {
                               margin-left: -.2rem;
                               font-size: rem(10px);
                               font-weight: normal;
                               letter-spacing: 0;
                          }
+
                          p {
                               padding-top: .2rem;
                               font-size: rem(10px);
@@ -2126,18 +2457,19 @@ nav {
                          }
                     }
                }
-          }   
+          }
      }
 
      /* PRICING */
-     #card__pricing  {
+     #card__pricing {
           margin-top: -3.5rem;
      }
+
      .card__pricing {
-          .pricing {  
+          .pricing {
                width: 100%;
                padding: 2.5rem 0;
-               background-color: $darkgray; 
+               background-color: $darkgray;
 
                span.title__text {
                     margin-left: 0;
@@ -2154,12 +2486,15 @@ nav {
 
                .price__items {
                     padding-left: 0;
+
                     .price__items--content {
                          margin-bottom: 1rem;
                          padding-bottom: 0.5rem;
                          border-bottom: 1px solid $text-color;
 
-                         &:last-child {border-bottom: none;}
+                         &:last-child {
+                              border-bottom: none;
+                         }
 
                          #prix-1 .price__title,
                          #prix-2 .price__title,
@@ -2179,7 +2514,9 @@ nav {
                               padding-left: 1rem;
                          }
 
-                         .price__items--content--name {width: 100%;}
+                         .price__items--content--name {
+                              width: 100%;
+                         }
 
                          .price__items--content--price {
 
@@ -2193,7 +2530,7 @@ nav {
                               }
                          }
                     }
-               }  
+               }
           }
 
      }
@@ -2236,6 +2573,7 @@ nav {
 
           .card__temoins--carousel {
                width: 100%;
+
                .temoins__carousel--items {
                     width: 25%;
                     display: inline-block;
@@ -2245,7 +2583,9 @@ nav {
                          outline: 10px solid $darkgray;
                          transition: all 0.3s ease-in-out;
                     }
-                    &:first-child, &:last-child {
+
+                    &:first-child,
+                    &:last-child {
                          opacity: 20%;
                          background-color: $white;
                     }
@@ -2254,20 +2594,24 @@ nav {
      }
 
      /* HEURES D'OUVERTURE */
-     #card__open {margin-top: 2rem;}
+     #card__open {
+          margin-top: 2rem;
+     }
+
      .card__open {
           background-color: $darkgray;
 
           .open__houre {
                width: 100%;
                padding: 1rem 1rem;
-               
+
                #open__title {
                     width: 100%;
                     margin-bottom: 1rem;
                     align-items: center;
                     align-content: center;
                }
+
                span.open__title {
                     color: $red;
                     margin: auto;
@@ -2323,12 +2667,12 @@ nav {
           }
      }
 
-          /* FOOTER */
+     /* FOOTER */
      .footer {
           margin-top: 2rem;
           padding: 1rem 0;
           background-color: $darkgray;
-                    
+
           .footer__block {
                h3.contacts__title {
                     margin-top: 2rem;
@@ -2337,11 +2681,13 @@ nav {
                     font-size: rem(20px);
                     border-top: 1px solid $text-color;
                }
+
                .footer__items--1 {
                     ul {
                          list-style: none;
                          padding: 0;
                          margin: 0 0 1rem 0;
+
                          li {
                               color: $text-color;
                               font-size: rem(15px);
@@ -2351,7 +2697,9 @@ nav {
                               margin-top: .5rem;
                               transition: all 0.3s ease-in-out;
 
-                              .fa-map-marker-alt, .fa-phone, .fa-envelope-open {
+                              .fa-map-marker-alt,
+                              .fa-phone,
+                              .fa-envelope-open {
                                    color: $red;
                                    text-align: center;
                                    width: 2rem;
@@ -2368,19 +2716,20 @@ nav {
 
                                    &:hover {
                                         color: $red;
-                                   }                         
+                                   }
                               }
 
                          }
                     }
                }
 
-               .footer__items--2{
+               .footer__items--2 {
 
                     ul {
                          list-style: none;
                          padding: 0;
                          margin: 0;
+
                          li {
                               color: $text-color;
                               font-size: rem(15px);
@@ -2397,12 +2746,12 @@ nav {
 
                                    &:hover {
                                         color: $red;
-                                   }  
+                                   }
 
                                    &::before {
                                         content: " \f054  ";
                                         color: $white;
-                                   }                       
+                                   }
                               }
 
                          }
@@ -2412,6 +2761,7 @@ nav {
                .footer__items--3 {
                     .contact__form {
                          margin-top: 2rem;
+
                          .form__group {
                               margin-bottom: 1rem;
                               position: relative;
@@ -2427,7 +2777,7 @@ nav {
                                    top: 0;
                                    left: 73%;
                                    padding: .5rem .4rem .3rem .3rem;
-                              }   
+                              }
 
                               // On cache l'icon fa-circle-chevron-right
                               .fa-circle-chevron-right {
@@ -2437,12 +2787,12 @@ nav {
                               // Si on passe la souris sur le bouton, on fait apparaitre l'icon fa-chevron-right 
                               button:hover .fa-circle-chevron-right {
                                    display: none;
-                              }                                            
+                              }
                          }
 
                          .contact__social {
                               margin-top: 2rem;
-                              
+
                               ul.socials {
 
                                    margin: 0;
@@ -2451,10 +2801,10 @@ nav {
                                    display: inline-block;
 
                                    li.social__items {
-                                        
+
                                         margin: 0;
                                         padding: .5rem .5rem .5rem .8rem;
-                                        border: $border-r; 
+                                        border: $border-r;
 
                                         a {
                                              display: inline-block;
@@ -2466,9 +2816,9 @@ nav {
 
                                              &:hover {
                                                   color: $white;
-                                             }                         
+                                             }
                                         }
-                                   }                       
+                                   }
                               }
                          }
                     }
@@ -2477,7 +2827,7 @@ nav {
 
           .card__mentions {
                margin-top: 1.5rem;
-               padding: 1rem ;
+               padding: 1rem;
                text-align: center;
 
                .right {
@@ -2513,7 +2863,7 @@ nav {
                          font-weight: 900;
                          font-size: 1rem;
                          margin-left: 0;
-                    }                        
+                    }
                }
 
                &:hover {
@@ -2536,7 +2886,12 @@ nav {
           width: 100%;
      }
 
-     h1, h2, h3, h4, h5, h6 {
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6 {
           font-size: 1.5rem;
      }
 }
@@ -2544,12 +2899,11 @@ nav {
 /* Taille des desktops */
 @media screen and (min-width: 884px) and (max-width: 7680px) {
      .container {
-         flex-direction: row;
+          flex-direction: row;
      }
+
      .d-flex {
           display: flex;
           flex-direction: row;
      }
 }
-
-

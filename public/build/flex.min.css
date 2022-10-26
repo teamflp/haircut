@@ -1,5 +1,5 @@
 *,::after,::before{margin:0;padding:0;box-sizing:border-box}.container{max-width:90%;margin:0 auto}
-.container-fluid,.img-100{max-width:100%}.d-flex{display:flex}.a-items-center{align-items:center}
+.container-fluid,.img-100{max-width:100%}.d-flex{display:flex;max-width:100%}.a-items-center{align-items:center}
 .a-items-start{align-items:flex-start}.a-items-end{align-items:flex-end}.a-items-stretch{align-items:stretch}
 .a-items-baseline{align-items:baseline}.a-content-center{align-content:center}.a-content-start{align-content:flex-start}
 .a-content-end{align-content:flex-end}.a-content-stretch{align-content:stretch}.a-content-s-b{align-content:space-between}

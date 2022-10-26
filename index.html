@@ -1,517 +1,544 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="public/build/styles.css">
-     <link rel="stylesheet" href="public/build/flex.min.css">
-     <title>Haircut</title>
-</head>
-<body>
 
-     <!-- BARRE DE NAVIGATION -->
-     <nav class="d-flex j-content-s-b a-items-center">
-          <div class="logo">
-               <div class="mylogo w-50">
-                    <img class="img-100" src="public/images/logo.png" alt="logo">
-               </div>
-               <div class="menu__hamburger">
-                    <i class="fas fa-bars"></i>
-               </div>
-          </div>
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="public/build/styles.css">
+          <link rel="stylesheet" href="public/build/flex.min.css">
+          <title>Haircut</title>
+     </head>
 
-          <div class="navbar__menu">
-               <a href="index.html" class="menu__link">Accueil</i></a>
-               <a href="about.html" class="menu__link">A propos</a>
-               <a href="services.html" class="menu__link">Services</a>
-               
-               <!-- DROPDOWN MENU 
+     <body>
+
+          <!-- BARRE DE NAVIGATION -->
+          <nav class="d-flex j-content-s-b a-items-center">
+               <div class="logo d-flex">
+                    <div class="mylogo w-50">
+                         <img class="img-100" src="public/images/logo.png" alt="logo">
+                    </div>
+                    <button type="button" class="menu__hamburger">
+                         <i class="fas fa-bars"></i> <span>Menu</span>
+                    </button>
+               </div>
+
+               <div class="navbar__menu">
+                    <a href="index.html" class="menu__link">Accueil</i></a>
+                    <a href="about.html" class="menu__link">A propos</a>
+                    <a href="services.html" class="menu__link">Services</a>
+
+                    <!-- DROPDOWN MENU 
                     AU SURVOLE DE LA SOURIS SUR LE LIEN PRESTAIONS, 
                     LE SOUS-MENU (DROPDOWN) S'AFFICHE AUTOMATIQUEMENT.
-               -->
-               <div class="dropdown">
-                    <a href="#" class="menu__link--presta">Prestations </a>
-                    <div class="navbar__dropdown__content">
-                         <a href="forfait.html" class="submenu__link">Nos tarifs</a>
-                         <a href="barbiers.html" class="submenu__link">Barbiers</a>
-                         <a href="horaire.html" class="submenu__link">Horaire</a>
-                         <a href="temoins.html" class="submenu__link">Nos clients</a>
+                    -->
+                    <div class="dropdown">
+                         <a href="#" class="menu__link--presta">Prestations </a>
+                         <div class="navbar__dropdown__content">
+                              <a href="forfait.html" class="submenu__link">Nos tarifs</a>
+                              <a href="barbiers.html" class="submenu__link">Barbiers</a>
+                              <a href="horaire.html" class="submenu__link">Horaire</a>
+                              <a href="temoins.html" class="submenu__link">Nos clients</a>
+                         </div>
+                    </div>
+                    <a href="contact.html" class="menu__link">Contact</a>
+               </div>
+
+               <button type="button" class="card__button">
+                    <a class="button__link" href="">Rendez-vous <i class="fas fa-chevron-right"></i> </a>
+               </button>
+          </nav>
+
+          <!-- SECTION CAROUSEL -->
+          <div class="card__carousel container-fluid d-flex a-items-center j-content-center">
+               <div class="carousel carousel__img">
+                    <img class="img-100" src="public/images/carousel-1.jpg" alt="carrousel">
+                    <div class="carousel__text">
+                         <h1 class="carousel__text--title uppercase">
+                              Nous vous garderons un look génial
+                         </h1>
+                         <div class="contact uppercase">
+                              <i class="fas fa-map-marker-alt"></i>
+                              <span>142 av. Jean Jaurès 93500, Pantin</span>
+                         </div>
+                         <div class="contact">
+                              <i class="fas fa-phone"></i>
+                              <a class="tel" href="tel:+33 13 45 78 90 90">+33 13 45 78 90 90</a>
+                         </div>
                     </div>
                </div>
-               <a href="contact.html" class="menu__link">Contact</a>
           </div>
-          
-          <button type="button" class="card__button">
-               <a class="button__link" href="">Rendez-vous <i class="fas fa-chevron-right"></i></a>
-          </button>
-     </nav>
 
-     <!-- SECTION CAROUSEL -->
-     <div class="card__carousel container-fluid d-flex a-items-center j-content-center">
-          <div class="carousel carousel__img">
-               <img class="img-100" src="public/images/carousel-1.jpg" alt="carrousel">
-               <div class="carousel__text">
-                    <h1 class="carousel__text--title uppercase">
-                         Nous vous garderons un look génial
-                    </h1>
-                    <div class="contact uppercase">
-                         <i class="fas fa-map-marker-alt"></i> 
-                         <span>142 av. Jean Jaurès 93500, Pantin</span>
-                    </div>
-                    <div class="contact">
-                         <i class="fas fa-phone"></i>
-                         <a class="tel" href="tel:+33 13 45 78 90 90">+33 13 45 78 90 90</a>
-                    </div>
-               </div>
-          </div>
-     </div>
+          <div class="container-fluid">
+               <!-- CONTAINER -->
+               <div class="container">
+                    <!-- SECTION ABOUT US -->
+                    <div class="card__about__exp d-flex gap-10">
+                         <div class="card__about__exp--img w-100">
+                              <img class="img-100" src="public/images/about.jpg" alt="about">
+                              <div class="year">
+                                   <h1 class="year__title">25 années</h1>
+                                   <span class="year__text">Experience</span>
+                              </div>
+                         </div>
 
-     <div class="container-fluid">
-          <!-- CONTAINER -->
-          <div class="container">
-               <!-- SECTION ABOUT US -->
-               <div class="card__about__exp d-flex gap-10">
-                    <div class="card__about__exp--img w-100">
-                         <img class="img-100" src="public/images/about.jpg" alt="about">
-                         <div class="year">
-                              <h1 class="year__title">25 années</h1>
-                              <span class="year__text">Experience</span>
+                         <div class="card__about__exp--details w-100">
+                              <div class="title__text capitalize">Qui sommes-nous</div>
+                              <div class="card__about__exp__details--text mt-25 ">
+                                   <h3 class="details__title">Plus qu'une coupe de cheveux. En savoir plus sur nous</h3>
+                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis
+                                        consectetur non earum similique recusandae officiis suscipit, reiciendis ullam
+                                        atque, in ab. Odit maxime eos quam repellendus, beatae placeat.</p>
+                                   <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+                              </div>
+
+                              <div class="card__about__exp--story d-flex">
+                                   <div class="card__about__story--since w-100">
+                                        <h3 class="since__title">Depuis 1990</h3>
+                                        <p class="since__text">
+                                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                             dolore eu fugiat nulla pariatur.
+                                        </p>
+                                   </div>
+                                   <div class="card__about__story--since w-100">
+                                        <h3 class="since__title">100+ clients</h3>
+                                        <p class="since__text">
+                                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                             dolore eu fugiat nulla pariatur.
+                                        </p>
+                                   </div>
+                              </div>
                          </div>
                     </div>
 
-                    <div class="card__about__exp--details w-100">
-                         <div class="title__text capitalize">Qui sommes-nous</div>
-                         <div class="card__about__exp__details--text mt-25 ">
-                              <h3 class="details__title">Plus qu'une coupe de cheveux. En savoir plus sur nous</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis consectetur non earum similique recusandae officiis suscipit, reiciendis ullam atque, in ab. Odit maxime eos quam repellendus, beatae placeat.</p>
-                              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+                    <!-- SECTION SERVICES -->
+                    <div class="card__services">
+                         <div class="mydiv f-di-col w-100 text-center">
+                              <span class="title__text">Services</span>
+                              <h3 class="services__title mt-20 uppercase">Ce que nous fournissons</h3>
                          </div>
 
-                         <div class="card__about__exp--story d-flex">
-                              <div class="card__about__story--since w-100">
-                                   <h3 class="since__title">Depuis 1990</h3>
-                                   <p class="since__text">
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                         <!-- SERVICES ITEMS -->
+                         <div class="card__services-items d-flex gap-15">
+                              <div class="services__items">
+                                   <h3 class="services__title">Coupe de cheveux</h3>
+                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis,
+                                        reiciendis ullam atque, in ab..</p>
+                                   <div class="services__footer">
+                                        <span class="services__price">From $15</span>
+                                   </div>
+                                   <span class="services__img">
+                                        <img class="img-100" src="public/images/haircut.png" alt="Haircut" srcset="">
+                                   </span>
+                              </div>
+
+                              <div class="services__items">
+                                   <h3 class="services__title">Garniture de barbe</h3>
+                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis,
+                                        reiciendis ullam atque, in ab..</p>
+                                   <div class="services__footer">
+                                        <span class="services__price">From $15</span>
+                                   </div>
+                                   <div class="services__img">
+                                        <img class="img-100" src="public/images/beard-trim.png" alt="Haircut" srcset="">
+                                   </div>
+                              </div>
+
+                              <div class="services__items">
+                                   <h3 class="services__title">Rasage pour homme</h3>
+                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis,
+                                        reiciendis ullam atque, in ab..</p>
+                                   <div class="services__footer">
+                                        <span class="services__price">From $15</span>
+                                   </div>
+                                   <div class="services__img">
+                                        <img class="img-100" src="public/images/mans-shave.png" alt="Haircut" srcset="">
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="card__services-items d-flex gap-15" id="card__services-items-2">
+                              <div class="services__items">
+                                   <h3 class="services__title">Teinture</h3>
+                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis,
+                                        reiciendis ullam atque, in ab..</p>
+                                   <div class="services__footer">
+                                        <span class="services__price">From $15</span>
+                                   </div>
+                                   <div class="services__img">
+                                        <img class="img-100" src="public/images/hair-dyeing.png" alt="Haircut"
+                                             srcset="">
+                                   </div>
+                              </div>
+
+                              <div class="services__items">
+                                   <h3 class="services__title">Moustache</h3>
+                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis,
+                                        reiciendis ullam atque, in ab..</p>
+                                   <div class="services__footer">
+                                        <span class="services__price">From $15</span>
+                                   </div>
+                                   <div class="services__img">
+                                        <img class="img-100" src="public/images/mustache.png" alt="Haircut" srcset="">
+                                   </div>
+                              </div>
+
+                              <div class="services__items">
+                                   <h3 class="services__title">Empilage</h3>
+                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis,
+                                        reiciendis ullam atque, in ab..</p>
+                                   <div class="services__footer">
+                                        <span class="services__price">From $15</span>
+                                   </div>
+                                   <div class="services__img">
+                                        <img class="img-100" src="public/images/stacking.png" alt="Haircut" srcset="">
+                                   </div>
+                              </div>
+
+                         </div>
+                    </div>
+
+                    <!--  SECTION PRICING -->
+                    <div class="card__pricing w-100 mt-20 d-flex" id="card__pricing">
+                         <div class="pricing w-100 f-dir-col">
+                              <span class="title__text">Prix & Forfait</span>
+                              <h3 class="pricing__title mt-20 uppercase">
+                                   Découvrez nos services et tarifs de barbier
+                              </h3>
+
+                              <!-- PRICE ITEMS -->
+                              <div class="price__items mt-20">
+                                   <div class="price__items--content d-flex">
+                                        <span class="price__items--content--name w-100" id="designation">
+                                             <h3 class="price__title" id="price__title">La coupe de cheveux</h3>
+                                        </span>
+                                        <span class="price__items--content--price w-100" id="prix-1">
+                                             <h3 class="price__title">15€</h3>
+                                        </span>
+                                   </div>
+
+                                   <div class="price__items--content d-flex">
+                                        <span class="price__items--content--name w-100" id="designation">
+                                             <h3 class="price__title" id="price__title">Garniture de barbe</h3>
+                                        </span>
+                                        <span class="price__items--content--price w-100" id="prix-2">
+                                             <h3 class="price__title">15€</h3>
+                                        </span>
+                                   </div>
+
+                                   <div class="price__items--content d-flex">
+                                        <span class="price__items--content--name w-100" id="designation">
+                                             <h3 class="price__title" id="price__title">Rasage de l'homme</h3>
+                                        </span>
+                                        <span class="price__items--content--price w-100" id="prix-3">
+                                             <h3 class="price__title">15€</h3>
+                                        </span>
+                                   </div>
+
+                                   <div class="price__items--content d-flex">
+                                        <span class="price__items--content--name w-100" id="designation">
+                                             <h3 class="price__title" id="price__title">Teinture des cheveux</h3>
+                                        </span>
+                                        <span class="price__items--content--price w-100" id="prix-4">
+                                             <h3 class="price__title">15€</h3>
+                                        </span>
+                                   </div>
+
+                                   <div class="price__items--content d-flex">
+                                        <span class="price__items--content--name w-100" id="designation">
+                                             <h3 class="price__title" id="price__title">Moustache</h3>
+                                        </span>
+                                        <span class="price__items--content--price w-100" id="prix-5">
+                                             <h3 class="price__title">15€</h3>
+                                        </span>
+                                   </div>
+
+                                   <div class="price__items--content d-flex">
+                                        <span class="price__items--content--name w-100" id="designation">
+                                             <h3 class="price__title" id="price__title">Empilage</h3>
+                                        </span>
+                                        <span class="price__items--content--price w-100" id="prix-6">
+                                             <h3 class="price__title">15€</h3>
+                                        </span>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="img__princing w-100">
+                              <img class="img-100" src="public/images/price.jpg" alt="Pricing" srcset="">
+                         </div>
+                    </div>
+
+                    <!--  SECTION BARBIERS -->
+                    <div class="card__teams__barbers">
+                         <div class="f-di-col w-100 mt-60 text-center">
+                              <span class="barbers__text">Nos barbiers</span>
+                              <h3 class="barbers__title mt-20 uppercase">Rencontrez notre barbier</h3>
+                         </div>
+
+                         <div class="barbers__items d-flex gap-10 mt-10">
+                              <div class="barbers__items--content">
+                                   <div class="barbers__items--content--img">
+                                        <img class="img-100" src="public/images/team-1.jpg" alt="team" srcset="">
+                                        <div class="box__socials d-flex">
+
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-facebook-f"></i>
+                                                  </a>
+                                             </div>
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-twitter"></i>
+                                                  </a>
+                                             </div>
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-instagram"></i>
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="barbers__items--content--text">
+                                        <h3 class="barbers__title">John Doe</h3>
+                                        <p>Lorem ipsum</p>
+                                   </div>
+                              </div>
+
+                              <div class="barbers__items--content">
+                                   <div class="barbers__items--content--img">
+                                        <img class="img-100" src="public/images/team-2.jpg" alt="team" srcset="">
+                                        <div class="box__socials">
+
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-facebook-f"></i>
+                                                  </a>
+                                             </div>
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-twitter"></i>
+                                                  </a>
+                                             </div>
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-instagram"></i>
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="barbers__items--content--text">
+                                        <h3 class="barbers__title">Bryan Dran</h3>
+                                        <p>Lorem ipsum </p>
+                                   </div>
+                              </div>
+
+                              <div class="barbers__items--content">
+                                   <div class="barbers__items--content--img">
+                                        <img class="img-100" src="public/images/team-3.jpg" alt="team" srcset="">
+                                        <div class="box__socials d-flex">
+
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-facebook-f"></i>
+                                                  </a>
+                                             </div>
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-twitter"></i>
+                                                  </a>
+                                             </div>
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-instagram"></i>
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="barbers__items--content--text">
+                                        <h3 class="barbers__title">Rodriguez</h3>
+                                        <p>Lorem ipsum</p>
+                                   </div>
+                              </div>
+
+                              <div class="barbers__items--content">
+                                   <div class="barbers__items--content--img">
+                                        <img class="img-100" src="public/images/team-4.jpg" alt="team" srcset="">
+                                        <div class="box__socials d-flex">
+
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-facebook-f"></i>
+                                                  </a>
+                                             </div>
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-twitter"></i>
+                                                  </a>
+                                             </div>
+                                             <div class="box__socials--item">
+                                                  <a href="#" class="socials__items--link">
+                                                       <i class="fab fa-instagram"></i>
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="barbers__items--content--text">
+                                        <h3 class="barbers__title">Yoan Bruce</h3>
+                                        <p>Lorem ipsum</p>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!--  SECTION HEURES D'OUVERTURE -->
+                    <div class="card__open d-flex mt-60" id="card__open">
+                         <div class="img__open w-100">
+                              <img class="img-100" src="public/images/open.jpg" alt="outils" srcset="">
+                         </div>
+                         <div class="open__houre w-100">
+                              <span class="open__title capitalize" id="open__title">Heures d'ouverture</span>
+
+                              <p class="open__text mt-10">Des barbiers professionnels vous attendent</p>
+                              <div class="open__items d-flex f-di-col mt-20">
+                                   <div class="open__items--content w-100">
+                                        <span class="open__items--content--text">Lundi</span>
+                                        <span class="open__items--content--text">09h00 - 21h00</span>
+                                   </div>
+                                   <div class="open__items--content">
+                                        <span class="open__items--content--text">Mardi</span>
+                                        <span class="open__items--content--text">09h00 - 21h00</span>
+                                   </div>
+                                   <div class="open__items--content">
+                                        <span class="open__items--content--text">Mercredi</span>
+                                        <span class="open__items--content--text">09h00 - 21h00</span>
+                                   </div>
+                                   <div class="open__items--content">
+                                        <span class="open__items--content--text">Jeudi</span>
+                                        <span class="open__items--content--text">09h00 - 21h00</span>
+                                   </div>
+                                   <div class="open__items--content">
+                                        <span class="open__items--content--text">Vendredi</span>
+                                        <span class="open__items--content--text">09h00 - 21h00</span>
+                                   </div>
+                                   <div class="open__items--content">
+                                        <span class="open__items--content--text">Sam Dim</span>
+                                        <span title="" class="open__items--content--text">Fermé</span>
+                                   </div>
+                              </div>
+
+                         </div>
+                    </div>
+
+                    <!-- SECTION TEMOIGNAES -->
+                    <div class="card__temoins mt-60">
+                         <div class="temoins__header w-40 o-auto">
+                              <span class="temoins__text">Témoignage</span>
+                              <h3 class="temoins__header mt-30">Ce que disent nos clients !</h3>
+                              <h3 class="name__client mt-10">Emmanuel Vandock </h3>
+                              <p class="profession mt-5">Profession</p>
+
+                              <div class="card__temoins--text mt-10">
+                                   <p class="temoins__text">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum debitis,
+                                        tempora.
                                    </p>
                               </div>
-                              <div class="card__about__story--since w-100">
-                                   <h3 class="since__title">100+ clients</h3>
-                                   <p class="since__text">
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                   </p>
-                             </div>
-                         </div>
-                    </div>
-               </div>
 
-               <!-- SECTION SERVICES -->
-               <div class="card__services"> 
-                    <div class="mydiv f-di-col w-100 text-center">
-                         <span class="title__text">Services</span>
-                         <h3 class="services__title mt-20 uppercase">Ce que nous fournissons</h3>
-                    </div>    
-                    
-                    <!-- SERVICES ITEMS -->
-                    <div class="card__services-items d-flex gap-15">
-                         <div class="services__items">
-                              <h3 class="services__title">Coupe de cheveux</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis, reiciendis ullam atque, in ab..</p>
-                              <div class="services__footer">
-                                   <span class="services__price">From $15</span>
-                              </div>
-                              <span class="services__img">
-                                   <img class="img-100" src="public/images/haircut.png" alt="Haircut" srcset="">
-                              </span>
-                         </div>
-
-                         <div class="services__items">
-                              <h3 class="services__title">Garniture de barbe</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis, reiciendis ullam atque, in ab..</p>
-                              <div class="services__footer">
-                                   <span class="services__price">From $15</span>
-                              </div>
-                              <div class="services__img">
-                                   <img class="img-100" src="public/images/beard-trim.png" alt="Haircut" srcset="">
-                              </div>
-                         </div>
-
-                         <div class="services__items">
-                              <h3 class="services__title">Rasage pour homme</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis, reiciendis ullam atque, in ab..</p>
-                              <div class="services__footer">
-                                   <span class="services__price">From $15</span>
-                              </div>
-                              <div class="services__img">
-                                   <img class="img-100" src="public/images/mans-shave.png" alt="Haircut" srcset="">
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="card__services-items d-flex gap-15" id="card__services-items-2">
-                         <div class="services__items">
-                              <h3 class="services__title">Teinture</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis, reiciendis ullam atque, in ab..</p>
-                              <div class="services__footer">
-                                   <span class="services__price">From $15</span>
-                              </div>
-                              <div class="services__img">
-                                   <img class="img-100" src="public/images/hair-dyeing.png" alt="Haircut" srcset="">
-                              </div>
-                         </div>
-
-                         <div class="services__items">
-                              <h3 class="services__title">Moustache</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis, reiciendis ullam atque, in ab..</p>
-                              <div class="services__footer">
-                                   <span class="services__price">From $15</span>
-                              </div>
-                              <div class="services__img">
-                                   <img class="img-100" src="public/images/mustache.png" alt="Haircut" srcset="">
-                              </div>
-                         </div>
-
-                         <div class="services__items">
-                              <h3 class="services__title">Empilage</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore porro perferendis, reiciendis ullam atque, in ab..</p>
-                              <div class="services__footer">
-                                   <span class="services__price">From $15</span>
-                              </div>
-                              <div class="services__img">
-                                   <img class="img-100" src="public/images/stacking.png" alt="Haircut" srcset="">
-                              </div>
-                         </div>
-
-                    </div>
-               </div>
-
-               <!--  SECTION PRICING -->
-               <div class="card__pricing w-100 mt-20 d-flex" id="card__pricing">
-                    <div class="pricing w-100 f-dir-col">
-                         <span class="title__text">Prix & Forfait</span>
-                         <h3 class="pricing__title mt-20 uppercase">
-                              Découvrez nos services et tarifs de barbier
-                         </h3>
-
-                         <!-- PRICE ITEMS -->
-                         <div class="price__items mt-20">
-                              <div class="price__items--content d-flex">
-                                   <span class="price__items--content--name w-100" id="designation">
-                                        <h3 class="price__title" id="price__title">La coupe de cheveux</h3>
-                                   </span>
-                                   <span class="price__items--content--price w-100" id="prix-1">
-                                        <h3 class="price__title">15€</h3>
-                                   </span>
-                              </div>
-
-                              <div class="price__items--content d-flex">
-                                   <span class="price__items--content--name w-100" id="designation">
-                                        <h3 class="price__title" id="price__title">Garniture de barbe</h3>
-                                   </span>
-                                   <span class="price__items--content--price w-100" id="prix-2">
-                                        <h3 class="price__title">15€</h3>
-                                   </span>
-                              </div>
-
-                              <div class="price__items--content d-flex">
-                                   <span class="price__items--content--name w-100" id="designation">
-                                        <h3 class="price__title" id="price__title">Rasage de l'homme</h3>
-                                   </span>
-                                   <span class="price__items--content--price w-100" id="prix-3">
-                                        <h3 class="price__title">15€</h3>
-                                   </span>
-                              </div>
-
-                              <div class="price__items--content d-flex">
-                                   <span class="price__items--content--name w-100" id="designation">
-                                        <h3 class="price__title" id="price__title">Teinture des cheveux</h3>
-                                   </span>
-                                   <span class="price__items--content--price w-100" id="prix-4">
-                                        <h3 class="price__title">15€</h3>
-                                   </span>
-                              </div>
-
-                              <div class="price__items--content d-flex">
-                                   <span class="price__items--content--name w-100" id="designation">
-                                        <h3 class="price__title" id="price__title">Moustache</h3>
-                                   </span>
-                                   <span class="price__items--content--price w-100" id="prix-5">
-                                        <h3 class="price__title">15€</h3>
-                                   </span>
-                              </div>
-
-                              <div class="price__items--content d-flex">
-                                   <span class="price__items--content--name w-100" id="designation">
-                                        <h3 class="price__title" id="price__title">Empilage</h3>
-                                   </span>
-                                   <span class="price__items--content--price w-100" id="prix-6">
-                                        <h3 class="price__title">15€</h3>
-                                   </span>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="img__princing w-100">
-                         <img class="img-100" src="public/images/price.jpg" alt="Pricing" srcset="">
-                    </div>
-               </div>
-
-               <!--  SECTION BARBIERS -->
-               <div class="card__teams__barbers">
-                    <div class="f-di-col w-100 mt-60 text-center">
-                         <span class="barbers__text">Nos barbiers</span>
-                         <h3 class="barbers__title mt-20 uppercase">Rencontrez notre barbier</h3>
-                    </div>  
-
-                    <div class="barbers__items d-flex gap-10 mt-10">
-                         <div class="barbers__items--content">
-                              <div class="barbers__items--content--img">
-                                   <img class="img-100" src="public/images/team-1.jpg" alt="team" srcset="">
-                                   <div class="box__socials d-flex">
-
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-facebook-f"></i>
-                                             </a>
-                                        </div>
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-twitter"></i>
-                                             </a>
-                                        </div>
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-instagram"></i>
-                                             </a>
-                                        </div>
+                              <div
+                                   class="card__temoins--carousel j-content-center gap-10 a-items-center a-content-center w-50 mb-18 o-auto">
+                                   <div class="temoins__carousel--items">
+                                        <img class="img-100" src="public/images/testimonial-1.jpg" alt="temoin"
+                                             srcset="">
+                                   </div>
+                                   <div class="temoins__carousel--items">
+                                        <img class="img-100" src="public/images/testimonial-2.jpg" alt="temoin"
+                                             srcset="">
+                                   </div>
+                                   <div class="temoins__carousel--items">
+                                        <img class="img-100" src="public/images/testimonial-3.jpg" alt="temoin"
+                                             srcset="">
                                    </div>
                               </div>
-                              <div class="barbers__items--content--text">
-                                   <h3 class="barbers__title">John Doe</h3>
-                                   <p>Lorem ipsum</p>
-                              </div>
-                         </div>
-
-                         <div class="barbers__items--content">
-                              <div class="barbers__items--content--img">
-                                   <img class="img-100" src="public/images/team-2.jpg" alt="team" srcset="">
-                                   <div class="box__socials">
-                                        
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-facebook-f"></i>
-                                             </a>
-                                        </div>
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-twitter"></i>
-                                             </a>
-                                        </div>
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-instagram"></i>
-                                             </a>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="barbers__items--content--text">
-                                   <h3 class="barbers__title">Bryan Dran</h3>
-                                   <p>Lorem ipsum </p>
-                              </div>
-                         </div>
-
-                         <div class="barbers__items--content">
-                              <div class="barbers__items--content--img">
-                                   <img class="img-100" src="public/images/team-3.jpg" alt="team" srcset="">
-                                   <div class="box__socials d-flex">
-                                        
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-facebook-f"></i>
-                                             </a>
-                                        </div>
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-twitter"></i>
-                                             </a>
-                                        </div>
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-instagram"></i>
-                                             </a>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="barbers__items--content--text">
-                                   <h3 class="barbers__title">Rodriguez</h3>
-                                   <p>Lorem ipsum</p>
-                              </div>
-                         </div>
-
-                         <div class="barbers__items--content">
-                              <div class="barbers__items--content--img">
-                                   <img class="img-100" src="public/images/team-4.jpg" alt="team" srcset="">
-                                   <div class="box__socials d-flex">
-                                        
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-facebook-f"></i>
-                                             </a>
-                                        </div>
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-twitter"></i>
-                                             </a>
-                                        </div>
-                                        <div class="box__socials--item">
-                                             <a href="#" class="socials__items--link">
-                                                  <i class="fab fa-instagram"></i>
-                                             </a>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="barbers__items--content--text">
-                                   <h3 class="barbers__title">Yoan Bruce</h3>
-                                   <p>Lorem ipsum</p>
-                              </div>
                          </div>
                     </div>
                </div>
 
-               <!--  SECTION HEURES D'OUVERTURE -->
-               <div class="card__open d-flex mt-60" id="card__open">
-                    <div class="img__open w-100">
-                         <img class="img-100" src="public/images/open.jpg" alt="outils" srcset="">
-                    </div>
-                    <div class="open__houre w-100">
-                         <span class="open__title capitalize" id="open__title">Heures d'ouverture</span>
-
-                         <p class="open__text mt-10">Des barbiers professionnels vous attendent</p>
-                         <div class="open__items d-flex f-di-col mt-20">
-                              <div class="open__items--content w-100">
-                                   <span class="open__items--content--text">Lundi</span>
-                                   <span class="open__items--content--text">09h00 - 21h00</span>
-                              </div>
-                              <div class="open__items--content">
-                                   <span class="open__items--content--text">Mardi</span>
-                                   <span class="open__items--content--text">09h00 - 21h00</span>
-                              </div>
-                              <div class="open__items--content">
-                                   <span class="open__items--content--text">Mercredi</span>
-                                   <span class="open__items--content--text">09h00 - 21h00</span>
-                              </div>
-                              <div class="open__items--content">
-                                   <span class="open__items--content--text">Jeudi</span>
-                                   <span class="open__items--content--text">09h00 - 21h00</span>
-                              </div>
-                              <div class="open__items--content">
-                                   <span class="open__items--content--text">Vendredi</span>
-                                   <span class="open__items--content--text">09h00 - 21h00</span>
-                              </div>
-                              <div class="open__items--content">
-                                   <span class="open__items--content--text">Sam Dim</span>
-                                   <span title="" class="open__items--content--text">Fermé</span>
-                              </div>
-                         </div>
-
-                    </div>
-               </div>
-
-               <!-- SECTION TEMOIGNAES -->
-               <div class="card__temoins mt-60">
-                    <div class="temoins__header w-40 o-auto">
-                         <span class="temoins__text">Témoignage</span>
-                         <h3 class="temoins__header mt-30">Ce que disent nos clients !</h3>
-                         <h3 class="name__client mt-10">Emmanuel Vandock </h3>
-                         <p class="profession mt-5">Profession</p>
-
-                         <div class="card__temoins--text mt-10">
-                              <p class="temoins__text">
-                                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum debitis, tempora.
-                              </p>
-                         </div> 
-
-                         <div class="card__temoins--carousel j-content-center gap-10 a-items-center a-content-center w-50 mb-18 o-auto">
-                              <div class="temoins__carousel--items">
-                                   <img class="img-100" src="public/images/testimonial-1.jpg" alt="temoin" srcset="">
-                              </div>
-                              <div class="temoins__carousel--items">
-                                   <img class="img-100" src="public/images/testimonial-2.jpg" alt="temoin" srcset="">
-                              </div>
-                              <div class="temoins__carousel--items">
-                                   <img class="img-100" src="public/images/testimonial-3.jpg" alt="temoin" srcset="">
-                              </div>
-                         </div>                       
-                    </div>
-               </div> 
-          </div>
-
-          <!-- SECTION FOOTER -->
-          <div class="footer">
-               <div class="footer__block container d-flex j-content-s-b mt-15">
-                    <div class="footer__items--1 w-100">
-                         <h3 class="contacts__title">Entrer en contact</h3>
-                         <div class="contacts__items d-flex f-di-col mt-10">
-                              <ul>
-                                   <li><i class="fas fa-map-marker-alt"></i> 142 av. Jean Jaurès, 93500 - Pantin</li>
-                                   <li><i class="fas fa-phone"></i> +33 145 25 24 36</li>
-                                   <li><i class="fas fa-envelope-open"></i> info@exemple.com</li>
-                              </ul>
-                         </div>
-                    </div>
-
-                    <div class="footer__items--2 w-100">
-                         <h3 class="contacts__title mb-15">Liens rapides</h3>
-                         <ul>
-                              <li class="links-1"><a href="#">A propos de nous</a></li>
-                              <li class="links-1"><a href="#">Nous conctater</a></li>
-                              <li class="links-1"><a href="#">Nos services</a></li>
-                              <li class="links-1"><a href="#">Termes et conditions</a></li>
-                              <li class="links-1"><a href="#">Support</a></li>
-                         </ul>
-                    </div>
-                    <div class="footer__items--3 w-100">
-                         <h3 class="contacts__title">Bulletin</h3>
-                         <div class="contact__form">
-                              <form action="" class="form__group">
-                                   <input class="input__form" type="text" placeholder="Votre email">
-                                   <button type="submit" class="btn__form">S'inscrire <i class="fa-solid fa-circle-chevron-right"></i></button>
-                              </form>
-
-                              <div class="contact__social">
-                                   <ul class="d-flex socials gap-4">
-                                        <li class="social__items"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li class="social__items"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li class="social__items"><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                        <li class="social__items"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+               <!-- SECTION FOOTER -->
+               <div class="footer">
+                    <div class="footer__block container d-flex j-content-s-b mt-15">
+                         <div class="footer__items--1 w-100">
+                              <h3 class="contacts__title">Entrer en contact</h3>
+                              <div class="contacts__items d-flex f-di-col mt-10">
+                                   <ul>
+                                        <li><i class="fas fa-map-marker-alt"></i> 142 av. Jean Jaurès, 93500 - Pantin
+                                        </li>
+                                        <li><i class="fas fa-phone"></i> +33 145 25 24 36</li>
+                                        <li><i class="fas fa-envelope-open"></i> info@exemple.com</li>
                                    </ul>
                               </div>
                          </div>
-                    </div>
-                    
-               </div>
 
-               <div class="container">
-                    <div class="card__mentions d-flex w-100 mt-20">
-                         <div class="left w-100">
-                              <p> &copy; <a href="#">www.gnpinformatique.com</a>. Tous droits réservés.</p>
+                         <div class="footer__items--2 w-100">
+                              <h3 class="contacts__title mb-15">Liens rapides</h3>
+                              <ul>
+                                   <li class="links-1"><a href="#">A propos de nous</a></li>
+                                   <li class="links-1"><a href="#">Nous conctater</a></li>
+                                   <li class="links-1"><a href="#">Nos services</a></li>
+                                   <li class="links-1"><a href="#">Termes et conditions</a></li>
+                                   <li class="links-1"><a href="#">Support</a></li>
+                              </ul>
                          </div>
-                         <div class="right w-100">
-                              <p>Conçu par <a href="#">GNP Informatique</a></p>
+                         <div class="footer__items--3 w-100">
+                              <h3 class="contacts__title">Bulletin</h3>
+                              <div class="contact__form">
+                                   <form action="" class="form__group">
+                                        <input class="input__form" type="text" placeholder="Votre email">
+                                        <button type="submit" class="btn__form">S'inscrire <i
+                                                  class="fa-solid fa-circle-chevron-right"></i></button>
+                                   </form>
+
+                                   <div class="contact__social">
+                                        <ul class="d-flex socials gap-4">
+                                             <li class="social__items"><a href="#"><i class="fab fa-twitter"></i></a>
+                                             </li>
+                                             <li class="social__items"><a href="#"><i class="fab fa-facebook-f"></i></a>
+                                             </li>
+                                             <li class="social__items"><a href="#"><i class="fab fa-youtube"></i></a>
+                                             </li>
+                                             <li class="social__items"><a href="#"><i
+                                                            class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                   </div>
+                              </div>
+                         </div>
+
+                    </div>
+
+                    <div class="container">
+                         <div class="card__mentions d-flex w-100 mt-20">
+                              <div class="left w-100">
+                                   <p> &copy; <a href="#">www.gnpinformatique.com</a>. Tous droits réservés.</p>
+                              </div>
+                              <div class="right w-100">
+                                   <p>Conçu par <a href="#">GNP Informatique</a></p>
+                              </div>
                          </div>
                     </div>
+
+                    <!-- Bouton top -->
+
+                    <div class="btn__top" id="btn__top">
+                         <a href="#"></a>
+                    </div>
                </div>
+          </div>
 
-               <!-- Bouton top -->
+          <!-- Import JavaScript file -->
+          <script src="assets/js/jquery.js"></script>
+          <script src="assets/js/f88b724a6b.js"></script>
+          <script src="assets/js/scripts.js"></script>
+     </body>
 
-               <div class="btn__top border">
-                    <a href="#"></a>
-               </div>
-          </div>              
-     </div>
-
-     <!-- Import JavaScript file -->
-     <script src="assets/js/f88b724a6b.js"></script>
-     <script src="assets/js/scripts.js"></script>
-</body>
 </html>
